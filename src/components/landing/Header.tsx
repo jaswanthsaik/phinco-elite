@@ -17,7 +17,7 @@ const navDropdowns: NavDropdown[] = [
   {
     label: "OJT Programs",
     items: [
-      { label: "Data Science and AI", subtitle: "Built for AI Professionals", icon: <Layers className="h-4 w-4" /> },
+      { label: "Data Science and AI", subtitle: "Built for AI Professionals", icon: <Layers className="h-4 w-4" />, href: "/programs/data-science-ai" },
       { label: "Service now", subtitle: "Built for IT Professionals", icon: <Layers className="h-4 w-4" /> },
       { label: "Agentic for Developers", subtitle: "Built for Tech Professionals", icon: <Layers className="h-4 w-4" /> },
       { label: "Agentic for Generalist", subtitle: "Built for Non-Tech Professionals", icon: <Layers className="h-4 w-4" /> },
@@ -78,7 +78,7 @@ function DropdownMenu({
     <div className="relative" ref={ref}>
       <button
         onClick={onToggle}
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground hover:text-brand transition-colors"
+        className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-foreground hover:text-brand transition-colors"
       >
         {dropdown.label}
         {isOpen ? (
@@ -127,7 +127,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 shrink-0">
+        <a href="/" className="flex items-center gap-2 shrink-0">
           <span className="grid h-8 w-8 place-items-center rounded-md bg-brand text-primary-foreground font-bold">
             <BookOpen className="h-5 w-5" />
           </span>

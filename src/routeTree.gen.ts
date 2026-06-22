@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgramsDataScienceAiRoute = ProgramsDataScienceAiRouteImport.update({
+  id: '/programs/data-science-ai',
+  path: '/programs/data-science-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/programs/data-science-ai'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/programs/data-science-ai'
+  id: '__root__' | '/' | '/programs/data-science-ai'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProgramsDataScienceAiRoute: typeof ProgramsDataScienceAiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programs/data-science-ai': {
+      id: '/programs/data-science-ai'
+      path: '/programs/data-science-ai'
+      fullPath: '/programs/data-science-ai'
+      preLoaderRoute: typeof ProgramsDataScienceAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProgramsDataScienceAiRoute: ProgramsDataScienceAiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
