@@ -1,3 +1,4 @@
+import { AgenticDevelopersHero } from "@/components/Agentic-developers/AgenticDevelopersHero";
 import { Header } from "@/components/landing/Header";
 import { RealStories } from "@/components/landing/RealStories";
 import { SiteFooter } from "@/components/landing/SiteFooter";
@@ -7,7 +8,6 @@ import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
 import { AdmissionProcess } from "@/components/programs/AdmissionProcess";
 import { AlumniCompanies } from "@/components/programs/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/CertificationCourse";
-import { DataScienceHero } from "@/components/programs/DataScienceHero";
 import { ExploreSyllabus } from "@/components/programs/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/FeeBatchDetails";
@@ -20,16 +20,16 @@ import { ProgrammingTools } from "@/components/programs/ProgrammingTools";
 import { SupportThatMatters } from "@/components/programs/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/programs/data-science-ai")({
+export const Route = createFileRoute("/agenticDevelopers")({
   head: () => ({
     meta: [
-      { title: "Data Science and GenAI Program — Phinco Elite" },
+      { title: "Agentic for Developers — Phinco Elite" },
       {
         name: "description",
         content:
           "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
-      { property: "og:title", content: "Data Science and GenAI Program — Phinco Elite" },
+      { property: "og:title", content: "Agentic for Developers — Phinco Elite" },
       {
         property: "og:description",
         content: "Industry-ready Data Science & GenAI certification with real AI projects and placement support.",
@@ -44,7 +44,7 @@ function DataScienceAIPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <DataScienceHero />
+        <AgenticDevelopersHero />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

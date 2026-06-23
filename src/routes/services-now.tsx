@@ -7,7 +7,6 @@ import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
 import { AdmissionProcess } from "@/components/programs/AdmissionProcess";
 import { AlumniCompanies } from "@/components/programs/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/CertificationCourse";
-import { DataScienceHero } from "@/components/programs/DataScienceHero";
 import { ExploreSyllabus } from "@/components/programs/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/FeeBatchDetails";
@@ -18,18 +17,19 @@ import { OthersVsLearnbayProgram } from "@/components/programs/OthersVsLearnbayP
 import { PlacementSupport } from "@/components/programs/PlacementSupport";
 import { ProgrammingTools } from "@/components/programs/ProgrammingTools";
 import { SupportThatMatters } from "@/components/programs/SupportThatMatters";
+import { ServicesHero } from "@/components/services/ServicesHero";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/programs/data-science-ai")({
+export const Route = createFileRoute("/services-now")({
   head: () => ({
     meta: [
-      { title: "Data Science and GenAI Program — Phinco Elite" },
+      { title: "services now — Phinco Elite" },
       {
         name: "description",
         content:
           "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
-      { property: "og:title", content: "Data Science and GenAI Program — Phinco Elite" },
+      { property: "og:title", content: "services now — Phinco Elite" },
       {
         property: "og:description",
         content: "Industry-ready Data Science & GenAI certification with real AI projects and placement support.",
@@ -44,7 +44,7 @@ function DataScienceAIPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <DataScienceHero />
+        <ServicesHero />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

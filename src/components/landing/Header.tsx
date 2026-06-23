@@ -18,9 +18,9 @@ const navDropdowns: NavDropdown[] = [
     label: "OJT Programs",
     items: [
       { label: "Data Science and AI", subtitle: "Built for AI Professionals", icon: <Layers className="h-4 w-4" />, href: "/programs/data-science-ai" },
-      { label: "Service now", subtitle: "Built for IT Professionals", icon: <Layers className="h-4 w-4" /> },
-      { label: "Agentic for Developers", subtitle: "Built for Tech Professionals", icon: <Layers className="h-4 w-4" /> },
-      { label: "Agentic for Generalist", subtitle: "Built for Non-Tech Professionals", icon: <Layers className="h-4 w-4" /> },
+      { label: "Service now", subtitle: "Built for IT Professionals", icon: <Layers className="h-4 w-4" />, href: "/services-now" },
+      { label: "Agentic for Developers", subtitle: "Built for Tech Professionals", icon: <Layers className="h-4 w-4" />, href: "/agenticDevelopers" },
+      { label: "Agentic for Generalist", subtitle: "Built for Non-Tech Professionals", icon: <Layers className="h-4 w-4" />, href: "/agenticGeneralist" },
     ],
   },
   {

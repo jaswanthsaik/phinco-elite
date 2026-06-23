@@ -9,9 +9,27 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesNowRouteImport } from './routes/services-now'
+import { Route as AgenticGeneralistRouteImport } from './routes/agenticGeneralist'
+import { Route as AgenticDevelopersRouteImport } from './routes/agenticDevelopers'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
 
+const ServicesNowRoute = ServicesNowRouteImport.update({
+  id: '/services-now',
+  path: '/services-now',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgenticGeneralistRoute = AgenticGeneralistRouteImport.update({
+  id: '/agenticGeneralist',
+  path: '/agenticGeneralist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgenticDevelopersRoute = AgenticDevelopersRouteImport.update({
+  id: '/agenticDevelopers',
+  path: '/agenticDevelopers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -25,32 +43,81 @@ const ProgramsDataScienceAiRoute = ProgramsDataScienceAiRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agenticDevelopers': typeof AgenticDevelopersRoute
+  '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/services-now': typeof ServicesNowRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agenticDevelopers': typeof AgenticDevelopersRoute
+  '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/services-now': typeof ServicesNowRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agenticDevelopers': typeof AgenticDevelopersRoute
+  '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/services-now': typeof ServicesNowRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/programs/data-science-ai'
+  fullPaths:
+    | '/'
+    | '/agenticDevelopers'
+    | '/agenticGeneralist'
+    | '/services-now'
+    | '/programs/data-science-ai'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/programs/data-science-ai'
-  id: '__root__' | '/' | '/programs/data-science-ai'
+  to:
+    | '/'
+    | '/agenticDevelopers'
+    | '/agenticGeneralist'
+    | '/services-now'
+    | '/programs/data-science-ai'
+  id:
+    | '__root__'
+    | '/'
+    | '/agenticDevelopers'
+    | '/agenticGeneralist'
+    | '/services-now'
+    | '/programs/data-science-ai'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgenticDevelopersRoute: typeof AgenticDevelopersRoute
+  AgenticGeneralistRoute: typeof AgenticGeneralistRoute
+  ServicesNowRoute: typeof ServicesNowRoute
   ProgramsDataScienceAiRoute: typeof ProgramsDataScienceAiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/services-now': {
+      id: '/services-now'
+      path: '/services-now'
+      fullPath: '/services-now'
+      preLoaderRoute: typeof ServicesNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agenticGeneralist': {
+      id: '/agenticGeneralist'
+      path: '/agenticGeneralist'
+      fullPath: '/agenticGeneralist'
+      preLoaderRoute: typeof AgenticGeneralistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agenticDevelopers': {
+      id: '/agenticDevelopers'
+      path: '/agenticDevelopers'
+      fullPath: '/agenticDevelopers'
+      preLoaderRoute: typeof AgenticDevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -70,6 +137,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgenticDevelopersRoute: AgenticDevelopersRoute,
+  AgenticGeneralistRoute: AgenticGeneralistRoute,
+  ServicesNowRoute: ServicesNowRoute,
   ProgramsDataScienceAiRoute: ProgramsDataScienceAiRoute,
 }
 export const routeTree = rootRouteImport
