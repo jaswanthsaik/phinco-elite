@@ -102,7 +102,7 @@ const FAQS: Record<Category, { q: string; a: string }[]> = {
 };
 
 export function FAQSection() {
-  const [category, setCategory] = useState<Category>("Payments and Scholarships");
+  const [category, setCategory] = useState<Category>("Course-Related");
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   const items = FAQS[category];

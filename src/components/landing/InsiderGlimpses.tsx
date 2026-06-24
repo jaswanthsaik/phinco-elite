@@ -99,40 +99,43 @@ export function InsiderGlimpses() {
   };
 
   return (
-    <section className="bg-white px-4 py-8 sm:py-12">
-      <div className="mx-auto max-w-7xl rounded-3xl bg-[#dceeff] px-4 py-8 sm:px-6 sm:py-10 md:px-14 md:py-14">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div>
-            <h2 className="text-2xl font-extrabold leading-tight text-[#0b0b0b] sm:text-3xl md:text-[40px]">
+    <section className="w-full overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-10 lg:py-12">
+      <div className="mx-auto w-full max-w-7xl rounded-2xl bg-[#dceeff] px-3 py-6 sm:rounded-3xl sm:px-6 sm:py-10 md:px-10 lg:px-14 lg:py-14">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="text-center lg:text-left">
+            <h2 className="mx-auto max-w-2xl text-[24px] font-extrabold leading-tight text-[#0b0b0b] sm:text-3xl md:text-[40px] lg:mx-0">
               <span className="text-[#b8753a]">Insider glimpses:</span>{" "}
               Click to see real conversations with our learners
             </h2>
 
-            <div className="mt-8 flex items-center justify-center gap-2 sm:mt-10 sm:gap-4">
+            <div className="mt-6 flex w-full items-center justify-center gap-2 sm:mt-8 sm:gap-3 lg:justify-start">
               <button
                 aria-label="Previous learner"
                 onClick={prev}
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1d6c8] text-gray-700 transition hover:bg-[#e8c2b0] sm:h-10 sm:w-10"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1d6c8] text-gray-700 transition hover:bg-[#e8c2b0] focus:outline-none focus:ring-2 focus:ring-[#b8753a] sm:h-10 sm:w-10"
               >
                 <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
               </button>
 
-              <div className="flex min-w-0 flex-1 items-center justify-center gap-2 overflow-hidden sm:gap-4 md:w-[470px] md:flex-none">
+              <div className="flex min-w-0 max-w-[260px] flex-1 items-center justify-center gap-2 overflow-hidden sm:max-w-[430px] sm:gap-4 md:max-w-[500px] lg:flex-none">
                 {getVisibleLearners().map(({ learner: l, index, position }) => {
                   const isActive = position === 0;
                   const isSide = Math.abs(position) === 1;
+                  const hideOnMobile = Math.abs(position) === 2;
 
                   return (
                     <button
                       key={`${l.name}-${index}-${position}`}
                       onClick={() => setActive(index)}
                       aria-label={`Show conversation from ${l.name}`}
-                      className={`relative shrink-0 overflow-hidden rounded-full transition-all duration-500 ease-in-out ${
+                      className={`relative shrink-0 overflow-hidden rounded-full transition-all duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#b8753a] ${
+                        hideOnMobile ? "hidden sm:block" : ""
+                      } ${
                         isActive
-                          ? "h-16 w-16 border-2 border-[#b8753a] opacity-100 sm:h-20 sm:w-20 md:h-24 md:w-24"
+                          ? "h-14 w-14 border-2 border-[#b8753a] opacity-100 sm:h-20 sm:w-20 md:h-24 md:w-24"
                           : isSide
-                          ? "h-12 w-12 border-2 border-transparent opacity-80 hover:opacity-100 sm:h-16 sm:w-16 md:h-20 md:w-20"
-                          : "h-12 w-12 border-2 border-transparent opacity-45 sm:h-16 sm:w-16 md:h-20 md:w-20"
+                          ? "h-11 w-11 border-2 border-transparent opacity-80 hover:opacity-100 sm:h-16 sm:w-16 md:h-20 md:w-20"
+                          : "h-11 w-11 border-2 border-transparent opacity-45 sm:h-14 sm:w-14 md:h-16 md:w-16"
                       }`}
                     >
                       <img
@@ -149,57 +152,59 @@ export function InsiderGlimpses() {
               <button
                 aria-label="Next learner"
                 onClick={next}
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1d6c8] text-gray-700 transition hover:bg-[#e8c2b0] sm:h-10 sm:w-10"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1d6c8] text-gray-700 transition hover:bg-[#e8c2b0] focus:outline-none focus:ring-2 focus:ring-[#b8753a] sm:h-10 sm:w-10"
               >
                 <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
               </button>
             </div>
 
-            <a
-              href="#counselling"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-[#f6873b] px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-[#e0732a] sm:mt-10 sm:w-auto sm:px-7 sm:py-3.5 sm:text-base"
-            >
-              Free Career Counselling from Experts
-            </a>
+            <div className="mt-7 flex justify-center sm:mt-9 lg:justify-start">
+              <a
+                href="/"
+                className="inline-flex w-full max-w-sm items-center justify-center rounded-md bg-[#f6873b] px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-[#e0732a] sm:w-auto sm:px-7 sm:py-3.5 sm:text-base"
+              >
+                Free Career Counselling from Experts
+              </a>
+            </div>
           </div>
 
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-[260px] sm:w-[300px] md:w-[340px]">
-              <div className="rounded-[40px] bg-[#0f0f0f] p-2 shadow-2xl">
-                <div className="h-[430px] overflow-hidden rounded-[34px] bg-white sm:h-[520px]">
-                  <div className="mx-auto mt-2 h-1.5 w-20 rounded-full bg-gray-700/30" />
+          <div className="flex w-full justify-center lg:justify-end">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[340px]">
+              <div className="rounded-[32px] bg-[#0f0f0f] p-1.5 shadow-2xl sm:rounded-[40px] sm:p-2">
+                <div className="h-[390px] overflow-hidden rounded-[28px] bg-white sm:h-[500px] sm:rounded-[34px] md:h-[520px]">
+                  <div className="mx-auto mt-2 h-1.5 w-16 rounded-full bg-gray-700/30 sm:w-20" />
 
-                  <div className="px-4 pt-4 sm:px-5 sm:pt-5">
+                  <div className="px-3 pt-4 sm:px-5 sm:pt-5">
                     <div className="flex items-start gap-3">
                       <img
                         src={learner.image}
                         alt={learner.name}
                         loading="lazy"
-                        className="h-11 w-11 rounded-full object-cover"
+                        className="h-10 w-10 shrink-0 rounded-full object-cover sm:h-11 sm:w-11"
                       />
 
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-2">
-                          <p className="truncate text-[15px] font-semibold text-gray-900">
+                          <p className="truncate text-sm font-semibold text-gray-900 sm:text-[15px]">
                             {learner.name}
                           </p>
 
-                          <button className="shrink-0 text-sm font-semibold text-[#0a66c2]">
+                          <button className="shrink-0 text-xs font-semibold text-[#0a66c2] sm:text-sm">
                             + Follow
                           </button>
                         </div>
 
-                        <p className="line-clamp-2 text-xs text-gray-600">
+                        <p className="line-clamp-2 text-[11px] text-gray-600 sm:text-xs">
                           {learner.headline}
                         </p>
 
-                        <p className="text-[11px] text-gray-500">
+                        <p className="text-[10px] text-gray-500 sm:text-[11px]">
                           {learner.age} • 🌐
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-4 max-h-[300px] overflow-y-auto pr-2 text-[11px] leading-relaxed text-gray-800 whitespace-pre-line sm:max-h-[400px] sm:text-[12px]">
+                    <div className="mt-4 max-h-[245px] overflow-y-auto pr-2 whitespace-pre-line text-[11px] leading-relaxed text-gray-800 sm:max-h-[350px] sm:text-xs md:max-h-[375px]">
                       {learner.body}
                     </div>
                   </div>
@@ -207,7 +212,6 @@ export function InsiderGlimpses() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

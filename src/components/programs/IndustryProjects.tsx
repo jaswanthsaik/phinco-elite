@@ -155,7 +155,7 @@ export function IndustryProjects() {
 
         <p className="mt-6 text-sm text-gray-700">
           <span className="font-bold text-orange-500">Important Note:</span> The final number of quizzes, assignments, and discussions will be confirmed closer to the program start. To know more{" "}
-          <a href="#" className="font-semibold text-blue-600 underline">
+          <a href="/" className="font-semibold text-blue-600 underline">
             check eligibility
           </a>
         </p>

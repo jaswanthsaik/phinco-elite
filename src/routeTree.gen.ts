@@ -9,15 +9,72 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesNowGeneralistRouteImport } from './routes/servicesNowGeneralist'
+import { Route as ServicesNowDevelopersRouteImport } from './routes/servicesNowDevelopers'
 import { Route as ServicesNowRouteImport } from './routes/services-now'
+import { Route as PlacementStoriesRouteImport } from './routes/placement-stories'
+import { Route as MastersGeneralistRouteImport } from './routes/mastersGeneralist'
+import { Route as MastersDevelopersRouteImport } from './routes/mastersDevelopers'
+import { Route as DataScienceGeneralistRouteImport } from './routes/dataScienceGeneralist'
+import { Route as DataScienceDevelopersRouteImport } from './routes/dataScienceDevelopers'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as AgenticGeneralistRouteImport } from './routes/agenticGeneralist'
 import { Route as AgenticDevelopersRouteImport } from './routes/agenticDevelopers'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
+import { Route as BlogsTopicRouteImport } from './routes/blogs.$topic'
 
+const ServicesNowGeneralistRoute = ServicesNowGeneralistRouteImport.update({
+  id: '/servicesNowGeneralist',
+  path: '/servicesNowGeneralist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesNowDevelopersRoute = ServicesNowDevelopersRouteImport.update({
+  id: '/servicesNowDevelopers',
+  path: '/servicesNowDevelopers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesNowRoute = ServicesNowRouteImport.update({
   id: '/services-now',
   path: '/services-now',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlacementStoriesRoute = PlacementStoriesRouteImport.update({
+  id: '/placement-stories',
+  path: '/placement-stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MastersGeneralistRoute = MastersGeneralistRouteImport.update({
+  id: '/mastersGeneralist',
+  path: '/mastersGeneralist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MastersDevelopersRoute = MastersDevelopersRouteImport.update({
+  id: '/mastersDevelopers',
+  path: '/mastersDevelopers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataScienceGeneralistRoute = DataScienceGeneralistRouteImport.update({
+  id: '/dataScienceGeneralist',
+  path: '/dataScienceGeneralist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataScienceDevelopersRoute = DataScienceDevelopersRouteImport.update({
+  id: '/dataScienceDevelopers',
+  path: '/dataScienceDevelopers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsRoute = BlogsRouteImport.update({
+  id: '/blogs',
+  path: '/blogs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgenticGeneralistRoute = AgenticGeneralistRouteImport.update({
@@ -30,78 +87,236 @@ const AgenticDevelopersRoute = AgenticDevelopersRouteImport.update({
   path: '/agenticDevelopers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsIndexRoute = BlogsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogsRoute,
 } as any)
 const ProgramsDataScienceAiRoute = ProgramsDataScienceAiRouteImport.update({
   id: '/programs/data-science-ai',
   path: '/programs/data-science-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogsTopicRoute = BlogsTopicRouteImport.update({
+  id: '/$topic',
+  path: '/$topic',
+  getParentRoute: () => BlogsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/blogs': typeof BlogsRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
+  '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/mastersDevelopers': typeof MastersDevelopersRoute
+  '/mastersGeneralist': typeof MastersGeneralistRoute
+  '/placement-stories': typeof PlacementStoriesRoute
   '/services-now': typeof ServicesNowRoute
+  '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
+  '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
+  '/blogs/': typeof BlogsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/contact': typeof ContactRoute
+  '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
+  '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/mastersDevelopers': typeof MastersDevelopersRoute
+  '/mastersGeneralist': typeof MastersGeneralistRoute
+  '/placement-stories': typeof PlacementStoriesRoute
   '/services-now': typeof ServicesNowRoute
+  '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
+  '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
+  '/blogs': typeof BlogsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
+  '/blogs': typeof BlogsRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
+  '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/mastersDevelopers': typeof MastersDevelopersRoute
+  '/mastersGeneralist': typeof MastersGeneralistRoute
+  '/placement-stories': typeof PlacementStoriesRoute
   '/services-now': typeof ServicesNowRoute
+  '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
+  '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
+  '/blogs/': typeof BlogsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
+    | '/blogs'
+    | '/contact'
+    | '/dataScienceDevelopers'
+    | '/dataScienceGeneralist'
+    | '/mastersDevelopers'
+    | '/mastersGeneralist'
+    | '/placement-stories'
     | '/services-now'
+    | '/servicesNowDevelopers'
+    | '/servicesNowGeneralist'
+    | '/blogs/$topic'
     | '/programs/data-science-ai'
+    | '/blogs/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
+    | '/contact'
+    | '/dataScienceDevelopers'
+    | '/dataScienceGeneralist'
+    | '/mastersDevelopers'
+    | '/mastersGeneralist'
+    | '/placement-stories'
     | '/services-now'
+    | '/servicesNowDevelopers'
+    | '/servicesNowGeneralist'
+    | '/blogs/$topic'
     | '/programs/data-science-ai'
+    | '/blogs'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
+    | '/blogs'
+    | '/contact'
+    | '/dataScienceDevelopers'
+    | '/dataScienceGeneralist'
+    | '/mastersDevelopers'
+    | '/mastersGeneralist'
+    | '/placement-stories'
     | '/services-now'
+    | '/servicesNowDevelopers'
+    | '/servicesNowGeneralist'
+    | '/blogs/$topic'
     | '/programs/data-science-ai'
+    | '/blogs/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AgenticDevelopersRoute: typeof AgenticDevelopersRoute
   AgenticGeneralistRoute: typeof AgenticGeneralistRoute
+  BlogsRoute: typeof BlogsRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  DataScienceDevelopersRoute: typeof DataScienceDevelopersRoute
+  DataScienceGeneralistRoute: typeof DataScienceGeneralistRoute
+  MastersDevelopersRoute: typeof MastersDevelopersRoute
+  MastersGeneralistRoute: typeof MastersGeneralistRoute
+  PlacementStoriesRoute: typeof PlacementStoriesRoute
   ServicesNowRoute: typeof ServicesNowRoute
+  ServicesNowDevelopersRoute: typeof ServicesNowDevelopersRoute
+  ServicesNowGeneralistRoute: typeof ServicesNowGeneralistRoute
   ProgramsDataScienceAiRoute: typeof ProgramsDataScienceAiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/servicesNowGeneralist': {
+      id: '/servicesNowGeneralist'
+      path: '/servicesNowGeneralist'
+      fullPath: '/servicesNowGeneralist'
+      preLoaderRoute: typeof ServicesNowGeneralistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicesNowDevelopers': {
+      id: '/servicesNowDevelopers'
+      path: '/servicesNowDevelopers'
+      fullPath: '/servicesNowDevelopers'
+      preLoaderRoute: typeof ServicesNowDevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services-now': {
       id: '/services-now'
       path: '/services-now'
       fullPath: '/services-now'
       preLoaderRoute: typeof ServicesNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/placement-stories': {
+      id: '/placement-stories'
+      path: '/placement-stories'
+      fullPath: '/placement-stories'
+      preLoaderRoute: typeof PlacementStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mastersGeneralist': {
+      id: '/mastersGeneralist'
+      path: '/mastersGeneralist'
+      fullPath: '/mastersGeneralist'
+      preLoaderRoute: typeof MastersGeneralistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mastersDevelopers': {
+      id: '/mastersDevelopers'
+      path: '/mastersDevelopers'
+      fullPath: '/mastersDevelopers'
+      preLoaderRoute: typeof MastersDevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dataScienceGeneralist': {
+      id: '/dataScienceGeneralist'
+      path: '/dataScienceGeneralist'
+      fullPath: '/dataScienceGeneralist'
+      preLoaderRoute: typeof DataScienceGeneralistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dataScienceDevelopers': {
+      id: '/dataScienceDevelopers'
+      path: '/dataScienceDevelopers'
+      fullPath: '/dataScienceDevelopers'
+      preLoaderRoute: typeof DataScienceDevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs': {
+      id: '/blogs'
+      path: '/blogs'
+      fullPath: '/blogs'
+      preLoaderRoute: typeof BlogsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agenticGeneralist': {
@@ -118,12 +333,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgenticDevelopersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/blogs/': {
+      id: '/blogs/'
+      path: '/'
+      fullPath: '/blogs/'
+      preLoaderRoute: typeof BlogsIndexRouteImport
+      parentRoute: typeof BlogsRoute
     }
     '/programs/data-science-ai': {
       id: '/programs/data-science-ai'
@@ -132,14 +361,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsDataScienceAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blogs/$topic': {
+      id: '/blogs/$topic'
+      path: '/$topic'
+      fullPath: '/blogs/$topic'
+      preLoaderRoute: typeof BlogsTopicRouteImport
+      parentRoute: typeof BlogsRoute
+    }
   }
 }
 
+interface BlogsRouteChildren {
+  BlogsTopicRoute: typeof BlogsTopicRoute
+  BlogsIndexRoute: typeof BlogsIndexRoute
+}
+
+const BlogsRouteChildren: BlogsRouteChildren = {
+  BlogsTopicRoute: BlogsTopicRoute,
+  BlogsIndexRoute: BlogsIndexRoute,
+}
+
+const BlogsRouteWithChildren = BlogsRoute._addFileChildren(BlogsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AgenticDevelopersRoute: AgenticDevelopersRoute,
   AgenticGeneralistRoute: AgenticGeneralistRoute,
+  BlogsRoute: BlogsRouteWithChildren,
+  ContactRoute: ContactRoute,
+  DataScienceDevelopersRoute: DataScienceDevelopersRoute,
+  DataScienceGeneralistRoute: DataScienceGeneralistRoute,
+  MastersDevelopersRoute: MastersDevelopersRoute,
+  MastersGeneralistRoute: MastersGeneralistRoute,
+  PlacementStoriesRoute: PlacementStoriesRoute,
   ServicesNowRoute: ServicesNowRoute,
+  ServicesNowDevelopersRoute: ServicesNowDevelopersRoute,
+  ServicesNowGeneralistRoute: ServicesNowGeneralistRoute,
   ProgramsDataScienceAiRoute: ProgramsDataScienceAiRoute,
 }
 export const routeTree = rootRouteImport

@@ -4,13 +4,12 @@ import {
   Briefcase,
   CheckCircle2,
   ChevronRight,
-  Cloud,
   Code2,
   Download,
   FileBadge,
   GraduationCap,
   Sparkles,
-  Star,
+  Star
 } from "lucide-react";
 import type { ComponentType } from "react";
 import { useState } from "react";
@@ -25,7 +24,6 @@ type Category = {
 const CATEGORIES: Category[] = [
   { id: "popular", label: "Popular Program", Icon: Star },
   { id: "genai", label: "GEN AI & Agentic AI", Icon: Sparkles, badge: "NEW" },
-  { id: "cloud", label: "Cloud & DevOps", Icon: Cloud },
   { id: "master", label: "Master Certification", Icon: GraduationCap },
   { id: "sde", label: "SDE", Icon: Code2 },
   { id: "datasci", label: "Data Sci & GenAI", Icon: BarChart3 },
@@ -62,15 +60,6 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
         "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=900&auto=format&fit=crop",
     },
     {
-      title: "AI-Powered Cloud & DevOps Master Program",
-      duration: "9 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
-      audience: "Designed by industry experts",
-      partners: ["IBM", "Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=900&auto=format&fit=crop",
-    },
-    {
       title: "SDE Master Program With GenAI & Agentic AI",
       duration: "11 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
@@ -78,33 +67,6 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
       partners: ["IBM", "Microsoft"],
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=900&auto=format&fit=crop",
-    },
-    {
-      title: "GenAI & AgenticAI for Cloud & DevOps",
-      duration: "5 Months | 2 Capstone Projects",
-      cert: "Project Certification from IBM",
-      audience: "For Network Professionals",
-      partners: ["IBM"],
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop",
-    },
-    {
-      title: "Applied AI Practitioner Program",
-      duration: "4 Months | 2 Capstone Projects",
-      cert: "Certification from IIT Patna",
-      audience: "For System Administrators",
-      partners: ["IBM"],
-      image:
-        "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=900&auto=format&fit=crop",
-    },
-    {
-      title: "AI Practitioner Program",
-      duration: "4 Months | 2 Capstone Projects",
-      cert: "Certification from IIT Patna",
-      audience: "For System Administrators",
-      partners: ["IBM"],
-      image:
-        "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=900&auto=format&fit=crop",
     },
   ],
 
@@ -135,36 +97,6 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
       partners: ["IBM"],
       image:
         "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=900&auto=format&fit=crop",
-    },
-  ],
-
-  cloud: [
-    {
-      title: "Cloud & DevOps for IT Support & IT Operations",
-      duration: "5 months",
-      cert: "Certification form Microsoft",
-      audience: "For IT Support & IT Operations",
-      partners: ["Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=900&auto=format&fit=crop",
-    },
-    {
-      title: "Cloud & DevOps for Database Administrators",
-      duration: "5 months",
-      cert: "Certification form Microsoft",
-      audience: "For Database Administrators",
-      partners: ["Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=900&auto=format&fit=crop",
-    },
-    {
-      title: "Advanced Cloud & DevOps Program",
-      duration: "5 months",
-      cert: "Certification form Microsoft",
-      audience: "For Database Administrators",
-      partners: ["Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=900&auto=format&fit=crop",
     },
   ],
 
@@ -290,7 +222,7 @@ export function KickstartPrograms() {
   const programs = PROGRAMS_BY_CATEGORY[active] ?? [];
 
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section id='programs' className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl lg:text-5xl">
           Kickstart your career with our programs
@@ -323,7 +255,7 @@ export function KickstartPrograms() {
                 <button
                   key={c.id}
                   onClick={() => setActive(c.id)}
-                  className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
+                  className={`flex w-full cursor-pointer items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                     isActive
                       ? "bg-[#06243d] text-white shadow"
                       : "bg-white text-black shadow-sm hover:bg-slate-50"

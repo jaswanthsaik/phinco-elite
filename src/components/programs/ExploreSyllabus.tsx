@@ -1,5 +1,7 @@
+import emailjs from "@emailjs/browser";
 import { Building2, ChevronDown, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
+import { toast } from "sonner";
 
 type Term = {
   title: string;
@@ -7,6 +9,31 @@ type Term = {
   heading?: string;
   sections: { heading?: string; items: string[] }[];
 };
+
+const EMAILJS_SERVICE_ID = "service_1p7ynrp";
+const EMAILJS_TEMPLATE_ID = "template_0aw959n";
+const EMAILJS_PUBLIC_KEY = "d0BucBhFNX26TUOgd";
+
+const TERMS_URL = "https://phincoelite.com/Terms%20&%20Conditions";
+const PRIVACY_URL = "https://phincoelite.com/Privacy-Policy";
+
+const COURSES = [
+  "GenAI & Agentic AI Developer",
+  "GenAI & Agentic AI Generalist",
+  "Data Science & GenAI Developer",
+  "Data Science & GenAI Generalist",
+  "Services Now for Developer",
+  "Services Now for Generalist",
+  "Masters for Developer",
+  "Masters for Generalist",
+];
+
+const PROFILE_TYPES = [
+  "Freshers",
+  "Career Gaps & Restarters",
+  "IT Working Professionals",
+  "Non-IT Working Professionals",
+];
 
 const TERMS: Term[] = [
   {
@@ -133,6 +160,52 @@ const TERMS: Term[] = [
 
 export function ExploreSyllabus() {
   const [openIndex, setOpenIndex] = useState<number>(0);
+  const [agreed, setAgreed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!agreed) {
+      toast.error("Please agree to the Terms & Conditions and Privacy Policy.");
+      return;
+    }
+
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+
+    try {
+      const data = new FormData(form);
+
+      const payload = {
+        full_name: String(data.get("full_name") || ""),
+        email: String(data.get("email") || ""),
+        phone: String(data.get("phone") || ""),
+        course: String(data.get("course") || ""),
+        profile_type: String(data.get("profile_type") || ""),
+      };
+
+      const configured =
+        !EMAILJS_SERVICE_ID.startsWith("YOUR_") &&
+        !EMAILJS_TEMPLATE_ID.startsWith("YOUR_") &&
+        !EMAILJS_PUBLIC_KEY.startsWith("YOUR_");
+
+      if (configured) {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload, {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        });
+      }
+
+      toast.success("Thanks! Our team will reach out to you shortly.");
+      form.reset();
+      setAgreed(false);
+    } catch (err) {
+      toast.error("Something went wrong. Please try again or call us.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
     <section className="bg-white py-10 sm:py-14 lg:py-20">
@@ -149,10 +222,8 @@ export function ExploreSyllabus() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 lg:mt-12 lg:grid-cols-[1fr_360px]">
-          {/* Syllabus accordion */}
           <div className="relative min-w-0">
             <div className="relative space-y-4 pl-10 sm:pl-14 lg:pl-16">
-              {/* Vertical dashed line */}
               <div
                 aria-hidden
                 className="absolute bottom-6 left-4 top-5 border-l-2 border-dashed border-slate-300 sm:left-6"
@@ -163,7 +234,6 @@ export function ExploreSyllabus() {
 
                 return (
                   <div key={term.title} className="relative">
-                    {/* Timeline icon */}
                     <span
                       className={`absolute -left-10 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border-2 bg-white shadow-sm sm:-left-14 sm:h-10 sm:w-10 lg:-left-16 lg:h-12 lg:w-12 ${
                         isOpen ? "border-blue-500" : "border-slate-300"
@@ -242,22 +312,27 @@ export function ExploreSyllabus() {
             </div>
           </div>
 
-          {/* Consultation form */}
           <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-md sm:p-6 lg:sticky lg:top-6">
             <h3 className="text-center text-lg font-bold leading-7 text-slate-900 sm:text-left">
               Free Consultation with{" "}
               <span className="text-blue-600">Expert</span>
             </h3>
 
-            <form className="mt-5 space-y-4">
+            <form onSubmit={handleSubmit} className="mt-5 space-y-4">
               <input
+                name="full_name"
                 type="text"
+                required
+                maxLength={100}
                 placeholder="Enter your Full Name *"
                 className="w-full border-0 border-b border-slate-300 bg-transparent py-3 text-sm placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-0"
               />
 
               <input
+                name="email"
                 type="email"
+                required
+                maxLength={255}
                 placeholder="Enter your Email *"
                 className="w-full border-0 border-b border-slate-300 bg-transparent py-3 text-sm placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-0"
               />
@@ -266,35 +341,86 @@ export function ExploreSyllabus() {
                 <span className="shrink-0 text-sm text-slate-600">🇮🇳 +91</span>
 
                 <input
+                  name="phone"
                   type="tel"
+                  required
+                  maxLength={20}
                   placeholder="Phone Number"
                   className="min-w-0 flex-1 border-0 bg-transparent text-sm placeholder:text-slate-400 focus:outline-none focus:ring-0"
                 />
               </div>
 
               <select
-                className="w-full border-0 border-b border-slate-300 bg-transparent py-3 text-sm text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-0"
+                name="course"
+                required
                 defaultValue=""
+                className="w-full border-0 border-b border-slate-300 bg-transparent py-3 text-sm text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-0"
               >
                 <option value="" disabled>
-                  Work Experience *
+                  Select Course *
                 </option>
-                <option>0-1 years</option>
-                <option>1-3 years</option>
-                <option>3-5 years</option>
-                <option>5+ years</option>
+
+                {COURSES.map((course) => (
+                  <option key={course} value={course}>
+                    {course}
+                  </option>
+                ))}
               </select>
 
-              <p className="text-[11px] leading-5 text-slate-400">
-                By submitting the form, you agree to our Terms and Conditions
-                and our Privacy Policy.
-              </p>
+              <select
+                name="profile_type"
+                required
+                defaultValue=""
+                className="w-full border-0 border-b border-slate-300 bg-transparent py-3 text-sm text-slate-500 focus:border-blue-500 focus:outline-none focus:ring-0"
+              >
+                <option value="" disabled>
+                  Profile Type *
+                </option>
+
+                {PROFILE_TYPES.map((profile) => (
+                  <option key={profile} value={profile}>
+                    {profile}
+                  </option>
+                ))}
+              </select>
+
+              <label className="flex items-start gap-2 text-[11px] leading-5 text-slate-400">
+                <input
+                  type="checkbox"
+                  checked={agreed}
+                  onChange={(e) => setAgreed(e.target.checked)}
+                  className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-blue-600"
+                />
+
+                <span>
+                  By submitting the form, you agree to our{" "}
+                  <a
+                    href={TERMS_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-blue-600 underline"
+                  >
+                    Terms and Conditions
+                  </a>{" "}
+                  and our{" "}
+                  <a
+                    href={PRIVACY_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-blue-600 underline"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </span>
+              </label>
 
               <button
-                type="button"
-                className="w-full cursor-pointer rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-blue-700"
+                type="submit"
+                disabled={submitting}
+                className="w-full cursor-pointer rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Apply For Counselling
+                {submitting ? "Submitting..." : "Apply For Counselling"}
               </button>
             </form>
           </aside>

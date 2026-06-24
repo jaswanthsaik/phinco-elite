@@ -1,7 +1,34 @@
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useState, type FormEvent } from "react";
+import { toast } from "sonner";
+
+const EMAILJS_SERVICE_ID = "service_1p7ynrp";
+const EMAILJS_TEMPLATE_ID = "template_0aw959n";
+const EMAILJS_PUBLIC_KEY = "d0BucBhFNX26TUOgd";
+
+const TERMS_URL = "https://phincoelite.com/Terms%20&%20Conditions";
+const PRIVACY_URL = "https://phincoelite.com/Privacy-Policy";
+
+const COURSES = [
+  "GenAI & Agentic AI Developer",
+  "GenAI & Agentic AI Generalist",
+  "Data Science & GenAI Developer",
+  "Data Science & GenAI Generalist",
+  "Services Now for Developer",
+  "Services Now for Generalist",
+  "Masters for Developer",
+  "Masters for Generalist",
+];
+
+const PROFILE_TYPES = [
+  "Freshers",
+  "Career Gaps & Restarters",
+  "IT Working Professionals",
+  "Non-IT Working Professionals",
+];
 
 const logos = [
   { name: "J.P.Morgan", img: portrait1 },
@@ -18,16 +45,52 @@ const logos = [
 export function IndustryLeading() {
   const scrollingLogos = [...logos, ...logos];
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    experience: "",
-    course: "",
-  });
+  const [agreed, setAgreed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const update = (k: string, v: string) =>
-    setForm((p) => ({ ...p, [k]: v }));
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!agreed) {
+      toast.error("Please agree to the Terms & Conditions and Privacy Policy.");
+      return;
+    }
+
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+
+    try {
+      const data = new FormData(form);
+
+      const payload = {
+        full_name: String(data.get("full_name") || ""),
+        email: String(data.get("email") || ""),
+        phone: String(data.get("phone") || ""),
+        course: String(data.get("course") || ""),
+        profile_type: String(data.get("profile_type") || ""),
+      };
+
+      const configured =
+        !EMAILJS_SERVICE_ID.startsWith("YOUR_") &&
+        !EMAILJS_TEMPLATE_ID.startsWith("YOUR_") &&
+        !EMAILJS_PUBLIC_KEY.startsWith("YOUR_");
+
+      if (configured) {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload, {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        });
+      }
+
+      toast.success("Thanks! Our team will reach out to you shortly.");
+      form.reset();
+      setAgreed(false);
+    } catch (err) {
+      toast.error("Something went wrong. Please try again or call us.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#0a2540] via-[#0f1a2a] to-[#3a1a0a] py-12 sm:py-16 lg:py-20">
@@ -55,6 +118,7 @@ export function IndustryLeading() {
               alt="Shravanthi"
               className="h-11 w-11 rounded-full object-cover sm:h-12 sm:w-12"
             />
+
             <div>
               <div className="text-sm font-semibold text-orange-400 sm:text-base">
                 Shravanth A.
@@ -97,23 +161,25 @@ export function IndustryLeading() {
           </h3>
 
           <form
+            onSubmit={handleSubmit}
             className="mt-5 space-y-4 sm:mt-6 sm:space-y-5"
-            onSubmit={(e) => e.preventDefault()}
           >
             <input
+              name="full_name"
               type="text"
+              required
+              maxLength={100}
               placeholder="Enter your Full Name *"
-              value={form.name}
-              onChange={(e) => update("name", e.target.value)}
-              className="w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm outline-none focus:border-[#1d6bff]"
+              className={inputClass}
             />
 
             <input
+              name="email"
               type="email"
+              required
+              maxLength={255}
               placeholder="Enter your Email *"
-              value={form.email}
-              onChange={(e) => update("email", e.target.value)}
-              className="w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm outline-none focus:border-[#1d6bff]"
+              className={inputClass}
             />
 
             <div className="flex items-center gap-3 border-b border-slate-200 py-3">
@@ -123,49 +189,85 @@ export function IndustryLeading() {
               </span>
 
               <input
+                name="phone"
                 type="tel"
-                placeholder="+91"
-                value={form.phone}
-                onChange={(e) => update("phone", e.target.value)}
+                required
+                maxLength={20}
+                placeholder="+91 XXXXXXXXXX"
                 className="min-w-0 flex-1 bg-transparent text-sm outline-none"
               />
             </div>
 
             <select
-              value={form.experience}
-              onChange={(e) => update("experience", e.target.value)}
-              className="w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-500 outline-none focus:border-[#1d6bff]"
+              name="course"
+              required
+              defaultValue=""
+              className={selectClass}
             >
-              <option value="">Work Experience *</option>
-              <option>0-1 years</option>
-              <option>1-3 years</option>
-              <option>3-5 years</option>
-              <option>5+ years</option>
+              <option value="" disabled>
+                Select Course *
+              </option>
+
+              {COURSES.map((course) => (
+                <option key={course} value={course}>
+                  {course}
+                </option>
+              ))}
             </select>
 
             <select
-              value={form.course}
-              onChange={(e) => update("course", e.target.value)}
-              className="w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-500 outline-none focus:border-[#1d6bff]"
+              name="profile_type"
+              required
+              defaultValue=""
+              className={selectClass}
             >
-              <option value="">Select Course Preference *</option>
-              <option>Data Science</option>
-              <option>GenAI</option>
-              <option>Cloud DevOps</option>
-              <option>Business Analytics</option>
+              <option value="" disabled>
+                Profile Type *
+              </option>
+
+              {PROFILE_TYPES.map((profile) => (
+                <option key={profile} value={profile}>
+                  {profile}
+                </option>
+              ))}
             </select>
 
-            <p className="text-xs leading-relaxed text-slate-400">
-              By submitting the form, you agree to our{" "}
-              <span className="underline">Terms and Conditions</span> and our{" "}
-              <span className="underline">Privacy Policy</span>
-            </p>
+            <label className="flex items-start gap-3 text-xs leading-relaxed text-slate-400">
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#1d6bff]"
+              />
+
+              <span>
+                By submitting the form, you agree to our{" "}
+                <a
+                  href={TERMS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-[#1d6bff] underline"
+                >
+                  Terms and Conditions
+                </a>{" "}
+                and our{" "}
+                <a
+                  href={PRIVACY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-[#1d6bff] underline"
+                >
+                  Privacy Policy
+                </a>
+              </span>
+            </label>
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-[#1d6bff] py-3 text-sm font-semibold text-white shadow-md hover:bg-[#155fd9] sm:text-base"
+              disabled={submitting}
+              className="w-full rounded-lg bg-[#1d6bff] py-3 text-sm font-semibold text-white shadow-md hover:bg-[#155fd9] disabled:cursor-not-allowed disabled:opacity-60 sm:text-base cursor-pointer"
             >
-              Apply For Counselling
+              {submitting ? "Submitting..." : "Apply For Counselling"}
             </button>
           </form>
         </div>
@@ -200,3 +302,9 @@ export function IndustryLeading() {
     </section>
   );
 }
+
+const inputClass =
+  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm outline-none placeholder:text-slate-400 focus:border-[#1d6bff]";
+
+const selectClass =
+  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-500 outline-none focus:border-[#1d6bff]";
