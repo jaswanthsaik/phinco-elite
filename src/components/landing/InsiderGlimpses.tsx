@@ -160,7 +160,7 @@ export function InsiderGlimpses() {
 
             <div className="mt-7 flex justify-center sm:mt-9 lg:justify-start">
               <a
-                href="/"
+                href="/contact#contactus"
                 className="inline-flex w-full max-w-sm items-center justify-center rounded-md bg-[#f6873b] px-5 py-3 text-sm font-semibold text-white shadow transition hover:bg-[#e0732a] sm:w-auto sm:px-7 sm:py-3.5 sm:text-base"
               >
                 Free Career Counselling from Experts

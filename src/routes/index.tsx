@@ -1,4 +1,5 @@
 import { AICoLabExperience } from "@/components/landing/AICoLabExperience";
+import { CareerPath } from "@/components/landing/CareerPath";
 import { CertificationTrack } from "@/components/landing/CertificationTrack";
 import { DomainsStrip } from "@/components/landing/DomainsStrip";
 import { Header } from "@/components/landing/Header";
@@ -41,7 +42,8 @@ function Index() {
       <main>
         <Hero />
         <DomainsStrip />
-        <CertificationTrack />
+            <CertificationTrack />
+        <CareerPath />
         <KickstartPrograms />
         <AICoLabExperience />
         <WhyChooseLearnbay />

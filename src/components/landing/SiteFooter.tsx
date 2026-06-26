@@ -20,8 +20,8 @@ const COURSES: FooterLink[] = [
   { label: "Data Science & GenAI Generalist", href: "/dataScienceGeneralist" },
   { label: "Services Now for Developer", href: "/servicesNowDevelopers" },
   { label: "Services Now for Generalist", href: "/servicesNowGeneralist" },
-  { label: "Masters for Developer", href: "/mastersDevelopers" },
-  { label: "Masters for Generalist", href: "/mastersGeneralist" },
+  { label: "Masters for Data Scientists", href: "/mastersDevelopers" },
+  { label: "Masters for Full Stack Developers", href: "/mastersGeneralist" },
 ];
 
 // Pulled from the header PHINCO Eduversity mega menu

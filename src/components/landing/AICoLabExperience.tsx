@@ -18,7 +18,7 @@ export function AICoLabExperience() {
         {/* Title cell */}
         <div className="rounded-2xl p-6">
           <h2 className="text-4xl font-extrabold leading-tight">
-            <span className="text-yellow-400">AI Co-Lab</span>
+            <span className="text-yellow-400">Virtual AI Co-Lab</span>
             <br />
             <span className="text-orange-400">Experience</span>
           </h2>

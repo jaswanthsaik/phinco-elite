@@ -184,7 +184,7 @@ export function WhyChooseLearnbay() {
             className="text-transparent"
             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.85)" }}
           >
-            Learnbay?
+            Phinco?
           </span>
         </h2>
 

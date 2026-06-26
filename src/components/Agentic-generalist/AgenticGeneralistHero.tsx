@@ -71,12 +71,16 @@ export function AgenticGeneralistHero() {
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <button className="rounded-lg border border-white/15 bg-[#0f1535] px-8 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#161d4a] sm:text-base">
+          <a
+          href="/contact#contactus"
+          className="rounded-lg border border-white/15 bg-[#0f1535] px-8 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-[#161d4a] sm:text-base">
             View Roadmap
-          </button>
-          <button className="rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/30 transition hover:opacity-90 sm:text-base">
+          </a>
+         <a
+          href="/contact#contactus"
+           className="rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/30 transition hover:opacity-90 sm:text-base">
             Download Syllabus
-          </button>
+          </a>
         </div>
       </div>
     </section>

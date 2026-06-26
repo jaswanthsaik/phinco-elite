@@ -4,32 +4,32 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { TalkToTeam } from "@/components/landing/TalkToTeam";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
-import { AdmissionProcess } from "@/components/programs/AdmissionProcess";
-import { AlumniCompanies } from "@/components/programs/AlumniCompanies";
-import { CertificationCourse } from "@/components/programs/CertificationCourse";
-import { ExploreSyllabus } from "@/components/programs/ExploreSyllabus";
-import { FAQSection } from "@/components/programs/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/FeeBatchDetails";
-import { IndustryProjects } from "@/components/programs/IndustryProjects";
-import { LearningToPlacement } from "@/components/programs/LearningToPlacement";
-import { MeetOurMentors } from "@/components/programs/MeetOurMentors";
-import { OthersVsLearnbayProgram } from "@/components/programs/OthersVsLearnbayProgram";
-import { PlacementSupport } from "@/components/programs/PlacementSupport";
-import { ProgramHero } from "@/components/programs/ProgramHero";
-import { ProgrammingTools } from "@/components/programs/ProgrammingTools";
-import { SupportThatMatters } from "@/components/programs/SupportThatMatters";
+import { AdmissionProcess } from "@/components/programs/mastersGeneralist/AdmissionProcess";
+import { AlumniCompanies } from "@/components/programs/mastersGeneralist/AlumniCompanies";
+import { CertificationCourse } from "@/components/programs/mastersGeneralist/CertificationCourse";
+import { ExploreSyllabus } from "@/components/programs/mastersGeneralist/ExploreSyllabus";
+import { FAQSection } from "@/components/programs/mastersGeneralist/FAQSection";
+import { FeeBatchDetails } from "@/components/programs/mastersGeneralist/FeeBatchDetails";
+import { IndustryProjects } from "@/components/programs/mastersGeneralist/IndustryProjects";
+import { LearningToPlacement } from "@/components/programs/mastersGeneralist/LearningToPlacement";
+import { MeetOurMentors } from "@/components/programs/mastersGeneralist/MeetOurMentors";
+import { OthersVsLearnbayProgram } from "@/components/programs/mastersGeneralist/OthersVsLearnbayProgram";
+import { PlacementSupport } from "@/components/programs/mastersGeneralist/PlacementSupport";
+import { ProgramHero } from "@/components/programs/mastersGeneralist/ProgramHero";
+import { ProgrammingTools } from "@/components/programs/mastersGeneralist/ProgrammingTools";
+import { SupportThatMatters } from "@/components/programs/mastersGeneralist/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/mastersGeneralist")({
   head: () => ({
     meta: [
-      { title: "Masters for Generalist — Phinco Elite" },
+      { title: "Masters for Full Stack Developers — Phinco Elite" },
       {
         name: "description",
         content:
           "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
-      { property: "og:title", content: "Masters for Generalist — Phinco Elite" },
+      { property: "og:title", content: "Masters for Full Stack Developers — Phinco Elite" },
       {
         property: "og:description",
         content: "Industry-ready Data Science & GenAI certification with real AI projects and placement support.",
@@ -44,7 +44,7 @@ function ProgramPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <ProgramHero titleTop="Masters" titleHighlight="for Generalist" />
+        <ProgramHero titleTop="Masters" titleHighlight="for Full Stack Developers" />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

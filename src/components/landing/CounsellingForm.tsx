@@ -29,8 +29,8 @@ const COURSES = [
   "Data Science & GenAI Generalist",
   "Services Now for Developer",
   "Services Now for Generalist",
-  "Masters for Developer",
-  "Masters for Generalist",
+  "Masters for Data Scientists",
+  "Masters for Full Stack Developers",
 ];
 
 const PROFILE_TYPES = [
@@ -84,7 +84,7 @@ export function CounsellingForm() {
   }
 
   return (
-    <section className="bg-background px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <section id="contactus" className="bg-background px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left brand panel */}
@@ -201,7 +201,7 @@ export function CounsellingForm() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full rounded-md bg-brand py-3.5 text-sm font-bold text-primary-foreground transition hover:opacity-90 disabled:opacity-60 cursor-pointer cursor-pointer"
+                className="w-full rounded-md bg-brand py-3.5 text-sm font-bold text-primary-foreground transition hover:opacity-90 disabled:opacity-60 cursor-pointer"
               >
                 {submitting ? "Submitting…" : "Submit"}
               </button>

@@ -89,13 +89,7 @@ interface OjtProgram {
 }
 
 const ojtPrograms: OjtProgram[] = [
-  {
-    label: "GenAI & Agentic AI",
-    children: [
-      { label: "GenAI & Agentic AI Developer", href: "/agenticDevelopers" },
-      { label: "GenAI & Agentic AI Generalist", href: "/agenticGeneralist" },
-    ],
-  },
+ 
   {
     label: "Data Science & GenAI",
     children: [
@@ -112,15 +106,21 @@ const ojtPrograms: OjtProgram[] = [
   {
     label: "Services Now",
     children: [
-      { label: "Services Now for Developer", href: "/servicesNowDevelopers" },
       { label: "Services Now for Generalist", href: "/servicesNowGeneralist" },
+    ],
+  },
+   {
+    label: "GenAI & Agentic AI",
+    children: [
+      { label: "GenAI & Agentic AI Developer", href: "/agenticDevelopers" },
+      { label: "GenAI & Agentic AI Generalist", href: "/agenticGeneralist" },
     ],
   },
   {
     label: "Masters",
     children: [
-      { label: "Masters for Developer", href: "/mastersDevelopers" },
-      { label: "Masters for Generalist", href: "/mastersGeneralist" },
+      { label: "Masters for Data Scientists", href: "/mastersDevelopers" },
+      { label: "Masters for Full Stack Developers", href: "/mastersGeneralist" },
     ],
   },
 ];

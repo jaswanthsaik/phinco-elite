@@ -18,7 +18,7 @@ export function TalkToTeam() {
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
-                  href="mailto:contacts@learnbay.co"
+                  href="/contact#contactus"
                   className="inline-flex items-center justify-center rounded-md bg-[#22c39a] px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow transition hover:bg-[#1aa884]"
                 >
                   Enquire Now
@@ -28,7 +28,7 @@ export function TalkToTeam() {
                   className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-bold text-[#1f8df0] shadow transition hover:bg-gray-100"
                 >
                   <Phone className="h-4 w-4 fill-current" />
-                  091-77956 87988
+                  9912104888
                 </a>
               </div>
             </div>

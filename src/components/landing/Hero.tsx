@@ -1,8 +1,9 @@
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
-
+import { Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
+
 
 function PortraitBadge({
   src,
@@ -68,31 +69,40 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-8 pt-8 sm:px-6 sm:pb-10 lg:grid-cols-[56%_44%] lg:gap-0 lg:px-8">
         <div className="text-center lg:text-left">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[3.2rem] lg:leading-[1.2]">
-            Advance Your Career With Real Industry Projects and{" "}
+            Upgrade your Career with{" "}
             <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              Get Hired
+              Learn to Hire Programs
             </span>
+            —Because Employers Hire Skills Not Just Degrees 
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-sm text-white/80 sm:text-lg lg:mx-0">
-            Join India's #1{" "}
+            Join India’s First{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-300 bg-clip-text font-semibold text-transparent">
-              Project-Based Upskilling
+              On Job Training Programs
             </span>{" "}
-            Platform for Working Professionals
+            for any Job Aspirants without Fake Experience
           </p>
 
           <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <a
+            {/* <a
               href=""
               className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:opacity-90 sm:w-auto sm:text-base"
             >
               <Phone className="h-4 w-4" />
               Get Expert Callback
-            </a>
+            </a> */}
+            <Link
+                      to="/contact"
+                      hash="contactus"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:opacity-90 sm:w-auto sm:text-base"
+                    >
+                       <Phone className="h-4 w-4" />
+                      Get Expert Callback
+            </Link>
 
             <a
-              href=""
+              href="/#certification"
               className="inline-flex w-full items-center justify-center rounded-md border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto sm:text-base"
             >
               Explore Courses

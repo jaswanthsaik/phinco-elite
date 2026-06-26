@@ -19,8 +19,8 @@ const COURSES = [
   "Data Science & GenAI Generalist",
   "Services Now for Developer",
   "Services Now for Generalist",
-  "Masters for Developer",
-  "Masters for Generalist",
+  "Masters for Data Scientists",
+  "Masters for Full Stack Developers",
 ];
 
 const PROFILE_TYPES = [

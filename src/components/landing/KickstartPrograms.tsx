@@ -4,12 +4,10 @@ import {
   Briefcase,
   CheckCircle2,
   ChevronRight,
-  Code2,
   Download,
   FileBadge,
-  GraduationCap,
   Sparkles,
-  Star
+  Star,
 } from "lucide-react";
 import type { ComponentType } from "react";
 import { useState } from "react";
@@ -21,16 +19,8 @@ type Category = {
   badge?: string;
 };
 
-const CATEGORIES: Category[] = [
-  { id: "popular", label: "Popular Program", Icon: Star },
-  { id: "genai", label: "GEN AI & Agentic AI", Icon: Sparkles, badge: "NEW" },
-  { id: "master", label: "Master Certification", Icon: GraduationCap },
-  { id: "sde", label: "SDE", Icon: Code2 },
-  { id: "datasci", label: "Data Sci & GenAI", Icon: BarChart3 },
-  { id: "masters", label: "Master's Degree", Icon: Star },
-];
-
 type Program = {
+  id: string;
   title: string;
   duration: string;
   cert: string;
@@ -39,9 +29,18 @@ type Program = {
   image: string;
 };
 
+const CATEGORIES: Category[] = [
+  { id: "popular", label: "Popular Program", Icon: Star },
+  { id: "datasci", label: "Data Sci & GenAI", Icon: BarChart3 },
+  { id: "servicenow", label: "Services Now", Icon: Sparkles },
+  { id: "genai", label: "GEN AI & Agentic AI", Icon: Sparkles, badge: "NEW" },
+  { id: "masters", label: "Master's Degree", Icon: Star },
+];
+
 const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   popular: [
     {
+      id: "popular-datasci",
       title: "Advanced Data Science & GenAI Master Program",
       duration: "13 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
@@ -51,6 +50,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
         "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=900&auto=format&fit=crop",
     },
     {
+      id: "popular-genai",
       title: "GenAI & Agentic AI Master Certification Program",
       duration: "9 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
@@ -59,19 +59,47 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
       image:
         "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=900&auto=format&fit=crop",
     },
+  ],
+
+  datasci: [
     {
-      title: "SDE Master Program With GenAI & Agentic AI",
-      duration: "11 Months | 4 Capstone Projects",
+      id: "datasci-developer",
+      title: "Advanced Data Science & GenAI Master Program",
+      duration: "13 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
       audience: "Designed For Tech Professionals",
       partners: ["IBM", "Microsoft"],
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=900&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
+    },
+    {
+      id: "datasci-generalist",
+      title: "Advanced Data Science & GenAI Master Program",
+      duration: "13 Months | 4 Capstone Projects",
+      cert: "Project Certification from IBM",
+      audience: "Designed For Tech Professionals",
+      partners: ["IBM", "Microsoft"],
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
+    },
+  ],
+
+  servicenow: [
+    {
+      id: "servicenow-generalist",
+      title: "Services Now for Generalists",
+      duration: "13 Months | 4 Capstone Projects",
+      cert: "Project Certification from IBM",
+      audience: "Designed For Tech Professionals",
+      partners: ["IBM", "Microsoft"],
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
     },
   ],
 
   genai: [
     {
+      id: "genai-developer",
       title: "Advanced Data Science & GenAI Master Program",
       duration: "13 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
@@ -81,6 +109,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop",
     },
     {
+      id: "genai-generalist",
       title: "GenAI & Agentic AI Master Certification Program",
       duration: "9 Months | 4 Capstone Projects",
       cert: "Project Certification from IBM",
@@ -89,55 +118,21 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
       image:
         "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=900&auto=format&fit=crop",
     },
-    {
-      title: "Applied AI Practitioner Program",
-      duration: "4 Months | 2 Capstone Projects",
-      cert: "Certification from IIT Patna",
-      audience: "For Non-Programmers",
-      partners: ["IBM"],
-      image:
-        "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=900&auto=format&fit=crop",
-    },
-  ],
-
-  master: [
-    {
-      title: "Master Certification in Data Science",
-      duration: "10 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
-      audience: "For Working Professionals",
-      partners: ["IBM"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
-    },
-  ],
-
-  sde: [
-    {
-      title: "SDE Master Program With GenAI & Agentic AI",
-      duration: "11 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
-      audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop",
-    },
-  ],
-
-  datasci: [
-    {
-      title: "Advanced Data Science & GenAI Master Program",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
-      audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
-    },
   ],
 
   masters: [
     {
+      id: "masters-datascientists",
+      title: "Master's Degree in AI & Data Science",
+      duration: "18 Months",
+      cert: "Degree Certification",
+      audience: "For Graduates and Professionals",
+      partners: ["IBM"],
+      image:
+        "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=900&auto=format&fit=crop",
+    },
+    {
+      id: "masters-fullstack",
       title: "Master's Degree in AI & Data Science",
       duration: "18 Months",
       cert: "Degree Certification",
@@ -222,7 +217,7 @@ export function KickstartPrograms() {
   const programs = PROGRAMS_BY_CATEGORY[active] ?? [];
 
   return (
-    <section id='programs' className="bg-white py-16 sm:py-20">
+    <section id="programs" className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl lg:text-5xl">
           Kickstart your career with our programs
@@ -246,7 +241,6 @@ export function KickstartPrograms() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[220px_1fr]">
-          {/* Sticky Sidebar */}
           <aside className="space-y-3 self-start lg:sticky lg:top-24">
             {CATEGORIES.map((c) => {
               const isActive = active === c.id;
@@ -283,10 +277,9 @@ export function KickstartPrograms() {
             })}
           </aside>
 
-          {/* Right Cards */}
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {programs.map((p) => (
-              <ProgramCard key={p.title} p={p} />
+              <ProgramCard key={p.id} p={p} />
             ))}
           </div>
         </div>
