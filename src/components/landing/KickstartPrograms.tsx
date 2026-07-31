@@ -41,21 +41,21 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   popular: [
     {
       id: "popular-datasci",
-      title: "Advanced Data Science & GenAI Master Program",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      title: "Data Science with GenAI OJT Program",
+      duration: "4 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=900&auto=format&fit=crop",
     },
     {
       id: "popular-genai",
-      title: "GenAI & Agentic AI Master Certification Program",
-      duration: "9 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      title: "GenAI & Agentic AI Master OJT Program",
+      duration: "4 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "For Working Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=900&auto=format&fit=crop",
     },
@@ -64,21 +64,21 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   datasci: [
     {
       id: "datasci-developer",
-      title: "Advanced Data Science & GenAI Master Program",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      title: " Data Science with GenAI OJT Program",
+      duration: "4 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
     },
     {
       id: "datasci-generalist",
-      title: "Advanced Data Science & GenAI Master Program",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      title: "Data Science with GenAI OJT Program",
+      duration: "4 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
     },
@@ -88,10 +88,10 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
     {
       id: "servicenow-generalist",
       title: "Services Now for Generalists",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      duration: "4 Months | 4 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
     },
@@ -101,20 +101,20 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
     {
       id: "genai-developer",
       title: "Advanced Data Science & GenAI Master Program",
-      duration: "13 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      duration: "8 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "Designed For Tech Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900&auto=format&fit=crop",
     },
     {
       id: "genai-generalist",
       title: "GenAI & Agentic AI Master Certification Program",
-      duration: "9 Months | 4 Capstone Projects",
-      cert: "Project Certification from IBM",
+      duration: "8 Months | 10 Capstone Projects",
+      cert: "Project Certification from Meta",
       audience: "For Working Professionals",
-      partners: ["IBM", "Microsoft"],
+      partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=900&auto=format&fit=crop",
     },
@@ -123,21 +123,21 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   masters: [
     {
       id: "masters-datascientists",
-      title: "Master's Degree in AI & Data Science",
-      duration: "18 Months",
-      cert: "Degree Certification",
+      title: "Master's in AI & Data Science",
+      duration: "12 Months",
+      cert: "Global Valid Certification",
       audience: "For Graduates and Professionals",
-      partners: ["IBM"],
+      partners: ["Meta"],
       image:
         "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=900&auto=format&fit=crop",
     },
     {
       id: "masters-fullstack",
-      title: "Master's Degree in AI & Data Science",
-      duration: "18 Months",
-      cert: "Degree Certification",
+      title: "Master's in AI & Data Science",
+      duration: "12 Months",
+      cert: "Global Valid Certification",
       audience: "For Graduates and Professionals",
-      partners: ["IBM"],
+      partners: ["Meta"],
       image:
         "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=900&auto=format&fit=crop",
     },
@@ -198,13 +198,19 @@ function ProgramCard({ p }: { p: Program }) {
         </ul>
 
         <div className="flex items-center gap-4 pt-2">
-          <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-black px-5 py-2.5 text-xs font-bold text-white hover:bg-slate-800">
-            Brochure <Download className="h-3.5 w-3.5" />
-          </button>
+          <a
+            href="https://wa.me/919912104888"
+            className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-black px-5 py-2.5 text-xs font-bold text-white hover:bg-slate-800"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noreferrer"
+          >Book a Call</a>
 
-          <button className="inline-flex cursor-pointer items-center justify-center rounded-full border border-black px-5 py-2.5 text-xs font-bold text-black hover:bg-slate-50">
-            View Details
-          </button>
+          <a
+          href="mailto:info@phincoelite.com"
+          className="inline-flex cursor-pointer items-center justify-center rounded-full border border-black px-5 py-2.5 text-xs font-bold text-black hover:bg-slate-50">
+            Apply Now
+          </a>
         </div>
       </div>
     </article>
@@ -219,8 +225,8 @@ export function KickstartPrograms() {
   return (
     <section id="programs" className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl lg:text-5xl">
-          Kickstart your career with our programs
+        <h2 className="text-center text-2xl font-extrabold tracking-tight text-slate-800 sm:text-3xl lg:text-4xl">
+          From Learning to Hiring – Kickstart Your Career with Us
         </h2>
 
         <p className="mt-3 text-center text-base text-slate-600">
@@ -249,17 +255,15 @@ export function KickstartPrograms() {
                 <button
                   key={c.id}
                   onClick={() => setActive(c.id)}
-                  className={`flex w-full cursor-pointer items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
-                    isActive
+                  className={`flex w-full cursor-pointer items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${isActive
                       ? "bg-[#06243d] text-white shadow"
                       : "bg-white text-black shadow-sm hover:bg-slate-50"
-                  }`}
+                    }`}
                 >
                   <span className="inline-flex items-center gap-2">
                     <c.Icon
-                      className={`h-5 w-5 ${
-                        isActive ? "text-cyan-400" : "text-sky-500"
-                      }`}
+                      className={`h-5 w-5 ${isActive ? "text-cyan-400" : "text-sky-500"
+                        }`}
                     />
 
                     <span className="leading-tight">{c.label}</span>

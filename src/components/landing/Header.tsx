@@ -435,18 +435,18 @@ export function Header() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-16 lg:flex">
           <OjtMegaMenu
             isOpen={activeDropdown === "OJT Programs"}
             onToggle={() => handleToggle("OJT Programs")}
             onClose={handleClose}
           />
 
-          <EduversityMegaMenu
+          {/* <EduversityMegaMenu
             isOpen={activeDropdown === "PHINCO Eduversity"}
             onToggle={() => handleToggle("PHINCO Eduversity")}
             onClose={handleClose}
-          />
+          /> */}
 
           {navDropdowns.map((dropdown) => (
             <DropdownMenu

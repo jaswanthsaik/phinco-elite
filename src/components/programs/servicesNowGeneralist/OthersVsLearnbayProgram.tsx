@@ -32,7 +32,7 @@ export function OthersVsLearnbayProgram() {
     <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl">
-          Others Vs Learnbay
+          Others Vs PHINCO
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-[1fr_1.2fr_1.2fr] md:items-start md:gap-0">
@@ -54,7 +54,7 @@ export function OthersVsLearnbayProgram() {
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div className="mt-2 text-2xl font-bold">
-              <span className="text-blue-300">Learn</span>bay
+              <span className="text-blue-300">PHINCO</span>ELITE
             </div>
             <h3 className="mt-2 text-lg font-semibold">MasterTrack Certification</h3>
             <ul className="mt-6 space-y-5">

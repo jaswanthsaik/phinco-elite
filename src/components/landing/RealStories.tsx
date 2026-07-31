@@ -3,6 +3,7 @@
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
+import sanskar from "@/assets/sanskar.png";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -22,7 +23,8 @@ const stories: Story[] = [
     name: "Rijul Gaur",
     role: "Data Analyst",
     accent: "#f59e0b",
-    youtubeUrl: "https://www.youtube.com/watch?v=YRJbhFLLPyE",
+    youtubeUrl: "https://www.youtube.com/watch?v=T8cWzZwJTug",
+    
   },
   {
     img: portrait2,
@@ -30,23 +32,23 @@ const stories: Story[] = [
     name: "Jaya Sinha",
     role: "Data Scientist",
     accent: "#f97316",
-    youtubeUrl: "https://www.youtube.com/watch?v=9R3X0JoCLyU",
+    youtubeUrl: "https://www.youtube.com/watch?v=Zv6T1dx0VTg",
   },
   {
-    img: portrait2,
+    img: portrait3,
     company: "Capgemini",
     name: "Mahasweta Sarkar",
     role: "Data Analytics Consultant",
     accent: "#0ea5e9",
-    youtubeUrl: "https://www.youtube.com/watch?v=YRJbhFLLPyE",
+    youtubeUrl: "https://www.youtube.com/watch?v=2JqCGO5jH5w",
   },
   {
-    img: portrait3,
+    img: sanskar,
     company: "TheMathCompany",
     name: "Arvind K.",
     role: "Sr. Data Scientist",
     accent: "#f97316",
-    youtubeUrl: "https://www.youtube.com/watch?v=9R3X0JoCLyU",
+    youtubeUrl: "https://www.youtube.com/watch?v=dyhFns6PRFw",
   },
   {
     img: portrait2,
@@ -54,7 +56,7 @@ const stories: Story[] = [
     name: "Mahasweta Sarkar",
     role: "Data Analytics Consultant",
     accent: "#0ea5e9",
-    youtubeUrl: "https://www.youtube.com/watch?v=YRJbhFLLPyE",
+    youtubeUrl: "https://www.youtube.com/watch?v=5I82nYAjTco",
   },
   {
     img: portrait1,
@@ -117,11 +119,11 @@ export function RealStories() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-4xl font-bold text-[#0a1e3f] md:text-5xl">
-          Real Stories, <span className="italic">Real Success</span>
+          The Proof is in<span className="italic">Our Alumni’s Success.</span>
         </h2>
 
         <p className="mt-3 text-muted-foreground">
-          Discover what our learners say about us
+          Explore our track record of learner success.
         </p>
 
         {/* Carousel */}

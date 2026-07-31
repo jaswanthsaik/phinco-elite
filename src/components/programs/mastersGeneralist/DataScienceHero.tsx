@@ -24,7 +24,7 @@ export function DataScienceHero() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
         <h1 className="text-4xl font-extrabold leading-tight sm:text-6xl">
-          Data Science and{" "}
+          Data Science with{" "}
           <span className="bg-gradient-to-r from-rose-400 via-pink-500 to-indigo-400 bg-clip-text text-transparent">
             GenAI
           </span>
