@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import Certificate from "@/assets/certificate.png";
+import Certificate from "@/assets/Certificate.png";
 
 const TOOLS = [
  "Copilot",
