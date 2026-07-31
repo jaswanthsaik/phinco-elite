@@ -48,7 +48,7 @@ const ML_BLOGS: TopicBlog[] = [
     id: "m2",
     title: "Reasons to Dive into a Master's Journey in Artificial Intelligence",
     description:
-      "Unlock career potential with a Master's in AI. Learn key benefits, career opportunities, and industry demands for advanced AI expertise at Learnbay.",
+      "Unlock career potential with a Master's in AI. Learn key benefits, career opportunities, and industry demands for advanced AI expertise at PHINCO ELITE.",
     author: "Nivin Biswas",
     date: "Sep 20, 2024",
     readTime: "4.5 mins",
@@ -57,7 +57,7 @@ const ML_BLOGS: TopicBlog[] = [
   {
     id: "m3",
     title:
-      "Learnbay blog banner of trending machine learning projects to elevate your skills in 2024",
+      "PHINCO ELITE blog banner of trending machine learning projects to elevate your skills in 2024",
     description:
       "Explore cutting-edge machine learning projects to enhance your skills in 2024. Stay ahead of the curve with these trending projects designed to elevate your skills",
     author: "Nivin Biswas",

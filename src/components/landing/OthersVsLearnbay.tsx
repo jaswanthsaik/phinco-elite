@@ -32,7 +32,7 @@ export function OthersVsLearnbay() {
 
         {/* Heading */}
         <h2 className="mt-20 text-center text-4xl font-bold text-[#0a1e3f] md:text-5xl">
-          Others Vs <span className="italic">Learnbay</span>
+          Others Vs <span className="italic">PHINCO</span>
         </h2>
 
         {/* Comparison */}
@@ -54,7 +54,7 @@ export function OthersVsLearnbay() {
             <div className="mb-6 flex items-center justify-center gap-2 text-white">
               <span className="text-[#1d6bff]">☑</span>
               <span className="text-2xl font-bold">
-                Learn<span className="text-[#1d6bff]">bay</span>
+                PHINCO<span className="text-[#1d6bff]">ELITE</span>
               </span>
             </div>
             <div className="space-y-6">

@@ -29,49 +29,49 @@ type Step = {
 };
 
 const DOMAINS = [
-  { label: "Manufacturing", Icon: Factory, color: "text-orange-400" },
-  { label: "Technology", Icon: Cpu, color: "text-orange-400" },
-  { label: "Consulting", Icon: Network, color: "text-orange-400" },
-  { label: "Healthcare", Icon: HeartPulse, color: "text-orange-400" },
-  { label: "BFSI", Icon: Landmark, color: "text-orange-400" },
   { label: "Retail", Icon: ShoppingBag, color: "text-orange-400" },
+  { label: "Consulting", Icon: Network, color: "text-orange-400" },
+  { label: "Technology", Icon: Cpu, color: "text-orange-400" },
+  { label: "Healthcare", Icon: HeartPulse, color: "text-orange-400" },
+  { label: "Manufacturing", Icon: Factory, color: "text-orange-400" },
+  { label: "BFSI", Icon: Landmark, color: "text-orange-400" },
+  
 ];
 
 const STEPS: Step[] = [
  {
   Icon: Lightbulb,
   iconBg: "bg-blue-600",
-  title: "Training mode",
+  title: "Onboarding phase",
   body: (
     <div>
       <p className="max-w-[620px] text-base font-semibold leading-snug text-slate-300 sm:text-lg md:text-[22px]">
-        You can choose from two flexible training modes to suit your needs and preferences:
+        Pick the training mode that works best for you—we offer two flexible options to suit your needs:
       </p>
 
       <div className="mt-6 flex w-full flex-col gap-3 rounded-2xl bg-gradient-to-r from-[#3b1d10] to-[#0f0a08] px-4 py-4 ring-1 ring-white/10 sm:mt-7 sm:inline-flex sm:w-auto sm:min-w-[455px] sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:rounded-full sm:px-8">
         <span className="inline-flex items-center gap-3 text-sm font-extrabold leading-tight text-white sm:gap-4 sm:text-[16px]">
           <Video className="h-6 w-6 shrink-0 text-rose-500 sm:h-7 sm:w-7" />
           <span>
-            100% Live
+            100% Fully
             <br />
-            online classes
+            Interactive Online Classes
           </span>
         </span>
 
         <span className="inline-flex items-center gap-3 text-sm font-extrabold leading-tight text-white sm:gap-4 sm:text-[16px]">
           <MapPin className="h-6 w-6 shrink-0 text-orange-400 sm:h-7 sm:w-7" />
           <span>
-            Hybrid *
+            Hybrid Mode
             <br />
-            projects
+            Practical Work
           </span>
         </span>
       </div>
 
       <p className="mt-6 max-w-[680px] text-xs font-semibold leading-relaxed text-white sm:mt-7 sm:text-sm sm:leading-loose">
-        <span className="font-extrabold text-orange-400">*Important Note:</span>{" "}
-        Hybrid mode allows learners to benefit from both flexible, remote learning and direct,
-        face-to-face interaction.
+        <span className="font-extrabold text-orange-400">*Key Takeaway:</span>{" "}
+        Hybrid mode combines the convenience of distance learning with the power of direct, in-person interaction.
       </p>
     </div>
   ),
@@ -79,11 +79,11 @@ const STEPS: Step[] = [
   {
     Icon: Coins,
     iconBg: "bg-indigo-600",
-    title: "Specialize in your Domain",
+    title: "Master Your Industry",
     body: (
       <div>
         <p className="max-w-[620px] text-[22px] font-semibold leading-snug text-slate-300">
-          Choose from BFSI, Retail, Healthcare, and more for focused, relevant learning.
+          Select a dedicated track—like BFSI, Retail, or Healthcare—to ensure your learning is deeply relevant and tailored to your career goals.
         </p>
 
         <div className="mt-7 flex flex-wrap gap-3">
@@ -103,18 +103,18 @@ const STEPS: Step[] = [
   {
     Icon: Lightbulb,
     iconBg: "bg-emerald-500",
-    title: "Real Projects, Real Experience",
+    title: "Build a Portfolio That Gets You Hired",
     body: (
       <div>
         <p className="max-w-[620px] text-[22px] font-semibold leading-snug text-slate-300">
-          Master data science & AI by working on 100+ real-world projects with expert guidance.
+          Gain elite data science and AI expertise by executing over 10 authentic industry projects with professional guidance.
         </p>
 
         <div className="mt-7 inline-block rounded-xl bg-gradient-to-r from-[#1f1810] to-[#0f0a08] px-6 py-4 ring-1 ring-white/10">
           <p className="text-base font-bold text-white">
-            Get project <span className="ml-4 text-orange-300">Renowened</span>
+            Earn <span className="ml-4 text-orange-300">Renowned Project</span>
             <br />
-            Certification from: <span className="text-orange-300">Industry</span>
+            Certification from: <span className="text-orange-300">Leading Industry</span>
           </p>
         </div>
       </div>
@@ -123,11 +123,11 @@ const STEPS: Step[] = [
   {
   Icon: Headphones,
   iconBg: "bg-orange-500",
-  title: "Reach your career goals",
+  title: "Turn your career ambitions into reality.",
   body: (
     <div>
       <p className="max-w-[720px] text-[22px] font-semibold leading-snug text-slate-300">
-        Advance your career with our effective Placement Support.
+        From learning to landing the job: Our placement team has you covered.
       </p>
 
       <div className="mt-7 flex flex-wrap gap-4">

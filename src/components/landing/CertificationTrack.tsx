@@ -40,7 +40,7 @@ const PROGRAMS: Program[] = [
     cardBg: "bg-gradient-to-br from-[#5b0006] via-[#260406] to-[#070000]",
     buttonBg: "bg-[#ff7568]",
     bullets: ["Get job ready in 16 weeks", "1 year of placement assurance"],
-    partners: ["IBM", "Microsoft"],
+    partners: ["NASSCOM", "NSDC"],
     skills: ["EXCEL", "SQL", "PYTHON", "POWER BI", "STATS", "GEN AI"],
     highlight: "Domain Specialised Program with Industry Project Certification",
     timeline: "4 Months Live Classes",
@@ -57,7 +57,7 @@ const PROGRAMS: Program[] = [
     cardBg: "bg-gradient-to-br from-[#162b73] via-[#0b3e86] to-[#08265c]",
     buttonBg: "bg-[#17aeea]",
     bullets: ["Get job ready in 16 weeks", "1 year of placement assurance"],
-    partners: ["IBM", "Microsoft"],
+    partners: ["NASSCOM", "NSDC"],
     skills: ["SERVICENOW", "ITSM", "WORKFLOW", "AUTOMATION", "GEN AI"],
     highlight: "Domain Specialised Program with Industry Project Certification",
     timeline: "4 Months Live Classes",
@@ -73,7 +73,7 @@ const PROGRAMS: Program[] = [
     cardBg: "bg-gradient-to-br from-[#005844] via-[#004332] to-[#002d24]",
     buttonBg: "bg-[#10e0a0]",
     bullets: ["Get job ready in 16 weeks", "1 year of placement assurance"],
-    partners: ["IBM", "Microsoft"],
+    partners: ["NASSCOM", "NSDC"],
     skills: ["PYTHON", "LLM", "RAG", "AGENTS", "GEN AI"],
     highlight: "Domain Specialised Program with Industry Project Certification",
     timeline: "4 Months Live Classes",
@@ -89,11 +89,11 @@ const PROGRAMS: Program[] = [
     iconGradient: "from-fuchsia-500 to-indigo-500",
     cardBg: "bg-gradient-to-br from-[#551235] via-[#253f98] to-[#092a63]",
     buttonBg: "bg-[#2ea7ff]",
-    bullets: ["Get job ready in 16 weeks", "1 year of placement assurance"],
-    partners: ["IBM", "Microsoft"],
+    bullets: ["Get job ready in 32 weeks", "1 year of placement assurance"],
+    partners: ["NASSCOM", "NSDC"],
     skills: ["FULL STACK", "DATA SCIENCE", "AI", "PROJECTS", "CAREER READY"],
     highlight: "Domain Specialised Program with Industry Project Certification",
-    timeline: "4 Months Live Classes",
+    timeline: "8 Months Live Classes",
     projects: "20+ Real Domain Projects",
     techHref: "/mastersDevelopers",
     nonTechHref: "/mastersGeneralist",
@@ -165,7 +165,7 @@ function ProgramCard({ p }: { p: Program }) {
 
           <div className="flex flex-wrap items-center gap-3 text-sm text-amber-200">
             <span className="font-semibold">
-              Industry ready program with NASCOM NSDC
+              Industry ready program with
             </span>
 
             {p.partners.map((partner, i) => (

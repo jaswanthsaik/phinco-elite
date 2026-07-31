@@ -65,7 +65,7 @@ export function DataScienceHero() {
               Earn Industry-Ready Certification From
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              IBM
+              Nasscom 
             </span>
           </div>
         </div>

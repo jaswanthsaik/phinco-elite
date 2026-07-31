@@ -106,7 +106,7 @@ export function IndustryLeading() {
           </div>
 
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base">
-            I had a great learning experience at Learnbay. The faculties here
+            I had a great learning experience at PHINCO ELITE. The faculties here
             are top notch. Right from enrollment to getting a good job, they
             keep putting enormous efforts for each and every candidate. Thanks
             to all the trainers, backend team.
