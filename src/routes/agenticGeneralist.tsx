@@ -5,19 +5,19 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { TalkToTeam } from "@/components/landing/TalkToTeam";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
-import { AdmissionProcess } from "@/components/programs/agenticGeneralist/AdmissionProcess";
-import { AlumniCompanies } from "@/components/programs/agenticGeneralist/AlumniCompanies";
-import { CertificationCourse } from "@/components/programs/agenticGeneralist/CertificationCourse";
+import { AdmissionProcess } from "@/components/programs/dataScienceDevelopers/AdmissionProcess";
+import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/AlumniCompanies";
+import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/agenticGeneralist/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/agenticGeneralist/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/agenticGeneralist/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/agenticGeneralist/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/agenticGeneralist/LearningToPlacement";
-import { MeetOurMentors } from "@/components/programs/agenticGeneralist/MeetOurMentors";
-import { OthersVsLearnbayProgram } from "@/components/programs/agenticGeneralist/OthersVsLearnbayProgram";
-import { PlacementSupport } from "@/components/programs/agenticGeneralist/PlacementSupport";
+import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";
+import { OthersVsLearnbayProgram } from "@/components/programs/dataScienceDevelopers/OthersVsLearnbayProgram";
+import { PlacementSupport } from "@/components/programs/dataScienceDevelopers/PlacementSupport";
 import { ProgrammingTools } from "@/components/programs/agenticGeneralist/ProgrammingTools";
-import { SupportThatMatters } from "@/components/programs/agenticGeneralist/SupportThatMatters";
+import { SupportThatMatters } from "@/components/programs/dataScienceDevelopers/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/agenticGeneralist")({

@@ -51,12 +51,13 @@ export function AdmissionProcess() {
             </div>
 
             <div className="mt-10">
-              <button
+              <a
+              href="/contact#contactus"
                 type="button"
                 className="rounded-full bg-gradient-to-r from-rose-500 to-indigo-600 px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:opacity-90 sm:text-base"
               >
                 Request a Demo Class
-              </button>
+              </a>
             </div>
           </div>
 

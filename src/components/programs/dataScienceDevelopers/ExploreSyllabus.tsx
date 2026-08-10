@@ -133,7 +133,7 @@ const TERMS: Term[] = [
     duration: "(2 Weeks)",
     sections: [
       {
-          heading: "Statistics & Business Decision Making",
+        heading: "Statistics & Business Decision Making",
         items: [
           "Types of Data,Measures of Central Tendency,Measures of Dispersion",
           "Probability, Probability Distributions,Sampling Techniques, Hypothesis Testing",
@@ -248,17 +248,15 @@ export function ExploreSyllabus() {
                 return (
                   <div key={term.title} className="relative">
                     <span
-                      className={`absolute -left-10 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border-2 bg-white shadow-sm sm:-left-14 sm:h-10 sm:w-10 lg:-left-16 lg:h-12 lg:w-12 ${
-                        isOpen ? "border-blue-500" : "border-slate-300"
-                      }`}
+                      className={`absolute -left-10 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border-2 bg-white shadow-sm sm:-left-14 sm:h-10 sm:w-10 lg:-left-16 lg:h-12 lg:w-12 ${isOpen ? "border-blue-500" : "border-slate-300"
+                        }`}
                     >
                       {i === 0 ? (
                         <Sparkles className="h-4 w-4 text-blue-500 sm:h-5 sm:w-5" />
                       ) : (
                         <Building2
-                          className={`h-4 w-4 sm:h-5 sm:w-5 ${
-                            isOpen ? "text-blue-500" : "text-slate-500"
-                          }`}
+                          className={`h-4 w-4 sm:h-5 sm:w-5 ${isOpen ? "text-blue-500" : "text-slate-500"
+                            }`}
                         />
                       )}
                     </span>
@@ -267,11 +265,10 @@ export function ExploreSyllabus() {
                       type="button"
                       aria-expanded={isOpen}
                       onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                      className={`flex w-full cursor-pointer flex-col gap-2 rounded-2xl border px-4 py-4 text-left transition sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 ${
-                        isOpen
+                      className={`flex w-full cursor-pointer flex-col gap-2 rounded-2xl border px-4 py-4 text-left transition sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 ${isOpen
                           ? "border-blue-400 bg-blue-50/70"
                           : "border-blue-200 bg-blue-50/30 hover:bg-blue-50"
-                      }`}
+                        }`}
                     >
                       <span className="text-sm font-semibold leading-5 text-blue-600 sm:text-base">
                         {term.title}
@@ -283,9 +280,8 @@ export function ExploreSyllabus() {
                         </span>
 
                         <ChevronDown
-                          className={`h-4 w-4 text-blue-600 transition-transform ${
-                            isOpen ? "rotate-180" : ""
-                          }`}
+                          className={`h-4 w-4 text-blue-600 transition-transform ${isOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </span>
                     </button>
@@ -315,13 +311,21 @@ export function ExploreSyllabus() {
             </div>
 
             <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
-              <button className="w-full rounded-md bg-blue-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-blue-700 sm:w-auto sm:px-7 sm:text-sm">
+              <a
+                href="https://wa.me/919912104888"
+                className="w-full rounded-md bg-blue-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-blue-700 sm:w-auto sm:px-7 sm:text-sm"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Start Your Application
-              </button>
+              </a>
 
-              <button className="w-full rounded-md border-2 border-blue-600 bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-blue-600 transition hover:bg-blue-50 sm:w-auto sm:px-7 sm:text-sm">
+              <a
+                href="mailto:info@phincoelite.com"
+                className="w-full rounded-md border-2 border-blue-600 bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-blue-600 transition hover:bg-blue-50 sm:w-auto sm:px-7 sm:text-sm">
                 Download Syllabus
-              </button>
+              </a>
             </div>
           </div>
 

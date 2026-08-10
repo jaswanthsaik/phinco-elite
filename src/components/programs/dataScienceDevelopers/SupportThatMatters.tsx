@@ -98,9 +98,11 @@ export function SupportThatMatters() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="rounded-lg bg-blue-600 px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700">
+          <a
+          href="/contact#contactus"
+           className="rounded-lg bg-blue-600 px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700">
             Start Your Application
-          </button>
+          </a>
         </div>
       </div>
     </section>

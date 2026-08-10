@@ -25,7 +25,7 @@ export function AlumniCompanies() {
         <h2 className="text-center text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           Join Our Alumni{" "}
           <span className="bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
-            Network Across 
+            Network Across
           </span>{" "}
           350+ Companies
         </h2>
@@ -49,10 +49,17 @@ export function AlumniCompanies() {
         </div>
 
         <div className="mt-14 flex justify-center">
-          <button className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-700 sm:text-base">
-            Get Your Personalized Career Report
-            <ArrowRight className="h-4 w-4" />
-          </button>
+          <a
+            href="https://wa.me/919912104888"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-700 sm:text-base">
+              Get Your Personalized Career Report
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </a>
         </div>
       </div>
     </section>

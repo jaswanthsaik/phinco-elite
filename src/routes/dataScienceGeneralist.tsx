@@ -4,20 +4,20 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { TalkToTeam } from "@/components/landing/TalkToTeam";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
-import { AdmissionProcess } from "@/components/programs/dataScienceGeneralist/AdmissionProcess";
-import { AlumniCompanies } from "@/components/programs/dataScienceGeneralist/AlumniCompanies";
-import { CertificationCourse } from "@/components/programs/dataScienceGeneralist/CertificationCourse";
+import { AdmissionProcess } from "@/components/programs/dataScienceDevelopers/AdmissionProcess";
+import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/AlumniCompanies";
+import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/dataScienceGeneralist/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/dataScienceGeneralist/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/dataScienceGeneralist/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/dataScienceGeneralist/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/dataScienceGeneralist/LearningToPlacement";
-import { MeetOurMentors } from "@/components/programs/dataScienceGeneralist/MeetOurMentors";
-import { OthersVsLearnbayProgram } from "@/components/programs/dataScienceGeneralist/OthersVsLearnbayProgram";
-import { PlacementSupport } from "@/components/programs/dataScienceGeneralist/PlacementSupport";
+import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";
+import { OthersVsLearnbayProgram } from "@/components/programs/dataScienceDevelopers/OthersVsLearnbayProgram";
+import { PlacementSupport } from "@/components/programs/dataScienceDevelopers/PlacementSupport";
 import { ProgramHero } from "@/components/programs/dataScienceGeneralist/ProgramHero";
 import { ProgrammingTools } from "@/components/programs/dataScienceGeneralist/ProgrammingTools";
-import { SupportThatMatters } from "@/components/programs/dataScienceGeneralist/SupportThatMatters";
+import { SupportThatMatters } from "@/components/programs/dataScienceDevelopers/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/dataScienceGeneralist")({
