@@ -3,19 +3,19 @@ import { BriefcaseBusiness, Contact, IdCard, Users } from "lucide-react";
 const ITEMS = [
   {
     title: "Placement Support",
-    body: "Unlock access to job opportunities, with personalized support to enhance interview readiness and optimize professional profile.",
+    body: "Unlock access to job opportunities with personalized placement assistance, interview preparation, and professional profile optimization to help you land your ideal role.",
     icon: BriefcaseBusiness,
     iconColor: "text-blue-600",
   },
   {
     title: "Mock Interviews",
-    body: "Sharpen interview skills with tailored mock sessions that simulate real-world scenarios, giving the experience to excel in job interviews.",
+    body: "Practice real-world interview scenarios with personalized mock sessions, expert feedback, and guidance to build confidence and improve your interview performance.",
     icon: Contact,
     iconColor: "text-emerald-600",
   },
   {
-    title: "Resume BuildUp",
-    body: "Craft a compelling resume with expert guidance, ensuring your profile stands out in a competitive job market.",
+    title: "Resume Building",
+    body: "Create a job-winning, ATS-friendly resume with expert guidance that highlights your skills, projects, and experience to stand out in a competitive job market.",
     icon: IdCard,
     iconColor: "text-amber-600",
   },

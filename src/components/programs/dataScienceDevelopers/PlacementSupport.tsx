@@ -14,14 +14,14 @@ const ITEMS = [
     iconColor: "text-emerald-600",
   },
   {
-    title: "Resume BuildUp",
-    body: "Craft a compelling resume with expert guidance, ensuring your profile stands out in a competitive job market.",
+    title: "Resume Building",
+    body: "Create a job-winning, ATS-friendly resume with expert guidance that highlights your skills, projects, and experience to stand out in a competitive job market.",
     icon: IdCard,
     iconColor: "text-amber-600",
   },
   {
-    title: "Interview Calls",
-    body: "Maximize chances of landing the perfect job with interview opportunities, backed by continuous support and feedback.",
+    title: "Interview Opportunities",
+    body: "Get access to relevant job interviews with continuous support, expert guidance, and feedback to help you confidently secure your ideal role.",
     icon: Users,
     iconColor: "text-purple-600",
   },
@@ -32,7 +32,7 @@ export function PlacementSupport() {
     <section className="bg-gradient-to-b from-white to-slate-50 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-3xl font-bold text-gray-900 md:text-4xl">
-          Achieve career goals with Placement Support
+          Achieve Your Career Goals with Dedicated Placement Support
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

@@ -13,13 +13,13 @@ export function LearningToPlacement() {
           <h2 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl">
             From
             <br />
-            <span className="text-white">Learning to</span>
+            <span className="text-white">Skills to</span>
             <br />
             <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
               Placement
             </span>
           </h2>
-          <p className="mt-4 text-base text-white/70">We've got you covered</p>
+          <p className="mt-4 text-base text-white/70">From Learning to Success, We're With You</p>
           <svg viewBox="0 0 200 12" className="mt-2 h-3 w-48">
             <path d="M0 8 Q100 -4 200 8" stroke="#facc15" strokeWidth="3" fill="none" strokeLinecap="round" />
           </svg>
@@ -32,7 +32,7 @@ export function LearningToPlacement() {
         >
           <AlarmClockCheck className="h-14 w-14 text-rose-400" strokeWidth={1.5} />
           <p className="mt-4 text-2xl font-extrabold sm:text-3xl">250+ Hours</p>
-          <p className="mt-2 text-sm text-white/80 sm:text-base">of Live Instructor-Led Classes</p>
+          <p className="mt-2 text-sm text-white/80 sm:text-base">Expert-Led Training</p>
         </div>
 
         {/* 30+ Guided */}
@@ -40,11 +40,11 @@ export function LearningToPlacement() {
           className="flex flex-col items-center justify-center rounded-2xl p-10 text-center text-white shadow-xl ring-1 ring-white/5"
           style={{ background: "linear-gradient(135deg, #0d3a2b, #061a18 70%)" }}
         >
-          <p className="text-3xl font-extrabold text-yellow-300 sm:text-4xl">30+ Guided</p>
+          <p className="text-3xl font-extrabold text-yellow-300 sm:text-4xl">30+ Real-World</p>
           <p className="mt-2 text-base font-medium text-white sm:text-lg">
-            Skill focused
+            Projects 
             <br />
-            Hands-On Projects
+            with Expert Guidance
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-2">
             {["GitHub", "OpenAI", "Python"].map((t) => (
@@ -62,11 +62,11 @@ export function LearningToPlacement() {
   style={{ background: "linear-gradient(135deg, #5b1ab8, #3a0f8a 70%)" }}
 >
   <span className="rounded bg-white/5 px-4 py-1.5 text-2xl font-extrabold tracking-widest text-white">
-    IBM
+    NASSCOM
   </span>
 
   <p className="mt-5 text-xl font-extrabold text-emerald-300 sm:text-2xl">
-    Become an IBM
+    Become an NASSCOM
     <br />
     Certified AI
     <br />
@@ -74,9 +74,9 @@ export function LearningToPlacement() {
   </p>
 
   <p className="mt-4 text-sm text-white/80">
-    Learn practical skills and
+    Learn Practical Skills and 
     <br />
-    earn certification.
+    Earn an Industry-Recognized Certifications
   </p>
 </div>
 
@@ -97,13 +97,13 @@ export function LearningToPlacement() {
 >
   <div className="flex-1">
     <p className="text-xl font-extrabold sm:text-2xl">
-      1-on-1 <span className="text-amber-300">Personalized Support</span>
+      1-on-1 <span className="text-amber-300">Personalized Mentor Support</span>
     </p>
 
     <p className="mt-3 text-sm text-white/85 sm:text-base">
-      Doubt Clearing with Mentors, get
+      Clear Doubts, Get Expert Guidance,
       <br />
-      help whenever needed.
+      and Stay Supported Throughout Your Learning Journey.
     </p>
   </div>
 

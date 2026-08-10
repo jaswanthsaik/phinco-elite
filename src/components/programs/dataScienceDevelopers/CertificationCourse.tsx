@@ -1,27 +1,27 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
-type TabKey = "ibm" | "project";
+type TabKey = "NASSCOM" | "project";
 
 export function CertificationCourse() {
-  const [tab, setTab] = useState<TabKey>("ibm");
+  const [tab, setTab] = useState<TabKey>("NASSCOM");
 
   const content = {
-    ibm: {
-      title: "Course Completion Certificate from IBM",
+    NASSCOM: {
+      title: "NASSCOM Certificate",
       points: [
-        "Complete your training with the internationally recognized certificate.",
-        "Validate your Data Science & AI skills with IBM Course Completion Certificate.",
-        "Get acknowledged in IT sector by adding IBM Certificate to your profile.",
+        "Earn an Industry-Recognized Certification upon successful program completion.",
+        "Validate Your Data Analytics, AI & Data Science Skills with a recognized credential.",
+        "Enhance Your Professional Profile and boost your credibility with top employers.",
       ],
-      brand: "IBM",
+      brand: "NASSCOM",
     },
     project: {
-      title: "Industry Project Completion Certificate",
+      title: "Industry Project Excellence Certificate",
       points: [
-        "Earn a project certificate after completing real-world industry projects.",
-        "Showcase your hands-on AI and Data Science expertise to recruiters.",
-        "Boost your portfolio with verifiable, project-based credentials.",
+        "Build Real-World Industry Projects with hands-on guidance.",
+        "Earn an Industry Project Completion Certificate upon successful completion.",
+        "Create a Portfolio That Impresses Recruiters with practical, job-ready projects.",
       ],
       brand: "Project",
     },
@@ -33,7 +33,7 @@ export function CertificationCourse() {
     <section className="bg-white">
       <div className="mx-auto max-w-6xl px-6 pt-20">
         <h2 className="text-center text-2xl font-extrabold text-slate-900 sm:text-4xl">
-          Industry Recognized Certification Course
+          Industry Recognized Certification Program
         </h2>
       </div>
 
@@ -41,9 +41,9 @@ export function CertificationCourse() {
         <div className="mx-auto max-w-6xl px-6">
           {/* Tabs */}
           <div className="flex flex-wrap gap-8 border-b border-white/10">
-            {(["ibm", "project"] as TabKey[]).map((k) => {
+            {(["NASSCOM", "project"] as TabKey[]).map((k) => {
               const isActive = tab === k;
-              const label = k === "ibm" ? "IBM Certificate" : "Project Certificate";
+              const label = k === "NASSCOM" ? "NASSCOM Certificate" : "Project Certificate";
               return (
                 <button
                   key={k}
@@ -83,7 +83,7 @@ export function CertificationCourse() {
               <div className="w-full max-w-md rounded-md bg-white p-6 shadow-2xl">
                 <div className="flex items-start justify-between">
                   <span className="text-2xl font-extrabold tracking-tight text-blue-700">
-                    {active.brand === "IBM" ? "IBM" : "★"}
+                    {active.brand === "NASSCOM" ? "NASSCOM" : "★"}
                   </span>
                   <div className="grid h-12 w-12 grid-cols-3 gap-0.5">
                     {Array.from({ length: 9 }).map((_, i) => (

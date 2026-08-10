@@ -1,6 +1,6 @@
 const TAGS = [
-  { label: "95% industry relevance", color: "bg-orange-100 text-orange-600" },
-  { label: "22+ tools and modules", color: "bg-blue-100 text-blue-600" },
+  { label: "Industry relevance", color: "bg-orange-100 text-orange-600" },
+  { label: "Data Analytics Tools & Technologies", color: "bg-blue-100 text-blue-600" },
   { label: "100% real-world experience", color: "bg-emerald-100 text-emerald-600" },
 ];
 
@@ -18,74 +18,74 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     num: "1",
-    brand: "𝕏",
+    brand: "AMAZON",
     brandClass: "text-black",
-    title: "Social Media Feed System",
+    title: "Customer Churn Prediction & Retention Analytics",
     description:
-      "Efficient real-time notification feed management system for Twitter. Lightning speed time update and access during high volume data management per second.",
-    tools: "python  •  git",
+      "Build an AI-powered analytics solution to identify customers likely to churn and recommend personalized retention strategies using historical customer behavior.",
+    tools: "Python • SQL • Power BI • Scikit-learn",
     toolsClass: "bg-orange-50",
-    outcome: "Effective data Sharding and caching technique implementation.",
+    outcome: "Develop predictive churn models, customer segmentation dashboards, and retention strategy recommendations.",
   },
   {
     num: "2",
-    brand: "OYO",
+    brand: "Walmart",
     brandClass: "text-red-600",
-    title: "Designing of Booking System for Hotel Rooms",
+    title: "Retail Sales Forecasting Dashboard",
     description:
-      "User reservation and room management focused booking management systems for business.",
-    tools: "Azure DevOps",
+      "Design an end-to-end analytics solution to forecast sales across stores, optimize inventory, and identify seasonal demand patterns.",
+    tools: "Excel • Python • Power BI • SQL",
     toolsClass: "bg-blue-50",
-    outcome: "Infusion of a database schema for tracking room bookings, customer accounts etc.",
+    outcome: "Build forecasting models, interactive sales dashboards, and inventory optimization reports.",
   },
   {
     num: "3",
-    brand: "SWIGGY",
+    brand: "UBER",
     brandClass: "text-orange-500",
-    title: "Food Ordering System",
-    description: "Build a platform connecting users to local restaurants for ordering and delivery.",
-    tools: "Azure  •  AWS  •  Jenkins",
+    title: "Ride Demand & Driver Performance Analytics",
+    description: "Analyze ride demand, driver utilization, surge pricing, and customer behavior to improve operational efficiency.",
+    tools: "SQL • Power BI • Python • Tableau",
     toolsClass: "bg-orange-50",
-    outcome: "Design a microservices architecture for managing restaurant listings, orders etc.",
+    outcome: "Create KPI dashboards for demand forecasting, driver productivity, and revenue optimization.",
   },
   {
     num: "4",
     brand: "NETFLIX",
     brandClass: "text-red-600",
-    title: "Netflix Content Streaming Service",
+    title: "Content Recommendation & Viewer Analytics",
     description:
-      "Design a microservices-based architecture for Netflix's streaming service, focusing on service decomposition.",
-    tools: "docker  •  kubernetes",
+      "Develop an analytics platform to study viewer engagement, content performance, and recommendation effectiveness.",
+    tools: "Python • SQL • Power BI • Pandas",
     toolsClass: "bg-blue-50",
-    outcome: "Use CAP principles to manage data consistency.",
+    outcome: "Build recommendation insights, audience segmentation, and content performance dashboards.",
   },
   {
     num: "5",
-    brand: "Flipkart",
+    brand: "SWIGGY",
     brandClass: "text-blue-600",
-    title: "End-to-end Design of Flipkart-like Shopping Cart",
+    title: "Restaurant Performance & Delivery Analytics",
     description:
-      "High-quality UI, rich shopping cart system creation from scratch. Includes features like add, replace, delete items.",
-    tools: "git  •  linux",
-    toolsClass: "bg-orange-50",
-    outcome: "Normalization of database schema, Sequence diagrams.",
+      "Analyze restaurant performance, delivery times, and customer satisfaction to drive operational improvements.",
+    tools: "Python • SQL • Power BI • Pandas",
+    toolsClass: "bg-blue-50",
+    outcome: "Create dashboards for performance monitoring, delivery optimization, and customer satisfaction analysis.",
   },
   {
     num: "6",
-    brand: "make my trip",
+    brand: "ICICI Bank",
     brandClass: "text-red-500",
-    title: "Developing Property Booking System",
+    title: "Fraud Detection & Financial Risk Analytics",
     description:
-      "Create a booking management system for hotels that supports user reservations and room management.",
-    tools: "Prometheus  •  Grafana",
+      "Build a machine learning solution to detect fraudulent transactions and monitor financial risks using transaction data.",
+    tools: "Python • SQL • Power BI",
     toolsClass: "bg-orange-50",
-    outcome: "Implement a normalized database schema for hotels, rooms.",
+    outcome: "Create fraud detection models, risk scoring dashboards, and real-time financial monitoring reports.",
   },
 ];
 
 const EXPERIENCE = [
-  { icon: "📚", label: "Practical Skills" },
-  { icon: "📋", label: "Project Life Cycle" },
+  { icon: "📚", label: "Practical Knowledge" },
+  { icon: "📋", label: "Projects" },
   { icon: "👥", label: "Lead a Team" },
   { icon: "🎓", label: "Industry Knowledge" },
 ];
@@ -95,7 +95,7 @@ export function IndustryProjects() {
     <section className="bg-gradient-to-b from-white to-slate-50 py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl">
-          Industry{" "}
+          Hands-On Industry {" "}
           <span className="relative inline-block">
             Projects
             <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-orange-500" />
@@ -138,9 +138,9 @@ export function IndustryProjects() {
         <div className="mt-10 overflow-hidden rounded-2xl bg-gradient-to-r from-[#5a2a1a] via-[#3a1a3d] to-[#0a1a3d] p-6 sm:p-8">
           <div className="grid items-center gap-6 md:grid-cols-[1fr_auto]">
             <h3 className="text-xl font-bold text-white sm:text-2xl">
-              Gain Practical Experience with
+              Build Hands-On Experience with
               <br />
-              Real-World Projects
+              Enterprise-Level Projects
             </h3>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
               {EXPERIENCE.map((e) => (
@@ -154,9 +154,9 @@ export function IndustryProjects() {
         </div>
 
         <p className="mt-6 text-sm text-gray-700">
-          <span className="font-bold text-orange-500">Important Note:</span> The final number of quizzes, assignments, and discussions will be confirmed closer to the program start. To know more{" "}
+          <span className="font-bold text-orange-500">Important Note:</span> The final program structure, including quizzes, assignments, and discussion sessions, will be confirmed closer to the program start date.{" "}
           <a href="/" className="font-semibold text-blue-600 underline">
-            check eligibility
+             Check your eligibility to learn more.
           </a>
         </p>
       </div>

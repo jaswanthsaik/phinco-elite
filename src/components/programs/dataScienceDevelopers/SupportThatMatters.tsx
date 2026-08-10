@@ -6,12 +6,12 @@ export function SupportThatMatters() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-            Support That Matters
+            Your Success Is Our Priority
           </p>
           <h2 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
-            From Day One to Dream Role—
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              We're with you
+            From Your First Class to Your Dream Job, 
+            <span className="bg-gradient-to-r from-indigo-800 to-purple-500 bg-clip-text text-transparent">
+              We're With You Throughout the Journey.
             </span>
           </h2>
         </div>
@@ -20,44 +20,43 @@ export function SupportThatMatters() {
           {/* Top Companies */}
           <div className="relative overflow-hidden rounded-2xl border-2 border-orange-300/60 bg-gradient-to-br from-orange-50 to-rose-50 p-7">
             <span className="inline-block rounded-full bg-rose-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-rose-600">
-              Top Companies
+              Where Our Alumni Work
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-amber-900">
-              ALUMNI WORKING IN 350+ COMPANIES
+              Our Alumni Are Employed at 350+ Companies
             </h3>
             <p className="mt-3 text-sm text-gray-700">
-              Set your preferences and unlock access to top tech and{" "}
-              <strong>product-based</strong> companies <strong>hiring</strong>{" "}
-              across domains.
+              Set Your Career Preferences and {" "}
+              <strong>Unlock Opportunities with Top Tech and </strong> Product-Based Companies  <strong>Hiring </strong>{" "}
+              Across Multiple Domains.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-sm font-semibold">
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">∞ Meta</span>
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">● OLA</span>
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">amazon</span>
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">TITAN</span>
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm text-rose-600">zomato</span>
-              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">rapido</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">zomato</span>
               <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">MorganStanley</span>
               <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">EY</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">TITAN</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm text-rose-600">Meta</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">rapido</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">OLA</span>
+              <span className="rounded-md bg-white px-3 py-1.5 shadow-sm">Amazon</span>
             </div>
           </div>
 
           {/* Domain Tracks */}
           <div className="relative overflow-hidden rounded-2xl border-2 border-emerald-300/60 bg-gradient-to-br from-emerald-50 to-teal-50 p-7">
             <span className="inline-block rounded-full bg-emerald-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-emerald-700">
-              Domain Tracks
+              Choose Your Specialization
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-emerald-800">
-              SPECIALIZE IN THE INDUSTRY YOU WANT
+              SPECIALIZE IN YOUR CHOSEN INDUSTRY
             </h3>
             <p className="mt-3 text-sm text-gray-700">
-              Choose from BFSI, Healthcare, Retail, HR, and more. Build expertise
-              that matches your career goals.
+              Choose from BFSI, Healthcare, Retail, HR, Manufacturing, and more. Build industry-specific expertise that aligns with your career goals.
             </p>
             <div className="pointer-events-none absolute bottom-4 right-4 grid grid-cols-3 gap-3 opacity-80">
               <div className="h-12 w-12 rounded-full bg-emerald-200/70 flex items-center justify-center"><Landmark className="h-5 w-5 text-emerald-700" /></div>
               <div className="h-14 w-14 rounded-full bg-emerald-300/60 flex items-center justify-center"><ShoppingCart className="h-6 w-6 text-emerald-700" /></div>
-              <div className="h-10 w-10 rounded-full bg-emerald-200/50" />
+              {/* <div className="h-10 w-10 rounded-full bg-emerald-200/50" /> */}
               <div className="h-10 w-10 rounded-full bg-emerald-200/60 flex items-center justify-center"><User className="h-4 w-4 text-emerald-700" /></div>
               <div className="h-12 w-12 rounded-full bg-emerald-300/60 flex items-center justify-center"><ShoppingCart className="h-5 w-5 text-emerald-700" /></div>
               <div className="h-16 w-16 rounded-full bg-emerald-300/70 flex items-center justify-center"><Building2 className="h-7 w-7 text-emerald-700" /></div>
@@ -67,14 +66,14 @@ export function SupportThatMatters() {
           {/* GenAI + Agentic AI */}
           <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-300/60 bg-gradient-to-br from-indigo-50 to-blue-50 p-7">
             <span className="inline-block rounded-full bg-indigo-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
-              GenAI + Agentic AI
+              Master GenAI & Agentic AI
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-blue-700">
-              BUILD WITH LANGCHAIN, RAG &amp; AUTOGPT
+              with Industry-Leading Frameworks
             </h3>
             <p className="mt-3 text-sm text-gray-700">
-              Work hands-on with cutting-edge GenAI tools and frameworks used in{" "}
-              <strong>real-world enterprise</strong> applications.
+              Build production-ready AI agents using {" "}
+              <strong>LangChain, RAG, AutoGPT, and other cutting-edge technologies </strong> powering next-generation AI applications.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
               <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">AutoGPT</span>
@@ -87,14 +86,13 @@ export function SupportThatMatters() {
           {/* Job Readiness */}
           <div className="relative overflow-hidden rounded-2xl border-2 border-purple-300/60 bg-gradient-to-br from-purple-50 to-fuchsia-50 p-7">
             <span className="inline-block rounded-full bg-purple-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-purple-700">
-              Job Readiness &amp; Interview Confidence
+              Career Readiness & Interview Success
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-purple-700">
-              BECOME JOB-READY WITH PRACTICAL EXPERIENCE
+              Build Skills. Gain Confidence. Get Hired.
             </h3>
             <p className="mt-3 max-w-sm text-sm text-gray-700">
-              Practice real infrastructure and automation scenarios. Get expert
-              feedback to confidently clear Data Science interviews.
+              Work on real-world scenarios, refine your technical expertise, and prepare with expert-led mock interviews. Develop the confidence to crack interviews and launch your career in Data Science, AI, and Analytics.
             </p>
           </div>
         </div>
