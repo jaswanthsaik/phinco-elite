@@ -43,117 +43,131 @@ const TERMS: Term[] = [
       {
         heading: "Induction + Orientation",
         items: [
-          "Overview Of AI, Generative AI, And Agentic AI",
-          "Career Paths And Role Mapping For AI Professionals",
-          "LinkedIn Profile Optimization For AI & Tech Hiring",
-          "Using Python Colab For Hands-On Learning",
-          "Learning Workflow, Tools, And Program Onboarding",
+          "Introduction to Data Analytics & Career Opportunities",
+          "Data Analytics Career Roadmap",
+          "Resume & LinkedIn Profile Optimization",
+          "LMS Walkthrough & Learning Resources",
+          "Setting Up Excel, SQL, Python & Power BI",
+          "Program Orientation & Learning Plan",
         ],
       },
     ],
   },
   {
-    title: "Term 1 – Python for GenAI",
-    duration: "(1.5 Months)",
+    title: "Advanced Excel for Data Analytics",
+    duration: "(3 Weeks)",
     sections: [
       {
-        heading: "Python Foundations",
+        heading: "Excel for Business Analytics",
         items: [
-          "Python syntax, data types, control flow, and functions",
-          "Object-oriented programming and modules",
-          "File handling, error handling, and best practices",
-          "NumPy and Pandas for data manipulation",
-          "Matplotlib and Seaborn for visualization",
+          "Excel Fundamentals & Shortcuts",
+          "Functions & Formulas",
+          "Lookup Functions (VLOOKUP, XLOOKUP, INDEX-MATCH)",
+          "Conditional Formatting",
+          "Data Cleaning & Validation",
+          "Pivot Tables & Pivot Charts",
+          "Power Query",
+          "Interactive Dashboards",
+          "AI in Excel",
+          "Business Case Studies",
         ],
       },
     ],
   },
   {
-    title: "Term 2 – Foundation for GenAI",
-    duration: "(2 Months)",
+    title: "SQL for Data Analytics",
+    duration: "(4 Weeks)",
     sections: [
       {
-        heading: "Statistics & Machine Learning",
+        heading: "SQL & Database Management",
         items: [
-          "Probability, statistics, and hypothesis testing",
-          "Supervised and unsupervised learning algorithms",
-          "Feature engineering and model evaluation",
-          "Deep learning fundamentals with TensorFlow & PyTorch",
-          "Neural networks, CNNs, and RNNs",
+          "Database Fundamentals",
+          "SQL Queries",
+          "Filtering & Sorting",
+          "Aggregate Functions",
+          "GROUP BY & HAVING",
+          "Joins (Inner, Left, Right, Full)",
+          "Subqueries & Nested Queries",
+          "Window Functions",
+          "Stored Procedures & Views",
+          "Common Table Expressions (CTEs)",
+          "Database Design & Normalization",
+          "Query Optimization",
         ],
       },
     ],
   },
   {
-    title: "Term 3 – Generative AI",
-    duration: "(1.5 Months)",
+    title: "Power BI for Data Analytics",
+    duration: "(3 weeks)",
     sections: [
       {
-        heading: "GenAI Tools & Frameworks",
+        heading: "Business Intelligence & Dashboarding",
         items: [
-          "Large Language Models (LLMs) architecture",
-          "Prompt engineering and fine-tuning",
-          "LangChain, RAG, and vector databases",
-          "Building GenAI applications with OpenAI APIs",
-          "Image generation with Midjourney and Stable Diffusion",
+          "Power BI Desktop & Data Import & Transformation",
+          "Power Query & Data Modeling",
+          "Relationships & DAX Fundamentals",
+          "Interactive Dashboards, Visualizations & KPIs",
+          "Power BI Service & Sharing Reports",
         ],
       },
     ],
   },
   {
-    title: "Term 4 – Agentic AI",
-    duration: "(15 Days)",
+    title: "Python for Data Analytics",
+    duration: "(4 Weeks)",
     sections: [
       {
-        heading: "Autonomous AI Agents",
+        heading: "Python Programming for Data Analytics",
         items: [
-          "AutoGPT and agent frameworks",
-          "Multi-agent systems and orchestration",
-          "Tool use, planning, and reasoning",
-          "Deploying production-grade AI agents",
+          "Python Fundamentals: Variables, Data Types, Control Flow, Functions",
+          "Data Structures, Functions & Modules",
+          "NumPy,Pandas,Data Cleaning",
+          "Exploratory Data Analysis (EDA),Data Visualization,APIs,Automation Scripts",
         ],
       },
     ],
   },
   {
-    title: "Term 5 – Big Data & Distributed Systems",
-    duration: "(1 Month)",
+    title: "Statistics for Data Analytics",
+    duration: "(2 Weeks)",
     sections: [
       {
+          heading: "Statistics & Business Decision Making",
         items: [
-          "Big Data & Distributed Systems: Big Data concepts, distributed architecture, Hadoop master–slave structure.",
-          "HDFS Operations: File storage model, directories, manipulation commands, permissions, quotas.",
-          "MapReduce Framework: Mapper–reducer flow, shuffle/sort, architecture, real-world use cases.",
-          "Core Hadoop Components: YARN resource management, Hadoop ecosystem overview, Hive, Pig, HBase, Sqoop.",
+          "Types of Data,Measures of Central Tendency,Measures of Dispersion",
+          "Probability, Probability Distributions,Sampling Techniques, Hypothesis Testing",
+          "Confidence Intervals,Correlation & Regression Analysis,",
+          "A/B Testing,Business Statistics Case Studies",
         ],
       },
-      {
-        heading: "Hadoop Ecosystem",
-        items: [
-          "HDFS basics, architecture, and fault-tolerant storage.",
-          "YARN & MapReduce job execution and resource management.",
-          "Ecosystem integration: Hive, Sqoop, and SQL/NoSQL connectivity.",
-          "Cluster setup, configuration, scaling, and performance tuning.",
-        ],
-      },
-      {
-        heading: "Spark Fundamentals",
-        items: [
-          "Spark Basics: Core features, architecture, RDDs, DAGs, transformations & actions.",
-          "Spark Environment Setup: SparkSession, standalone mode, YARN/Mesos cluster management.",
-          "RDD & DataFrame Operations: Creation, transformations, actions, interoperability.",
-          "Spark SQL: Structured data processing, SQL queries, DataFrame APIs.",
-        ],
-      },
-      {
-        heading: "Spark Ecosystem & Advanced Tools",
-        items: [
-          "Spark Streaming: Real-time pipelines, DStreams/Structured Streaming, Kafka integration.",
-          "Spark MLlib: Feature engineering, building & training ML models, model evaluation.",
-          "Performance Optimization: Caching, partitioning, Tungsten & Catalyst optimizer basics.",
-          "PySpark & Integration: Using Spark with Python, connecting Spark with external data sources.",
-        ],
-      },
+      // {
+      //   heading: "Hadoop Ecosystem",
+      //   items: [
+      //     "HDFS basics, architecture, and fault-tolerant storage.",
+      //     "YARN & MapReduce job execution and resource management.",
+      //     "Ecosystem integration: Hive, Sqoop, and SQL/NoSQL connectivity.",
+      //     "Cluster setup, configuration, scaling, and performance tuning.",
+      //   ],
+      // },
+      // {
+      //   heading: "Spark Fundamentals",
+      //   items: [
+      //     "Spark Basics: Core features, architecture, RDDs, DAGs, transformations & actions.",
+      //     "Spark Environment Setup: SparkSession, standalone mode, YARN/Mesos cluster management.",
+      //     "RDD & DataFrame Operations: Creation, transformations, actions, interoperability.",
+      //     "Spark SQL: Structured data processing, SQL queries, DataFrame APIs.",
+      //   ],
+      // },
+      // {
+      //   heading: "Spark Ecosystem & Advanced Tools",
+      //   items: [
+      //     "Spark Streaming: Real-time pipelines, DStreams/Structured Streaming, Kafka integration.",
+      //     "Spark MLlib: Feature engineering, building & training ML models, model evaluation.",
+      //     "Performance Optimization: Caching, partitioning, Tungsten & Catalyst optimizer basics.",
+      //     "PySpark & Integration: Using Spark with Python, connecting Spark with external data sources.",
+      //   ],
+      // },
     ],
   },
 ];
@@ -212,12 +226,11 @@ export function ExploreSyllabus() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-extrabold leading-tight text-slate-900 sm:text-3xl lg:text-4xl">
-            Explore our Syllabus
+            Explore Our Industry-Aligned Curriculum
           </h2>
 
           <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base lg:text-lg">
-            Curriculum is specifically engineered to meet the expectations of
-            leading tech companies
+            Discover a comprehensive, hands-on learning path designed to help you build in-demand skills and become job-ready.
           </p>
         </div>
 
@@ -314,7 +327,7 @@ export function ExploreSyllabus() {
 
           <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-md sm:p-6 lg:sticky lg:top-6">
             <h3 className="text-center text-lg font-bold leading-7 text-slate-900 sm:text-left">
-              Free Consultation with{" "}
+              Free Career Consultation with an Industry{" "}
               <span className="text-blue-600">Expert</span>
             </h3>
 

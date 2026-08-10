@@ -1,19 +1,19 @@
 const TOOLS = [
-  { name: "TensorFlow", color: "text-orange-500" },
+  { name: "Excel", color: "text-orange-500" },
   { name: "Jupyter", color: "text-orange-400" },
-  { name: "Excel", color: "text-emerald-600" },
+  { name: "TensorFlow", color: "text-emerald-600" },
   { name: "PyTorch", color: "text-red-500" },
-  { name: "Keras", color: "text-red-600" },
-  { name: "NumPy", color: "text-blue-700" },
+  { name: "ChatGPT", color: "text-red-600" },
+  { name: "matplotlib", color: "text-blue-700" },
   { name: "pandas", color: "text-indigo-800" },
-  { name: "ChatGPT", color: "text-teal-600" },
+  { name: "ChatGpt", color: "text-teal-600" },
   { name: "Midjourney", color: "text-slate-700" },
-  { name: "matplotlib", color: "text-blue-600" },
+  { name: "Numpy", color: "text-blue-600" },
   { name: "mongoDB", color: "text-emerald-700" },
   { name: "seaborn", color: "text-slate-500" },
   { name: "hadoop", color: "text-yellow-500" },
   { name: "amazon web services", color: "text-orange-500" },
-  { name: "Azure", color: "text-sky-600" },
+  { name: "Keras", color: "text-sky-600" },
 ];
 
 export function ProgrammingTools() {
@@ -21,7 +21,7 @@ export function ProgrammingTools() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-2xl font-extrabold text-slate-900 sm:text-4xl">
-          Programming Languages &amp; Tools Covered
+          Industry-Standard Programming Languages & Tools
         </h2>
 
         <div className="mt-12 rounded-2xl bg-slate-50 p-6 sm:p-10">

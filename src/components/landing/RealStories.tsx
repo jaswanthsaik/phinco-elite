@@ -9,7 +9,7 @@ import { useRef, useState } from "react";
 
 type Story = {
   img: string;
-  company: string;
+  // company: string;
   name: string;
   role: string;
   accent: string;
@@ -19,48 +19,48 @@ type Story = {
 const stories: Story[] = [
   {
     img: portrait1,
-    company: "JPMorganChase & Co.",
-    name: "Rijul Gaur",
-    role: "Data Analyst",
+    // company: "JPMorganChase ",
+    name: "Himani",
+    role: "Fresher to Data Analyst",
     accent: "#f59e0b",
     youtubeUrl: "https://www.youtube.com/watch?v=T8cWzZwJTug",
     
   },
   {
     img: portrait2,
-    company: "amazon",
-    name: "Jaya Sinha",
-    role: "Data Scientist",
+    // company: "amazon",
+    name: "Rahul",
+    role: "Career gap to Data Analyst",
     accent: "#f97316",
     youtubeUrl: "https://www.youtube.com/watch?v=Zv6T1dx0VTg",
   },
   {
     img: portrait3,
-    company: "Capgemini",
-    name: "Mahasweta Sarkar",
-    role: "Data Analytics Consultant",
+    // company: "Capgemini",
+    name: "Shalini",
+    role: "Marketing to Data Analytics",
     accent: "#0ea5e9",
     youtubeUrl: "https://www.youtube.com/watch?v=2JqCGO5jH5w",
   },
   {
     img: sanskar,
-    company: "TheMathCompany",
-    name: "Arvind K.",
-    role: "Sr. Data Scientist",
+    // company: "TheMathCompany",
+    name: "sanskar",
+    role: "Customer Support to Data Analyst",
     accent: "#f97316",
     youtubeUrl: "https://www.youtube.com/watch?v=dyhFns6PRFw",
   },
   {
     img: portrait2,
-    company: "Capgemini",
-    name: "Mahasweta Sarkar",
-    role: "Data Analytics Consultant",
+    // company: "Capgemini",
+    name: "Neha",
+    role: "Career gap to Data Analyst",
     accent: "#0ea5e9",
     youtubeUrl: "https://www.youtube.com/watch?v=5I82nYAjTco",
   },
   {
     img: portrait1,
-    company: "CENDROL",
+    // company: "CENDROL",
     name: "Shubham Kumar",
     role: "Data Scientist",
     accent: "#f59e0b",
@@ -68,7 +68,7 @@ const stories: Story[] = [
   },
   {
     img: portrait2,
-    company: "Capgemini",
+    // company: "Capgemini",
     name: "Mahasweta Sarkar",
     role: "Data Analytics Consultant",
     accent: "#0ea5e9",
@@ -119,11 +119,12 @@ export function RealStories() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-4xl font-bold text-[#0a1e3f] md:text-5xl">
-          The Proof is in<span className="italic">Our Alumni’s Success.</span>
+          The Proof Is in 
+<span className="italic">Our Alumni’s  </span> Success.
         </h2>
 
         <p className="mt-3 text-muted-foreground">
-          Explore our track record of learner success.
+          Explore Our Learners’ Journey from Skills to Success
         </p>
 
         {/* Carousel */}
@@ -164,9 +165,9 @@ export function RealStories() {
                 </button>
 
                 <div className="absolute inset-x-0 bottom-0 p-3">
-                  <div className="mb-1 border-t border-white/20 pt-2 text-xs font-semibold text-white">
+                  {/* <div className="mb-1 border-t border-white/20 pt-2 text-xs font-semibold text-white">
                     {s.company}
-                  </div>
+                  </div> */}
 
                   <div
                     className="text-sm font-bold"

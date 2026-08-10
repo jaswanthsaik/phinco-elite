@@ -1,30 +1,62 @@
 import { CheckCircle2, ShieldCheck, XCircle } from "lucide-react";
 
 const FEATURES = [
-  "Access to Live Classes",
-  "Class Type",
-  "Domain Specializations",
-  "Project Certificates",
-  "Learning Mode",
-  "Project Mentorship",
+  "Learning Format",
+  "Program Duration",
+  "Industry Specializations",
+  "Hands-On Projects",
+  "Project Certifications",
+  "Mentorship",
+    "Placement Support",
+    "Career Support",
+  "Interview Preparation",
+    "Industry Tools",
+        "GenAI & Agentic AI",
+    "Capstone Projects",
+    "Learning Mode",
+    "Portfolio Development",
+    "Post-Program Support",
+
 ];
 
 const LEARNBAY = [
-  "3-Year Flexi Pass",
-  "Live, Mentor-Led, Interactive",
-  "BFSI, Healthcare, Supply Chain, Manufacturing, HR, Project Management",
-  "Issued by Learnbay and leading MNCs & unicorn startups",
-  "Hybrid (Online + Classroom Project Sessions)",
-  "Dedicated Project Mentor",
+  " Live, Instructor-Led Interactive Classes",
+  " 3-Year Flexi Pass for Continuous Learning",
+  " BFSI, Healthcare, Supply Chain, Manufacturing, HR, Project Management",
+  " 30+ Real-World Industry Projects",
+  " Industry-Recognized Project Certificates",
+  " Dedicated 1-on-1 Mentor Support",
+      " Resume Building, LinkedIn Optimization & Mock Interviews",
+    " Personalized Mock Interviews & Feedback",
+    " Access to Hiring Opportunities & End-to-End Career Guidance",
+    " 22+ Industry-Standard Tools & Technologies",
+    " Learn LangChain, RAG, AutoGPT & Modern AI Frameworks",
+    " Enterprise-Level Projects Based on Real Business Scenarios",
+      " Hybrid (Online + Classroom Project Sessions)",
+  " Build a Job-Ready Portfolio with Industry Projects",
+  " Alumni Network, Career Guidance & Continued Learning Access",
+
+
 ];
 
 const OTHERS = [
-  "Usually Limited (6-12 months)",
-  "Mostly Recorded Sessions",
-  "No domain specification, Courses are Limited or Generalized",
-  "No project certificate",
-  "Primarily Online with larger number of student",
-  "General Doubt Sessions or Not at all",
+  " Mostly Recorded Sessions",
+  " Limited Access (6–12 Months)",
+  " Generic Curriculum with Limited Domain Exposure",
+  " Mostly Academic or Basic Projects",
+  " Limited or No Project Certifications",
+  " Generalized or Limited Support",
+  " Basic Placement Assistance",
+  " Limited Interview Practice",
+  " Limited Career Support",
+  " Limited Tool Exposure",
+  " Rarely Included",
+  " Basic Academic Assignments",
+  "Primarily Online",
+  " Minimal Portfolio Support",
+  " Support Ends After Course Completion",
+
+
 ];
 
 export function OthersVsLearnbayProgram() {

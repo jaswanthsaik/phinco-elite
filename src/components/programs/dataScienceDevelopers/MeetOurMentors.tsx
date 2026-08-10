@@ -3,22 +3,22 @@ import { useRef, useState } from "react";
 
 type Mentor = {
   name: string;
-  company: string;
+  // company: string;
   companyClass: string;
   initials: string;
   bg: string;
 };
 
 const MENTORS: Mentor[] = [
-  { name: "Disha Jindgar", company: "Walmart", companyClass: "text-[#0071ce]", initials: "DJ", bg: "bg-amber-100" },
-  { name: "Disha M.", company: "Just Eat Takeaway", companyClass: "text-orange-500", initials: "DM", bg: "bg-amber-100" },
-  { name: "Tammanna V.", company: "Walmart", companyClass: "text-[#0071ce]", initials: "TV", bg: "bg-amber-100" },
-  { name: "Mohit S.", company: "kyndryl", companyClass: "text-[#ff462d]", initials: "MS", bg: "bg-amber-100" },
-  { name: "Priya K.", company: "Amazon", companyClass: "text-orange-500", initials: "PK", bg: "bg-amber-100" },
-  { name: "Rohit A.", company: "Microsoft", companyClass: "text-blue-600", initials: "RA", bg: "bg-amber-100" },
-  { name: "Tammanna V.", company: "Walmart", companyClass: "text-[#0071ce]", initials: "TV", bg: "bg-amber-100" },
-  { name: "Mohit S.", company: "kyndryl", companyClass: "text-[#ff462d]", initials: "MS", bg: "bg-amber-100" },
-  { name: "Priya K.", company: "Amazon", companyClass: "text-orange-500", initials: "PK", bg: "bg-amber-100" },
+  { name: "Raj S.",  companyClass: "text-[#0071ce]", initials: "RS", bg: "bg-amber-100" },
+  { name: "Disha M.", companyClass: "text-orange-500", initials: "DM", bg: "bg-amber-100" },
+  { name: "Pradeep D.", companyClass: "text-[#0071ce]", initials: "PD", bg: "bg-amber-100" },
+  { name: "Mohit S.", companyClass: "text-[#ff462d]", initials: "MS", bg: "bg-amber-100" },
+  { name: "Priya K.", companyClass: "text-orange-500", initials: "PK", bg: "bg-amber-100" },
+  { name: "Azad M", companyClass: "text-blue-600", initials: "AM", bg: "bg-amber-100" },
+  { name: "Tammanna V.", companyClass: "text-[#0071ce]", initials: "TV", bg: "bg-amber-100" },
+  { name: "Mohit S.", companyClass: "text-[#ff462d]", initials: "MS", bg: "bg-amber-100" },
+  { name: "Priya K.", companyClass: "text-orange-500", initials: "PK", bg: "bg-amber-100" },
 ];
 
 const CARDS_PER_DOT = 4;
@@ -146,9 +146,9 @@ export function MeetOurMentors() {
                         {m.name}
                       </h3>
 
-                      <p className={`mt-1 truncate text-sm font-bold ${m.companyClass}`}>
+                      {/* <p className={`mt-1 truncate text-sm font-bold ${m.companyClass}`}>
                         {m.company}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
 

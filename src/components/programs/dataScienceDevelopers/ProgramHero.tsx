@@ -11,9 +11,9 @@ interface ProgramHeroProps {
 export function ProgramHero({
   titleTop,
   titleHighlight,
-  badge = "Elevate your tech career with our programs",
-  pointOne = "Learn to integrate GenAI into your existing software stack",
-  pointTwo = "Build Autonomous AI Agents",
+  badge = "Gain In-Demand Skills and Elevate Your Tech Career.",
+  pointOne = "Gain hands-on expertise in integrating Generative AI with your existing software stack.",
+  pointTwo = "Master Agentic AI and Autonomous Agent Development",
 }: ProgramHeroProps) {
   return (
     <section
@@ -69,10 +69,10 @@ export function ProgramHero({
         <div className="mt-16 flex flex-col items-center gap-3">
           <div className="flex items-center gap-4">
             <span className="text-sm font-bold text-amber-400 sm:text-base">
-              Earn Industry-Ready Certification From
+              Earn an Industry-Recognized Certification from PHINCO ELITE
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              IBM
+              NASSCOM
             </span>
           </div>
         </div>
