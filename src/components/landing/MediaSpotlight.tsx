@@ -7,85 +7,97 @@ type Article = {
   title: string;
   date: string;
   href: string;
+  target: string;
 };
 
 const ARTICLES: Article[] = [
   {
-    outlet: "FINANCIAL EXPRESS",
+    outlet: "Analytics Insight",
     outletColor: "#c8102e",
-    title: "PHINCO ELITE achieves 300% surge; to expand workforce amidst impressive job market recognition",
-    date: "12th JULY",
-    href: "/",
+    title: "PHINCO ELITE Sets Ambitious Global Goal: To Train 10 Lakh Data Analytics Professionals After Placing 7,000+ Graduates Worldwide",
+    date: "2nd december",
+    href: "https://www.hindustanmetro.com/phinco-elite-sets-ambitious-global-goal-to-train-10-lakh-data-analytics-professionals-after-placing-7000-graduates-worldwide",
+    target: "_blank",
   },
   {
-    outlet: "DATAQUEST",
+    outlet: "Global Education",
     outletColor: "#c8102e",
-    title: "How data science can disrupt the fintech industry?",
-    date: "13th January",
-    href: "/",
+    title: "PHINCO ELITE Unveils Global Skilling Initiative to Train 10 Lakh Data Analytics Professionals After Reaching 7,000+ Placements",
+    date: "4th december",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "The People Management",
     outletColor: "#c8102e",
-    title: "Professional Upskilling Startup PHINCO ELITE Launches Three New Cutting-Edge Domain Courses",
-    date: "2and August",
-    href: "/",
+    title: "PHINCO ELITE Unveils Global Skilling Initiative to Train 10 Lakh Data Analytics Professionals After Reaching 7,000+ Placements",
+    date: "4th december",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "YourStory",
     outletColor: "#ee3124",
     title: "How PHINCO ELITE is helping working professionals transition into data science",
     date: "15th March",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "Economic Times",
     outletColor: "#c8102e",
     title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
     date: "20th June",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "FINANCIAL EXPRESS",
     outletColor: "#c8102e",
     title: "PHINCO ELITE introduces domain specialisation programme for sustainable career transition",
     date: "1st August",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "YourStory",
     outletColor: "#ee3124",
     title: "How PHINCO ELITE is helping working professionals transition into data science",
     date: "15th March",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "Economic Times",
     outletColor: "#c8102e",
     title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
     date: "20th June",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "Inc42",
     outletColor: "#000",
     title: "Phinco Elite plans global expansion with new GenAI master programs",
     date: "5th May",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "YourStory",
     outletColor: "#ee3124",
     title: "How PHINCO ELITE is helping working professionals transition into data science",
     date: "15th March",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
   {
     outlet: "Economic Times",
     outletColor: "#c8102e",
     title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
     date: "20th June",
-    href: "/",
+    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    target: "_blank",
   },
 ];
 
@@ -133,6 +145,7 @@ export function MediaSpotlight() {
             <a
               key={`${a.outlet}-${i}`}
               href={a.href}
+              target={a.target}
               className="group flex min-h-[220px] flex-col rounded-xl bg-white p-5 shadow-[0_4px_18px_-6px_rgba(0,0,0,0.08)] ring-1 ring-gray-100 transition hover:-translate-y-1 hover:shadow-xl sm:p-6"
             >
               <div className="flex h-10 items-center sm:h-12">

@@ -14,6 +14,7 @@ import { TalkToTeam } from "@/components/landing/TalkToTeam";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
 import { createFileRoute } from "@tanstack/react-router";
+import { OthersVsLearnbayProgram } from "@/components/programs/dataScienceDevelopers/OthersVsLearnbayProgram";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,7 +49,7 @@ function Index() {
         <WhyChooseLearnbay />
         <RealStories />
         <IndustryLeading />
-        <OthersVsLearnbay />
+        <OthersVsLearnbayProgram />
         <InsiderGlimpses />
         <MediaSpotlight />
         <TalkToTeam />
