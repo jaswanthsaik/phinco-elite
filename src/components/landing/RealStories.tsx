@@ -1,9 +1,10 @@
 "use client";
 
-import portrait1 from "@/assets/portrait-1.jpg";
-import portrait2 from "@/assets/portrait-2.jpg";
-import portrait3 from "@/assets/portrait-3.jpg";
-import sanskar from "@/assets/sanskar.png";
+import portrait1 from "@/assets/Himani.png";
+import portrait2 from "@/assets/rahul.png";
+import portrait3 from "@/assets/shalini.png";
+import portrait4 from "@/assets/neha.png";
+import sanskar from "@/assets/Sanskar (2).png";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -51,7 +52,7 @@ const stories: Story[] = [
     youtubeUrl: "https://www.youtube.com/watch?v=dyhFns6PRFw",
   },
   {
-    img: portrait2,
+    img: portrait4,
     // company: "Capgemini",
     name: "Neha",
     role: "Career gap to Data Analyst",
