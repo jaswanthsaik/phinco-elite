@@ -53,14 +53,13 @@ export function SupportThatMatters() {
             <p className="mt-3 text-sm text-gray-700">
               Choose from BFSI, Healthcare, Retail, HR, Manufacturing, and more. Build industry-specific expertise that aligns with your career goals.
             </p>
-            <div className="pointer-events-none absolute bottom-4 right-4 grid grid-cols-3 gap-3 opacity-80">
+            {/* <div className="pointer-events-none absolute bottom-4 right-4 hidden grid-cols-3 gap-3 opacity-80 lg:grid">
               <div className="h-12 w-12 rounded-full bg-emerald-200/70 flex items-center justify-center"><Landmark className="h-5 w-5 text-emerald-700" /></div>
               <div className="h-14 w-14 rounded-full bg-emerald-300/60 flex items-center justify-center"><ShoppingCart className="h-6 w-6 text-emerald-700" /></div>
-              {/* <div className="h-10 w-10 rounded-full bg-emerald-200/50" /> */}
               <div className="h-10 w-10 rounded-full bg-emerald-200/60 flex items-center justify-center"><User className="h-4 w-4 text-emerald-700" /></div>
               <div className="h-12 w-12 rounded-full bg-emerald-300/60 flex items-center justify-center"><ShoppingCart className="h-5 w-5 text-emerald-700" /></div>
               <div className="h-16 w-16 rounded-full bg-emerald-300/70 flex items-center justify-center"><Building2 className="h-7 w-7 text-emerald-700" /></div>
-            </div>
+            </div> */}
           </div>
 
           {/* GenAI + Agentic AI */}
