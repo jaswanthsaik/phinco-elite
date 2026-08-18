@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesNowGeneralistRouteImport } from './routes/servicesNowGeneralist'
 import { Route as ServicesNowDevelopersRouteImport } from './routes/servicesNowDevelopers'
 import { Route as ServicesNowRouteImport } from './routes/services-now'
+import { Route as ReferAndEarnRouteImport } from './routes/refer-and-earn'
 import { Route as PlacementStoriesRouteImport } from './routes/placement-stories'
 import { Route as MastersGeneralistRouteImport } from './routes/mastersGeneralist'
 import { Route as MastersDevelopersRouteImport } from './routes/mastersDevelopers'
@@ -40,6 +41,11 @@ const ServicesNowDevelopersRoute = ServicesNowDevelopersRouteImport.update({
 const ServicesNowRoute = ServicesNowRouteImport.update({
   id: '/services-now',
   path: '/services-now',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferAndEarnRoute = ReferAndEarnRouteImport.update({
+  id: '/refer-and-earn',
+  path: '/refer-and-earn',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlacementStoriesRoute = PlacementStoriesRouteImport.update({
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/refer-and-earn': typeof ReferAndEarnRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
@@ -143,6 +150,7 @@ export interface FileRoutesByTo {
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/refer-and-earn': typeof ReferAndEarnRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/refer-and-earn': typeof ReferAndEarnRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/refer-and-earn'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
@@ -202,6 +212,7 @@ export interface FileRouteTypes {
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/refer-and-earn'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
@@ -221,6 +232,7 @@ export interface FileRouteTypes {
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/refer-and-earn'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
@@ -241,6 +253,7 @@ export interface RootRouteChildren {
   MastersDevelopersRoute: typeof MastersDevelopersRoute
   MastersGeneralistRoute: typeof MastersGeneralistRoute
   PlacementStoriesRoute: typeof PlacementStoriesRoute
+  ReferAndEarnRoute: typeof ReferAndEarnRoute
   ServicesNowRoute: typeof ServicesNowRoute
   ServicesNowDevelopersRoute: typeof ServicesNowDevelopersRoute
   ServicesNowGeneralistRoute: typeof ServicesNowGeneralistRoute
@@ -268,6 +281,13 @@ declare module '@tanstack/react-router' {
       path: '/services-now'
       fullPath: '/services-now'
       preLoaderRoute: typeof ServicesNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refer-and-earn': {
+      id: '/refer-and-earn'
+      path: '/refer-and-earn'
+      fullPath: '/refer-and-earn'
+      preLoaderRoute: typeof ReferAndEarnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/placement-stories': {
@@ -395,6 +415,7 @@ const rootRouteChildren: RootRouteChildren = {
   MastersDevelopersRoute: MastersDevelopersRoute,
   MastersGeneralistRoute: MastersGeneralistRoute,
   PlacementStoriesRoute: PlacementStoriesRoute,
+  ReferAndEarnRoute: ReferAndEarnRoute,
   ServicesNowRoute: ServicesNowRoute,
   ServicesNowDevelopersRoute: ServicesNowDevelopersRoute,
   ServicesNowGeneralistRoute: ServicesNowGeneralistRoute,

@@ -129,7 +129,11 @@ const navDropdowns: NavDropdown[] = [
   {
     label: "More",
     items: [
-      { label: "Refer and Earn", icon: <Gift className="h-5 w-5" /> },
+      {
+        label: "Refer and Earn",
+        icon: <Gift className="h-5 w-5" />,
+        href: "/refer-and-earn",
+      },
       {
         label: "Placement Stories",
         icon: <Trophy className="h-5 w-5" />,
