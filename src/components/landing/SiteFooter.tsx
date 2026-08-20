@@ -47,22 +47,10 @@ const COMPANY: FooterLink[] = [
 ];
 
 const POLICIES: FooterLink[] = [
-  {
-    label: "Terms and Conditions",
-    href: "https://phincoelite.com/Terms%20&%20Conditions",
-    external: true,
-  },
-  {
-    label: "Privacy Policy",
-    href: "https://phincoelite.com/Privacy-Policy",
-    external: true,
-  },
-  {
-    label: "Refund Policy",
-    href: "https://phincoelite.com/Return%20and%20Refund%20Policy",
-    external: true,
-  },
-  { label: "Help", href: "https://phincoelite.com/Help", external: true },
+   { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Refund Policy", href: "/return-and-refund-policy" },
+  { label: "Help", href: "/help" },
 ];
 
 const SOCIAL = [

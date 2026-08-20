@@ -9,13 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as ServicesNowGeneralistRouteImport } from './routes/servicesNowGeneralist'
 import { Route as ServicesNowDevelopersRouteImport } from './routes/servicesNowDevelopers'
 import { Route as ServicesNowRouteImport } from './routes/services-now'
+import { Route as ReturnAndRefundPolicyRouteImport } from './routes/return-and-refund-policy'
 import { Route as ReferAndEarnRouteImport } from './routes/refer-and-earn'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PlacementStoriesRouteImport } from './routes/placement-stories'
 import { Route as MastersGeneralistRouteImport } from './routes/mastersGeneralist'
 import { Route as MastersDevelopersRouteImport } from './routes/mastersDevelopers'
+import { Route as HelpRouteImport } from './routes/help'
 import { Route as DataScienceGeneralistRouteImport } from './routes/dataScienceGeneralist'
 import { Route as DataScienceDevelopersRouteImport } from './routes/dataScienceDevelopers'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -28,6 +32,11 @@ import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
 import { Route as BlogsTopicRouteImport } from './routes/blogs.$topic'
 
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesNowGeneralistRoute = ServicesNowGeneralistRouteImport.update({
   id: '/servicesNowGeneralist',
   path: '/servicesNowGeneralist',
@@ -43,9 +52,19 @@ const ServicesNowRoute = ServicesNowRouteImport.update({
   path: '/services-now',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReturnAndRefundPolicyRoute = ReturnAndRefundPolicyRouteImport.update({
+  id: '/return-and-refund-policy',
+  path: '/return-and-refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReferAndEarnRoute = ReferAndEarnRouteImport.update({
   id: '/refer-and-earn',
   path: '/refer-and-earn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlacementStoriesRoute = PlacementStoriesRouteImport.update({
@@ -61,6 +80,11 @@ const MastersGeneralistRoute = MastersGeneralistRouteImport.update({
 const MastersDevelopersRoute = MastersDevelopersRouteImport.update({
   id: '/mastersDevelopers',
   path: '/mastersDevelopers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataScienceGeneralistRoute = DataScienceGeneralistRouteImport.update({
@@ -128,13 +152,17 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/help': typeof HelpRoute
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
+  '/return-and-refund-policy': typeof ReturnAndRefundPolicyRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -147,13 +175,17 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/help': typeof HelpRoute
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
+  '/return-and-refund-policy': typeof ReturnAndRefundPolicyRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs': typeof BlogsIndexRoute
@@ -168,13 +200,17 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/help': typeof HelpRoute
   '/mastersDevelopers': typeof MastersDevelopersRoute
   '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
+  '/return-and-refund-policy': typeof ReturnAndRefundPolicyRoute
   '/services-now': typeof ServicesNowRoute
   '/servicesNowDevelopers': typeof ServicesNowDevelopersRoute
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs/': typeof BlogsIndexRoute
@@ -190,13 +226,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/help'
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/privacy-policy'
     | '/refer-and-earn'
+    | '/return-and-refund-policy'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
+    | '/terms-and-conditions'
     | '/blogs/$topic'
     | '/programs/data-science-ai'
     | '/blogs/'
@@ -209,13 +249,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/help'
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/privacy-policy'
     | '/refer-and-earn'
+    | '/return-and-refund-policy'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
+    | '/terms-and-conditions'
     | '/blogs/$topic'
     | '/programs/data-science-ai'
     | '/blogs'
@@ -229,13 +273,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/help'
     | '/mastersDevelopers'
     | '/mastersGeneralist'
     | '/placement-stories'
+    | '/privacy-policy'
     | '/refer-and-earn'
+    | '/return-and-refund-policy'
     | '/services-now'
     | '/servicesNowDevelopers'
     | '/servicesNowGeneralist'
+    | '/terms-and-conditions'
     | '/blogs/$topic'
     | '/programs/data-science-ai'
     | '/blogs/'
@@ -250,18 +298,29 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DataScienceDevelopersRoute: typeof DataScienceDevelopersRoute
   DataScienceGeneralistRoute: typeof DataScienceGeneralistRoute
+  HelpRoute: typeof HelpRoute
   MastersDevelopersRoute: typeof MastersDevelopersRoute
   MastersGeneralistRoute: typeof MastersGeneralistRoute
   PlacementStoriesRoute: typeof PlacementStoriesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ReferAndEarnRoute: typeof ReferAndEarnRoute
+  ReturnAndRefundPolicyRoute: typeof ReturnAndRefundPolicyRoute
   ServicesNowRoute: typeof ServicesNowRoute
   ServicesNowDevelopersRoute: typeof ServicesNowDevelopersRoute
   ServicesNowGeneralistRoute: typeof ServicesNowGeneralistRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   ProgramsDataScienceAiRoute: typeof ProgramsDataScienceAiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicesNowGeneralist': {
       id: '/servicesNowGeneralist'
       path: '/servicesNowGeneralist'
@@ -283,11 +342,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesNowRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/return-and-refund-policy': {
+      id: '/return-and-refund-policy'
+      path: '/return-and-refund-policy'
+      fullPath: '/return-and-refund-policy'
+      preLoaderRoute: typeof ReturnAndRefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/refer-and-earn': {
       id: '/refer-and-earn'
       path: '/refer-and-earn'
       fullPath: '/refer-and-earn'
       preLoaderRoute: typeof ReferAndEarnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/placement-stories': {
@@ -309,6 +382,13 @@ declare module '@tanstack/react-router' {
       path: '/mastersDevelopers'
       fullPath: '/mastersDevelopers'
       preLoaderRoute: typeof MastersDevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dataScienceGeneralist': {
@@ -412,13 +492,17 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DataScienceDevelopersRoute: DataScienceDevelopersRoute,
   DataScienceGeneralistRoute: DataScienceGeneralistRoute,
+  HelpRoute: HelpRoute,
   MastersDevelopersRoute: MastersDevelopersRoute,
   MastersGeneralistRoute: MastersGeneralistRoute,
   PlacementStoriesRoute: PlacementStoriesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ReferAndEarnRoute: ReferAndEarnRoute,
+  ReturnAndRefundPolicyRoute: ReturnAndRefundPolicyRoute,
   ServicesNowRoute: ServicesNowRoute,
   ServicesNowDevelopersRoute: ServicesNowDevelopersRoute,
   ServicesNowGeneralistRoute: ServicesNowGeneralistRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
   ProgramsDataScienceAiRoute: ProgramsDataScienceAiRoute,
 }
 export const routeTree = rootRouteImport
