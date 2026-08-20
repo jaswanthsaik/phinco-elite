@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 // Update these paths based on your project structure
 import nasscomCertificate from "@/assets/certificate.jpeg";
-import projectCertificate from "@/assets/Certificate.png";
+import projectCertificate from "@/assets/Project  -Certificate.png";
 
 type TabKey = "NASSCOM" | "project";
 

@@ -34,7 +34,7 @@ const CATEGORIES: Category[] = [
   { id: "datasci", label: "Data Sci & GenAI", Icon: BarChart3 },
   { id: "servicenow", label: "Services Now", Icon: Sparkles },
   { id: "genai", label: "GEN AI & Agentic AI", Icon: Sparkles, badge: "NEW" },
-  { id: "masters", label: "Master's Degree", Icon: Star },
+  { id: "masters", label: " Internship Programs", Icon: Star },
 ];
 
 const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
@@ -64,20 +64,20 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   datasci: [
     {
       id: "datasci-developer",
-      title: " Data Science with GenAI OJT Program",
+      title: " Data Science & Analytics OJT ",
       duration: "4 Months | 10 Capstone Projects",
-      cert: "Project Certification from Meta",
-      audience: "Designed For Tech Professionals",
+      cert: "Project Certification from Google & ISO",
+      audience: "Designed For  Job Seekers",
       partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
     },
     {
       id: "datasci-generalist",
-      title: "Data Science with GenAI OJT Program",
-      duration: "4 Months | 10 Capstone Projects",
-      cert: "Project Certification from Meta",
-      audience: "Designed For Tech Professionals",
+      title: "Data Science & Analytics Certification",
+      duration: "4 Months | 5 Capstone Projects",
+      cert: "Project Certification from Google & ISO",
+      audience: "Designed For  Upskilling",
       partners: ["Meta", "Google"],
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop",
@@ -123,7 +123,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
   masters: [
     {
       id: "masters-datascientists",
-      title: "Master's in AI & Data Science",
+      title: "Internship for Data Science & Analytics",
       duration: "12 Months",
       cert: "Global Valid Certification",
       audience: "For Graduates and Professionals",
@@ -133,7 +133,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
     },
     {
       id: "masters-fullstack",
-      title: "Master's in AI & Data Science",
+      title: "Internship for Full Stack Development",
       duration: "12 Months",
       cert: "Global Valid Certification",
       audience: "For Graduates and Professionals",

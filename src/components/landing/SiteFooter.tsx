@@ -16,24 +16,24 @@ interface FooterLink {
 const COURSES: FooterLink[] = [
   { label: "GenAI & Agentic AI Developer", href: "/agenticDevelopers" },
   { label: "GenAI & Agentic AI Generalist", href: "/agenticGeneralist" },
-  { label: "Data Science & GenAI Developer", href: "/dataScienceDevelopers" },
-  { label: "Data Science & GenAI Generalist", href: "/dataScienceGeneralist" },
+  { label: "Data Science & Analytics OJT", href: "/dataScienceDevelopers" },
+  { label: "Data Science & Analytics Certification", href: "/dataScienceGeneralist" },
   { label: "Services Now for Developer", href: "/servicesNowDevelopers" },
   { label: "Services Now for Generalist", href: "/servicesNowGeneralist" },
-  { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
-  { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
+  // { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
+  // { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
 ];
 
 // Pulled from the header PHINCO Eduversity mega menu
-const EDUVERSITY: FooterLink[] = [
-  { label: "USA", href: "/" },
-  { label: "Ireland", href: "/" },
-  { label: "Europe", href: "/" },
-  { label: "Canada", href: "/" },
-  { label: "Australia", href: "/" },
-  { label: "Asia", href: "/" },
-  { label: "United Kingdom", href: "/" },
-  { label: "New Zealand", href: "/" },
+const INTERNSHIPS: FooterLink[] = [
+   { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
+  { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
+  // { label: "Europe", href: "/" },
+  // { label: "Canada", href: "/" },
+  // { label: "Australia", href: "/" },
+  // { label: "Asia", href: "/" },
+  // { label: "United Kingdom", href: "/" },
+  // { label: "New Zealand", href: "/" },
 ];
 
 // Pulled from the header More dropdown + pages
@@ -133,7 +133,7 @@ export function SiteFooter() {
           </div>
 
           <LinkColumn title="Courses" links={COURSES} />
-          <LinkColumn title="Eduversity" links={EDUVERSITY} />
+          <LinkColumn title="Internships" links={INTERNSHIPS} />
           <LinkColumn title="Company" links={COMPANY} />
         </div>
 
