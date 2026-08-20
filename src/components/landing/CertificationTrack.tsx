@@ -81,23 +81,23 @@ const PROGRAMS: Program[] = [
     techHref: "/agenticDevelopers",
     nonTechHref: "/agenticGeneralist",
   },
-  {
-    id: "masters",
-    title: "Masters Program",
-    badge: "Work on real capstone projects",
-    Icon: Atom,
-    iconGradient: "from-fuchsia-500 to-indigo-500",
-    cardBg: "bg-gradient-to-br from-[#551235] via-[#253f98] to-[#092a63]",
-    buttonBg: "bg-[#2ea7ff]",
-    bullets: ["Get job ready in 32 weeks", "1 year of placement assurance"],
-    partners: ["NASSCOM", "NSDC"],
-    skills: ["FULL STACK", "DATA SCIENCE", "AI", "PROJECTS", "CAREER READY"],
-    highlight: "Domain Specialised Program with Industry Project Certification",
-    timeline: "8 Months Live Classes",
-    projects: "20+ Real Domain Projects",
-    techHref: "/mastersDevelopers",
-    nonTechHref: "/mastersGeneralist",
-  },
+  // {
+  //   id: "masters",
+  //   title: "Masters Program",
+  //   badge: "Work on real capstone projects",
+  //   Icon: Atom,
+  //   iconGradient: "from-fuchsia-500 to-indigo-500",
+  //   cardBg: "bg-gradient-to-br from-[#551235] via-[#253f98] to-[#092a63]",
+  //   buttonBg: "bg-[#2ea7ff]",
+  //   bullets: ["Get job ready in 32 weeks", "1 year of placement assurance"],
+  //   partners: ["NASSCOM", "NSDC"],
+  //   skills: ["FULL STACK", "DATA SCIENCE", "AI", "PROJECTS", "CAREER READY"],
+  //   highlight: "Domain Specialised Program with Industry Project Certification",
+  //   timeline: "8 Months Live Classes",
+  //   projects: "20+ Real Domain Projects",
+  //   techHref: "/mastersDevelopers",
+  //   nonTechHref: "/mastersGeneralist",
+  // },
 ];
 
 const FILTERS: {
@@ -231,7 +231,7 @@ function ProgramCard({ p }: { p: Program }) {
                 href={p.techHref}
                 className={`${p.buttonBg} w-full rounded-xl px-4 py-3 text-center text-sm font-semibold text-slate-900 shadow-lg hover:opacity-95`}
               >
-                TECH
+                OJT Program
               </a>
             )}
 
@@ -240,7 +240,7 @@ function ProgramCard({ p }: { p: Program }) {
                 href={p.nonTechHref}
                 className={`${p.buttonBg} w-full rounded-xl px-4 py-3 text-center text-sm font-semibold text-slate-900 shadow-lg hover:opacity-95`}
               >
-                NON TECH
+                Certification
               </a>
             )}
           </div>

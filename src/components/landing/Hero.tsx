@@ -61,8 +61,8 @@ function PortraitBadge({
 const COURSES = [
   "GenAI & Agentic AI Developer",
   "GenAI & Agentic AI Generalist",
-  "Data Science & GenAI Developer",
-  "Data Science & GenAI Generalist",
+  "Data Science & Analytics OJT",
+  "Data Science & Analytics Certification",
   "Services Now for Developer",
   "Services Now for Generalist",
   "Internship for Data Scientists",
