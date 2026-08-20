@@ -24,35 +24,35 @@ const FAQS: Record<Category, { q: string; a: string }[]> = {
   "Course-Related": [
     {
       q: "What is the duration of this Program?",
-      a: "The Generative AI and Data Science program runs for approximately 8 months of structured live learning, plus extended access for revisions.",
+      a: "The program is designed to give you a structured, hands-on learning experience across Data Science, Machine Learning, Generative AI, Agentic AI, and Big Data, so you can build real, job-ready skills step by step.",
     },
     {
       q: "Who is this course designed for?",
-      a: "Working professionals, freshers, and career switchers looking to build a strong career in Data Science and Generative AI.",
+      a: "This program is a great fit for freshers, graduates, working professionals, and career switchers who are looking to start or grow their career in Data Science and AI.",
     },
     {
-      q: "Are the classes live or recorded?",
-      a: "All sessions are live and interactive. Recordings are made available for revision.",
+      q: "Do I need prior programming experience?",
+      a: "No, you don’t need any prior experience. We start from the basics and gradually guide you through Python, Data Science, Machine Learning, and advanced AI concepts step by step.",
     },
   ],
   "Payments and Scholarships": [
     {
-      q: "What is the cost of this Program?",
-      a: "The Generative AI and data science course costs ₹1,20,000 + 18% GST.",
+      q: "What payment options are available?",
+      a: "Students can explore the available one-time payment, EMI, or financing options with the admissions team.",
     },
     {
       q: "Can I pay in installments for the course?",
       a: "Yes, No Cost EMI options are available. You can split the fee into easy monthly installments.",
     },
     {
-      q: "What is the refund policy for the online master's in data science and AI program at Learnbay?",
-      a: "A full refund is available within the first 7 days of the program, subject to terms and conditions.",
+      q: "Can I speak with a counsellor before enrolling?",
+      a: "Yes, you can book a free consultation to get a clear understanding of the program, explore career opportunities, check your eligibility, and discuss the available payment options.",
     },
   ],
   "Capstone and Real-time Projects": [
     {
       q: "How many projects will I work on?",
-      a: "You'll work on 30+ hands-on projects, including capstone projects across domains like BFSI, Healthcare, and Retail.",
+      a: "You'll work on 10+ hands-on projects, including capstone projects across domains like BFSI, Healthcare, and Retail.",
     },
     {
       q: "Are the projects based on real datasets?",
@@ -62,16 +62,16 @@ const FAQS: Record<Category, { q: string; a: string }[]> = {
   Certifications: [
     {
       q: "What certificate will I receive?",
-      a: "You'll receive an IBM Course Completion Certificate plus a Project Completion Certificate from Learnbay.",
+      a: "You'll receive an ISO Course Completion Certificate plus a Project Completion Certificate from PHINCOELITE.",
     },
     {
       q: "Is the certificate globally recognized?",
-      a: "Yes, the IBM certificate is internationally recognized across the IT industry.",
+      a: "Yes, the ISO certificate is internationally recognized across the IT industry.",
     },
   ],
   "Job Assistance": [
     {
-      q: "Do you provide placement support?",
+      q: "Do you provide placement assistance?",
       a: "Yes, we provide 100% placement assistance including resume building, mock interviews, and referrals to 350+ hiring partners.",
     },
     {
@@ -96,7 +96,7 @@ const FAQS: Record<Category, { q: string; a: string }[]> = {
     },
     {
       q: "Can I revisit the course content after completion?",
-      a: "Yes, you'll get the 3-year Flexi Pass to revisit live cohorts and recordings.",
+      a: "Yes. You will receive lifetime access to the course content, allowing you to revisit the learning materials and revise the concepts whenever you need.",
     },
   ],
 };

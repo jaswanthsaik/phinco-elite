@@ -1,6 +1,6 @@
 const TAGS = [
   { label: "95% industry relevance", color: "bg-orange-100 text-orange-600" },
-  { label: "22+ tools and modules", color: "bg-blue-100 text-blue-600" },
+  { label: "10+ tools and modules", color: "bg-blue-100 text-blue-600" },
   { label: "100% real-world experience", color: "bg-emerald-100 text-emerald-600" },
 ];
 
@@ -18,57 +18,57 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     num: "1",
-    brand: "𝕏",
+    brand: "Jp Morgan",
     brandClass: "text-black",
-    title: "Social Media Feed System",
+    title: "Loan Approval Prediction System",
     description:
-      "Efficient real-time notification feed management system for Twitter. Lightning speed time update and access during high volume data management per second.",
-    tools: "python  •  git",
+      "Develop a predictive model to analyze applicant data and determine loan approval probability.",
+    tools: "Python • Statistics",
     toolsClass: "bg-orange-50",
-    outcome: "Effective data Sharding and caching technique implementation.",
+    outcome: "Build a classification model with real-world business insights.",
   },
   {
     num: "2",
-    brand: "OYO",
+    brand: "Optum",
     brandClass: "text-red-600",
-    title: "Designing of Booking System for Hotel Rooms",
+    title: "Disease Prediction & Patient Analytics",
     description:
-      "User reservation and room management focused booking management systems for business.",
-    tools: "Azure DevOps",
+      "Analyze patient datasets and build an AI model for disease-risk prediction and healthcare insights.",
+    tools: "Python • Pandas • Streamlit",
     toolsClass: "bg-blue-50",
-    outcome: "Infusion of a database schema for tracking room bookings, customer accounts etc.",
+    outcome: "Create an end-to-end predictive analytics application.",
   },
   {
     num: "3",
-    brand: "SWIGGY",
+    brand: "Amazon",
     brandClass: "text-orange-500",
-    title: "Food Ordering System",
-    description: "Build a platform connecting users to local restaurants for ordering and delivery.",
-    tools: "Azure  •  AWS  •  Jenkins",
+    title: "Smart Travel Recommendation System",
+    description: "Create an AI-powered travel assistant for recommending destinations, hotels, and personalized travel plans.",
+    tools: " Python • APIs • Streamlit",
     toolsClass: "bg-orange-50",
-    outcome: "Design a microservices architecture for managing restaurant listings, orders etc.",
+    outcome: "Build and deploy an intelligent GenAI travel application.",
   },
   {
     num: "4",
     brand: "NETFLIX",
     brandClass: "text-red-600",
-    title: "Netflix Content Streaming Service",
+    title: "Content Recommendation System",
     description:
-      "Design a microservices-based architecture for Netflix's streaming service, focusing on service decomposition.",
-    tools: "docker  •  kubernetes",
+      "Build a machine learning model that recommends movies and shows based on user preferences and viewing patterns.",
+    tools: "Python • Pandas ",
     toolsClass: "bg-blue-50",
-    outcome: "Use CAP principles to manage data consistency.",
+    outcome: "Build and deploy a personalized recommendation engine.",
   },
   {
     num: "5",
-    brand: "Flipkart",
+    brand: "Infosys",
     brandClass: "text-blue-600",
-    title: "End-to-end Design of Flipkart-like Shopping Cart",
+    title: "E-Commerce Customer Analytics & Recommendation Engine",
     description:
-      "High-quality UI, rich shopping cart system creation from scratch. Includes features like add, replace, delete items.",
-    tools: "git  •  linux",
+      "Analyze customer purchasing behavior, products, sales trends, and generate personalized recommendations.",
+    tools: "Python • SQL • Power BI",
     toolsClass: "bg-orange-50",
-    outcome: "Normalization of database schema, Sequence diagrams.",
+    outcome: "Create customer segmentation and product recommendation insights.",
   },
   {
     num: "6",
@@ -77,7 +77,7 @@ const PROJECTS: Project[] = [
     title: "Developing Property Booking System",
     description:
       "Create a booking management system for hotels that supports user reservations and room management.",
-    tools: "Prometheus  •  Grafana",
+    tools: "SQL  •  POWER BI",
     toolsClass: "bg-orange-50",
     outcome: "Implement a normalized database schema for hotels, rooms.",
   },
@@ -99,7 +99,7 @@ export function IndustryProjects() {
           <span className="relative inline-block">
             Projects
             <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-orange-500" />
-          </span>
+          </span>(Opt Any 5)
         </h2>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4">

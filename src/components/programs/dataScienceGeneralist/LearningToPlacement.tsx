@@ -62,11 +62,11 @@ export function LearningToPlacement() {
   style={{ background: "linear-gradient(135deg, #5b1ab8, #3a0f8a 70%)" }}
 >
   <span className="rounded bg-white/5 px-4 py-1.5 text-2xl font-extrabold tracking-widest text-white">
-    IBM
+    IS0 9001:2015
   </span>
 
   <p className="mt-5 text-xl font-extrabold text-emerald-300 sm:text-2xl">
-    Become an IBM
+    Become an ISO
     <br />
     Certified AI
     <br />

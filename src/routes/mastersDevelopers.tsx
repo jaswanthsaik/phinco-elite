@@ -23,13 +23,13 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/mastersDevelopers")({
   head: () => ({
     meta: [
-      { title: "Masters for Data Scientists — Phinco Elite" },
+      { title: "Internship for Data Scientists — Phinco Elite" },
       {
         name: "description",
         content:
-          "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
+          "Become an ISO Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
-      { property: "og:title", content: "Masters for Data Scientists — Phinco Elite" },
+      { property: "og:title", content: "Internship for Data Scientists — Phinco Elite" },
       {
         property: "og:description",
         content: "Industry-ready Data Science & GenAI certification with real AI projects and placement support.",
@@ -44,7 +44,7 @@ function ProgramPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <ProgramHero titleTop="Masters" titleHighlight="for Data Scientists" />
+        <ProgramHero titleTop="Internship" titleHighlight="for Data Scientists" />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

@@ -7,13 +7,13 @@ const TOOLS = [
   { name: "matplotlib", color: "text-blue-700" },
   { name: "pandas", color: "text-indigo-800" },
   { name: "ChatGpt", color: "text-teal-600" },
-  { name: "Midjourney", color: "text-slate-700" },
+  { name: "Snowflake", color: "text-slate-700" },
   { name: "Numpy", color: "text-blue-600" },
-  { name: "mongoDB", color: "text-emerald-700" },
-  { name: "seaborn", color: "text-slate-500" },
-  { name: "hadoop", color: "text-yellow-500" },
-  { name: "amazon web services", color: "text-orange-500" },
-  { name: "Keras", color: "text-sky-600" },
+  // { name: "mongoDB", color: "text-emerald-700" },
+  // { name: "seaborn", color: "text-slate-500" },
+  // { name: "hadoop", color: "text-yellow-500" },
+  // { name: "amazon web services", color: "text-orange-500" },
+  // { name: "Keras", color: "text-sky-600" },
 ];
 
 export function ProgrammingTools() {

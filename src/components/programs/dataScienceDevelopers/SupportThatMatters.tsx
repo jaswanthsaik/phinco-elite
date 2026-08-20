@@ -48,10 +48,10 @@ export function SupportThatMatters() {
               Choose Your Specialization
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-emerald-800">
-              SPECIALIZE IN YOUR CHOSEN INDUSTRY
+              Specialize in Data Science & Analytics for Your Chosen Industry
             </h3>
             <p className="mt-3 text-sm text-gray-700">
-              Choose from BFSI, Healthcare, Retail, HR, Manufacturing, and more. Build industry-specific expertise that aligns with your career goals.
+              Build industry-specific expertise across BFSI, Healthcare, Retail, HR, Manufacturing, and more. Apply Data Science, AI, and Generative AI skills to real-world business challenges and career goals.
             </p>
             {/* <div className="pointer-events-none absolute bottom-4 right-4 hidden grid-cols-3 gap-3 opacity-80 lg:grid">
               <div className="h-12 w-12 rounded-full bg-emerald-200/70 flex items-center justify-center"><Landmark className="h-5 w-5 text-emerald-700" /></div>
@@ -63,24 +63,26 @@ export function SupportThatMatters() {
           </div>
 
           {/* GenAI + Agentic AI */}
-          <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-300/60 bg-gradient-to-br from-indigo-50 to-blue-50 p-7">
+          {/* <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-300/60 bg-gradient-to-br from-indigo-50 to-blue-50 p-7">
             <span className="inline-block rounded-full bg-indigo-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
               Master GenAI & Agentic AI
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-blue-700">
-              with Industry-Leading Frameworks
+              Master Generative AI, Agentic AI & Industry-Leading Frameworks
             </h3>
             <p className="mt-3 text-sm text-gray-700">
-              Build production-ready AI agents using {" "}
-              <strong>LangChain, RAG, AutoGPT, and other cutting-edge technologies </strong> powering next-generation AI applications.
-            </p>
+              Build production-ready AI applications using  {" "}
+              <strong>LangChain, RAG, AutoGPT, and other cutting-edge technologies </strong> Learn how modern AI systems are built, integrated, and applied to real-world business problems.            </p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
+                            <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">Python</span>              
               <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">AutoGPT</span>
               <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">🦜 LangChain</span>
+                            <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">RAG</span>
+               <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm">Generative AI</span>
               <span className="rounded-md border border-rose-300 bg-white px-3 py-1.5 shadow-sm text-rose-500">Agentic AI</span>
               <span className="rounded-md border bg-white px-3 py-1.5 shadow-sm text-gray-600">and many more...</span>
             </div>
-          </div>
+          </div> */}
 
           {/* Job Readiness */}
           <div className="relative overflow-hidden rounded-2xl border-2 border-purple-300/60 bg-gradient-to-br from-purple-50 to-fuchsia-50 p-7">
@@ -91,7 +93,10 @@ export function SupportThatMatters() {
               Build Skills. Gain Confidence. Get Hired.
             </h3>
             <p className="mt-3 max-w-sm text-sm text-gray-700">
-              Work on real-world scenarios, refine your technical expertise, and prepare with expert-led mock interviews. Develop the confidence to crack interviews and launch your career in Data Science, AI, and Analytics.
+              Work on real-world projects and industry scenarios, strengthen your technical expertise, and prepare for interviews with expert-led mock interviews.
+            </p>
+            <p className="mt-3 text-sm text-gray-700">
+              Build the confidence to crack Data Science, AI, Analytics, and Generative AI interviews and launch your career.
             </p>
           </div>
         </div>

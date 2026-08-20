@@ -25,11 +25,11 @@ const BENEFITS = [
 const COURSES = [
   "GenAI & Agentic AI Developer",
   "GenAI & Agentic AI Generalist",
-  "Data Science & GenAI Developer",
+  "Data Science & Analytics OJT ",
   "Data Science & GenAI Generalist",
   "Services Now for Developer",
   "Services Now for Generalist",
-  "Masters for Data Scientists",
+  "Internship for Data Scientists",
   "Masters for Full Stack Developers",
 ];
 
