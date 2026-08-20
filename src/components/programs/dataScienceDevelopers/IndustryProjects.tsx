@@ -23,7 +23,7 @@ const PROJECTS: Project[] = [
     title: "Customer Churn Prediction & Retention Analytics",
     description:
       "Build an AI-powered analytics solution to identify customers likely to churn and recommend personalized retention strategies using historical customer behavior.",
-    tools: "Python • SQL • Power BI • Scikit-learn",
+    tools: "Credits: 85/100",
     toolsClass: "bg-orange-50",
     outcome: "Develop predictive churn models, customer segmentation dashboards, and retention strategy recommendations.",
   },
@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
     title: "Retail Sales Forecasting Dashboard",
     description:
       "Design an end-to-end analytics solution to forecast sales across stores, optimize inventory, and identify seasonal demand patterns.",
-    tools: "Excel • Python • Power BI • SQL",
+    tools: "Credits: 90/100",
     toolsClass: "bg-blue-50",
     outcome: "Build forecasting models, interactive sales dashboards, and inventory optimization reports.",
   },
@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
     brandClass: "text-orange-500",
     title: "Ride Demand & Driver Performance Analytics",
     description: "Analyze ride demand, driver utilization, surge pricing, and customer behavior to improve operational efficiency.",
-    tools: "SQL • Power BI • Python • Tableau",
+    tools: "Credits: 85/100",
     toolsClass: "bg-orange-50",
     outcome: "Create KPI dashboards for demand forecasting, driver productivity, and revenue optimization.",
   },
@@ -55,7 +55,7 @@ const PROJECTS: Project[] = [
     title: "Content Recommendation & Viewer Analytics",
     description:
       "Develop an analytics platform to study viewer engagement, content performance, and recommendation effectiveness.",
-    tools: "Python • SQL • Power BI • Pandas",
+    tools: "Credits: 85/100",
     toolsClass: "bg-blue-50",
     outcome: "Build recommendation insights, audience segmentation, and content performance dashboards.",
   },
@@ -66,7 +66,7 @@ const PROJECTS: Project[] = [
     title: "Restaurant Performance & Delivery Analytics",
     description:
       "Analyze restaurant performance, delivery times, and customer satisfaction to drive operational improvements.",
-    tools: "Python • SQL • Power BI • Pandas",
+    tools: "Credits: 90/100",
     toolsClass: "bg-blue-50",
     outcome: "Create dashboards for performance monitoring, delivery optimization, and customer satisfaction analysis.",
   },
@@ -77,7 +77,7 @@ const PROJECTS: Project[] = [
     title: "Fraud Detection & Financial Risk Analytics",
     description:
       "Build a machine learning solution to detect fraudulent transactions and monitor financial risks using transaction data.",
-    tools: "Python • SQL • Power BI",
+    tools: "Credits: 90/100",
     toolsClass: "bg-orange-50",
     outcome: "Create fraud detection models, risk scoring dashboards, and real-time financial monitoring reports.",
   },

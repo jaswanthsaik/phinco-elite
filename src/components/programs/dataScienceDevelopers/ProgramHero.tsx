@@ -72,7 +72,7 @@ export function ProgramHero({
               Earn an Industry-Recognized Certification from PHINCO ELITE
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              NASSCOM
+              ISO 9001:2015 Certified
             </span>
           </div>
         </div>

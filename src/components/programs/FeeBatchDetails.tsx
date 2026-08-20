@@ -34,7 +34,7 @@ export function FeeBatchDetails() {
             <div className="md:pl-8">
               <p className="text-sm font-bold text-slate-900">Program Fee:</p>
               <p className="mt-2 text-2xl font-extrabold text-slate-700 sm:text-3xl">
-                ₹ 1,20,000{" "}
+                ₹ 7,000 per month
                 <span className="text-xs font-medium text-slate-500 sm:text-sm">+ 18% GST</span>
               </p>
 

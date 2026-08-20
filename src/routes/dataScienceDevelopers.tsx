@@ -44,7 +44,7 @@ function ProgramPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <ProgramHero titleTop="Data Science & GenAI" titleHighlight="for Developers" />
+        <ProgramHero titleTop="Data Science & " titleHighlight="Analytics OJT" />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

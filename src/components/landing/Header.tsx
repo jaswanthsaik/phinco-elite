@@ -94,11 +94,11 @@ const ojtPrograms: OjtProgram[] = [
     label: "Data Science & GenAI",
     children: [
       {
-        label: "Data Science & GenAI Developer",
+        label: "Data Science & Analytics OJT",
         href: "/dataScienceDevelopers",
       },
       {
-        label: "Data Science & GenAI Generalist",
+        label: "Data Science & Analytics Certification",
         href: "/dataScienceGeneralist",
       },
     ],
@@ -117,10 +117,10 @@ const ojtPrograms: OjtProgram[] = [
     ],
   },
   {
-    label: "Masters",
+    label: "Internship",
     children: [
-      { label: "Masters for Data Scientists", href: "/mastersDevelopers" },
-      { label: "Masters for Full Stack Developers", href: "/mastersGeneralist" },
+      { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
+      { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
     ],
   },
 ];
@@ -206,7 +206,7 @@ function OjtMegaMenu({
         onClick={onToggle}
         className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-brand"
       >
-        OJT Programs
+        Career Programs
         {isOpen ? (
           <ChevronUp className="h-4 w-4 text-brand" />
         ) : (

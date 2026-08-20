@@ -59,22 +59,22 @@ const stories: Story[] = [
     accent: "#0ea5e9",
     youtubeUrl: "https://www.youtube.com/watch?v=5I82nYAjTco",
   },
-  {
-    img: portrait1,
-    // company: "CENDROL",
-    name: "Shubham Kumar",
-    role: "Data Scientist",
-    accent: "#f59e0b",
-    youtubeUrl: "https://www.youtube.com/watch?v=9R3X0JoCLyU",
-  },
-  {
-    img: portrait2,
-    // company: "Capgemini",
-    name: "Mahasweta Sarkar",
-    role: "Data Analytics Consultant",
-    accent: "#0ea5e9",
-    youtubeUrl: "https://www.youtube.com/watch?v=YRJbhFLLPyE",
-  },
+  // {
+  //   img: portrait1,
+  //   // company: "CENDROL",
+  //   name: "Shubham Kumar",
+  //   role: "Data Scientist",
+  //   accent: "#f59e0b",
+  //   youtubeUrl: "https://www.youtube.com/watch?v=9R3X0JoCLyU",
+  // },
+  // {
+  //   img: portrait2,
+  //   // company: "Capgemini",
+  //   name: "Mahasweta Sarkar",
+  //   role: "Data Analytics Consultant",
+  //   accent: "#0ea5e9",
+  //   youtubeUrl: "https://www.youtube.com/watch?v=YRJbhFLLPyE",
+  // },
 ];
 
 const ratings = [

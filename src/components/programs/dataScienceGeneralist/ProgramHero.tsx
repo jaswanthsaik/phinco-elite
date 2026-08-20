@@ -13,7 +13,7 @@ export function ProgramHero({
   titleHighlight,
   badge = "Elevate your tech career with our programs",
   pointOne = "Learn to integrate GenAI into your existing software stack",
-  pointTwo = "Build Autonomous AI Agents",
+  pointTwo = "Earn Your Data Science & Analytics Certification",
 }: ProgramHeroProps) {
   return (
     <section
@@ -72,7 +72,7 @@ export function ProgramHero({
               Earn Industry-Ready Certification From
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              IBM
+              IS0
             </span>
           </div>
         </div>

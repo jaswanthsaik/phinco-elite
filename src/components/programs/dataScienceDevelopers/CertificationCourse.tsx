@@ -12,7 +12,7 @@ export function CertificationCourse() {
 
   const content = {
     NASSCOM: {
-      title: "NASSCOM Certificate",
+      title: "ISO Certificate",
       points: [
         "Earn an Industry-Recognized Certification upon successful program completion.",
         "Validate Your Data Analytics, AI & Data Science Skills with a recognized credential.",
@@ -56,7 +56,7 @@ export function CertificationCourse() {
 
               const label =
                 k === "NASSCOM"
-                  ? "NASSCOM Certificate"
+                  ? "ISO Certificate"
                   : "Project Certificate";
 
               return (
