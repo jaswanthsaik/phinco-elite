@@ -6,6 +6,7 @@ import portrait3 from "@/assets/shalini.png";
 import portrait4 from "@/assets/neha.png";
 import sanskar from "@/assets/Sanskar (2).png";
 import portrait5 from "@/assets/roadmap.png";
+import roadmap from "@/assets/road-map.jpeg";
 
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useRef, useState } from "react";
@@ -280,7 +281,7 @@ export function RealStories() {
           <div className="mx-auto w-full max-w-[520px] overflow-hidden rounded-[22px] border border-[#10aee5] bg-[#e9fbff] p-3 shadow-md" onClick={() => setShowContactModal(true)}>
              <div className="overflow-hidden rounded-t-[14px] bg-neutral-900">
               <img
-                src= 'src\assets\road-map.jpeg'
+                src={roadmap}
                 alt="Learner testimonial video"
                 className="aspect-video h-full w-full object-cover"
               />
