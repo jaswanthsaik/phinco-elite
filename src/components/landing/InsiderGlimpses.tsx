@@ -1,8 +1,12 @@
-import learner1 from "@/assets/learner-1.jpg";
-import learner2 from "@/assets/learner-2.jpg";
-import learner3 from "@/assets/learner-3.jpg";
-import learner4 from "@/assets/learner-4.jpg";
-import learner5 from "@/assets/learner-5.jpg";
+import learner1 from "@/assets/prash.jpeg";
+import learner2 from "@/assets/arun.jpeg";
+import learner3 from "@/assets/ahmed.jpeg";
+import learner4 from "@/assets/venthan.png";
+import learner5 from "@/assets/geenth.png";
+import learner6 from "@/assets/rabbani.jpeg";
+import learner7 from "@/assets/geeen.png";
+
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
@@ -47,14 +51,14 @@ const LEARNERS: Learner[] = [
     name: "Geenthika R",
     headline: "House Wife to Analyst",
     age: "5d",
-    image: learner5,
+    image: learner7,
     body: "Completed my Data Analytics Program at PHINCO ELITE and successfully started my journey as a Data Analyst. The structured learning approach, practical projects, and personalised mentorship helped me build confidence and develop strong analytical skills. The guidance from mentors and the support throughout the program played a key role in my career transformation. Grateful to the PHINCO ELITE team for helping me achieve this milestone.",
   },
   {
     name: "Rabbani S",
     headline: "Customer Support to Analyst",
     age: "3d",
-    image: learner4,
+    image: learner6,
     body: "Happy to share my journey of transitioning from Customer Support to Data Analyst with the support of PHINCO ELITE. The Data Analytics program helped me build strong skills in Excel, SQL, Python, Power BI, and data analysis through practical training and real-world projects. The structured learning, mentor guidance, and hands-on experience helped me gain confidence and prepare for opportunities in the analytics field. Grateful to the PHINCO ELITE team for supporting my career transformation journey.",
   },
   {

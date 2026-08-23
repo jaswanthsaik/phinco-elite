@@ -1,6 +1,9 @@
-import portrait1 from "@/assets/portrait-1.jpg";
-import portrait2 from "@/assets/portrait-2.jpg";
-import portrait3 from "@/assets/portrait-3.jpg";
+import portrait1 from "@/assets/shravanth.jpeg";
+import portrait2 from "@/assets/portrait-2.jpeg";
+import portrait3 from "@/assets/geenth.png";
+import portrait4 from "@/assets/arun.jpeg";
+import portrait5 from "@/assets/neha.png";
+
 import emailjs from "@emailjs/browser";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
@@ -33,13 +36,16 @@ const PROFILE_TYPES = [
 const logos = [
   { name: "J.P.Morgan", img: portrait1 },
   { name: "KPMG", img: portrait2 },
-  { name: "J.P.Morgan", img: portrait1 },
   { name: "AXA", img: portrait3 },
-  { name: "general motors", img: portrait1 },
+  { name: "general motors", img: portrait4 },
+    { name: "DATA POEM", img: portrait5 },
+    { name: "J.P.Morgan", img: portrait1 },
   { name: "KPMG", img: portrait2 },
-  { name: "J.P.Morgan", img: portrait1 },
   { name: "AXA", img: portrait3 },
-  { name: "DATA POEM", img: portrait2 },
+    { name: "general motors", img: portrait4 },
+  { name: "DATA POEM", img: portrait5 },
+
+
 ];
 
 export function IndustryLeading() {
@@ -124,7 +130,7 @@ export function IndustryLeading() {
                 Shravanth A.
               </div>
               <div className="text-xs font-semibold text-[#1d6bff] sm:text-sm">
-                Data Scientist @TCS
+                Data Scientist @J.P.Morgan
               </div>
             </div>
           </div>

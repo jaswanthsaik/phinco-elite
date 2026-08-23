@@ -5,6 +5,8 @@ import portrait2 from "@/assets/rahul.png";
 import portrait3 from "@/assets/shalini.png";
 import portrait4 from "@/assets/neha.png";
 import sanskar from "@/assets/Sanskar (2).png";
+import portrait5 from "@/assets/roadmap.png";
+
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -24,7 +26,7 @@ const stories: Story[] = [
     name: "Himani",
     role: "Fresher to Data Analyst",
     accent: "#f59e0b",
-    youtubeUrl: "https://www.youtube.com/watch?v=T8cWzZwJTug",
+    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
     
   },
   {
@@ -33,7 +35,8 @@ const stories: Story[] = [
     name: "Rahul",
     role: "Career gap to Data Analyst",
     accent: "#f97316",
-    youtubeUrl: "https://www.youtube.com/watch?v=Zv6T1dx0VTg",
+    // role: "Career gap to Data Analyst",
+    youtubeUrl: "https://www.youtube.com/watch?v=dyiWCACsg0E",
   },
   {
     img: portrait3,
@@ -41,7 +44,7 @@ const stories: Story[] = [
     name: "Shalini",
     role: "Marketing to Data Analytics",
     accent: "#0ea5e9",
-    youtubeUrl: "https://www.youtube.com/watch?v=2JqCGO5jH5w",
+    youtubeUrl: "https://www.youtube.com/watch?v=HvdoG3X8gB8",
   },
   {
     img: sanskar,
@@ -49,7 +52,7 @@ const stories: Story[] = [
     name: "sanskar",
     role: "Customer Support to Data Analyst",
     accent: "#f97316",
-    youtubeUrl: "https://www.youtube.com/watch?v=dyhFns6PRFw",
+    youtubeUrl: "https://www.youtube.com/watch?v=cMgXp2qAb9U",
   },
   {
     img: portrait4,
@@ -57,7 +60,7 @@ const stories: Story[] = [
     name: "Neha",
     role: "Career gap to Data Analyst",
     accent: "#0ea5e9",
-    youtubeUrl: "https://www.youtube.com/watch?v=5I82nYAjTco",
+    youtubeUrl: "https://www.youtube.com/watch?v=dQRCKGdh2M8",
   },
   // {
   //   img: portrait1,
