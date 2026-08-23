@@ -9,7 +9,7 @@ import portrait3 from "@/assets/portrait-3.jpg";
 import { Header } from "@/components/landing/Header";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
-import { FAQSection } from "@/components/programs/FAQSection";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Download, Linkedin, Phone, Play } from "lucide-react";
 import { useState } from "react";

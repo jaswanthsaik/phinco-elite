@@ -3,7 +3,7 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import ReferAndEarn from "@/components/landing/ReferAndEarn";
 import { createFileRoute } from "@tanstack/react-router";
-import { FAQSection } from "@/components/programs/FAQSection";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
 
 export const Route = createFileRoute("/refer-and-earn")({
   head: () => ({

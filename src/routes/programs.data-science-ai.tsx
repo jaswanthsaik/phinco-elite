@@ -9,7 +9,7 @@ import { AlumniCompanies } from "@/components/programs/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/CertificationCourse";
 import { DataScienceHero } from "@/components/programs/DataScienceHero";
 import { ExploreSyllabus } from "@/components/programs/ExploreSyllabus";
-import { FAQSection } from "@/components/programs/FAQSection";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/LearningToPlacement";
