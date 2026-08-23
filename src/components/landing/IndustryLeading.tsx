@@ -249,8 +249,7 @@ export function IndustryLeading() {
               <span>
                 By submitting the form, you agree to our{" "}
                 <a
-                  href={TERMS_URL}
-                  target="_blank"
+                  href= "/terms-and-conditions"
                   rel="noreferrer"
                   className="font-medium text-[#1d6bff] underline"
                 >
@@ -258,8 +257,7 @@ export function IndustryLeading() {
                 </a>{" "}
                 and our{" "}
                 <a
-                  href={PRIVACY_URL}
-                  target="_blank"
+                  href= "/privacy-policy"
                   rel="noreferrer"
                   className="font-medium text-[#1d6bff] underline"
                 >

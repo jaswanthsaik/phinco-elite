@@ -8,8 +8,8 @@ import { AdmissionProcess } from "@/components/programs/servicesNowDevelopers/Ad
 import { AlumniCompanies } from "@/components/programs/servicesNowDevelopers/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/servicesNowDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/servicesNowDevelopers/ExploreSyllabus";
-import { FAQSection } from "@/components/programs/servicesNowDevelopers/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/servicesNowDevelopers/FeeBatchDetails";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
+import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/servicesNowDevelopers/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/servicesNowDevelopers/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/servicesNowDevelopers/MeetOurMentors";

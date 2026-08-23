@@ -9,6 +9,7 @@ import portrait5 from "@/assets/roadmap.png";
 
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { ContactFormModal } from "@/components/landing/ContactFormModal";
 
 type Story = {
   img: string;
@@ -87,9 +88,6 @@ const ratings = [
   { score: "4.7", label: "Google", bg: "bg-[#edf6ff]" },
 ];
 
-const testimonialVideoUrl = "https://www.youtube.com/watch?v=eautK0odE7Q&t=7s";
-const testimonialVideoId = "eautK0odE7Q";
-
 const getYoutubeEmbedUrl = (url: string) => {
   try {
     const parsedUrl = new URL(url);
@@ -111,6 +109,7 @@ const getYoutubeEmbedUrl = (url: string) => {
 export function RealStories() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   const handleScroll = (direction: "left" | "right") => {
     carouselRef.current?.scrollBy({
@@ -278,10 +277,10 @@ export function RealStories() {
           </div>
 
           {/* Right Side Video Card */}
-          <div className="mx-auto w-full max-w-[520px] overflow-hidden rounded-[22px] border border-[#10aee5] bg-[#e9fbff] p-3 shadow-md" onClick={() => setActiveVideo(testimonialVideoUrl)}>
-            <div className="overflow-hidden rounded-t-[14px] bg-neutral-900">
+          <div className="mx-auto w-full max-w-[520px] overflow-hidden rounded-[22px] border border-[#10aee5] bg-[#e9fbff] p-3 shadow-md" onClick={() => setShowContactModal(true)}>
+             <div className="overflow-hidden rounded-t-[14px] bg-neutral-900">
               <img
-                src={`https://img.youtube.com/vi/${testimonialVideoId}/maxresdefault.jpg`}
+                src= 'src\assets\road-map.jpeg'
                 alt="Learner testimonial video"
                 className="aspect-video h-full w-full object-cover"
               />
@@ -330,6 +329,10 @@ export function RealStories() {
           </div>
         </div>
       )}
+      <ContactFormModal
+      open={showContactModal}
+      onClose={() => setShowContactModal(false)}
+    />
     </section>
   );
 }

@@ -9,8 +9,8 @@ import { AdmissionProcess } from "@/components/programs/dataScienceDevelopers/Ad
 import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/agenticGeneralist/ExploreSyllabus";
-import { FAQSection } from "@/components/programs/agenticGeneralist/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/agenticGeneralist/FeeBatchDetails";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
+import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/agenticGeneralist/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/agenticGeneralist/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";

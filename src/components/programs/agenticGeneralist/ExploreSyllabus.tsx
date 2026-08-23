@@ -14,8 +14,6 @@ const EMAILJS_SERVICE_ID = "service_1p7ynrp";
 const EMAILJS_TEMPLATE_ID = "template_0aw959n";
 const EMAILJS_PUBLIC_KEY = "d0BucBhFNX26TUOgd";
 
-const TERMS_URL = "https://phincoelite.com/Terms%20&%20Conditions";
-const PRIVACY_URL = "https://phincoelite.com/Privacy-Policy";
 
 const COURSES = [
   "GenAI & Agentic AI Developer",
@@ -395,8 +393,7 @@ export function ExploreSyllabus() {
                 <span>
                   By submitting the form, you agree to our{" "}
                   <a
-                    href={TERMS_URL}
-                    target="_blank"
+                    href="/terms-and-conditions"
                     rel="noreferrer"
                     className="font-medium text-blue-600 underline"
                   >
@@ -404,8 +401,7 @@ export function ExploreSyllabus() {
                   </a>{" "}
                   and our{" "}
                   <a
-                    href={PRIVACY_URL}
-                    target="_blank"
+                    href="/privacy-policy"
                     rel="noreferrer"
                     className="font-medium text-blue-600 underline"
                   >

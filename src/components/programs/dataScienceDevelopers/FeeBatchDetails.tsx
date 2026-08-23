@@ -1,4 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
+import { ContactFormModal } from "@/components/landing/ContactFormModal";
+import { useRef, useState } from "react";
 
 const BENEFITS = [
   "Live online interactive sessions",
@@ -8,6 +10,7 @@ const BENEFITS = [
 ];
 
 export function FeeBatchDetails() {
+  const [showContactModal, setShowContactModal] = useState(false);
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-5xl px-6">
@@ -45,6 +48,7 @@ export function FeeBatchDetails() {
               <button
                 type="button"
                 className="mt-5 w-full rounded-lg bg-gradient-to-r from-slate-900 via-slate-800 to-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
+                onClick={() => setShowContactModal(true)}
               >
                 Check EMI Options
               </button>
@@ -52,6 +56,10 @@ export function FeeBatchDetails() {
           </div>
         </div>
       </div>
+      <ContactFormModal
+      open={showContactModal}
+      onClose={() => setShowContactModal(false)}
+    />
     </section>
   );
 }

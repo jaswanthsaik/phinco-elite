@@ -82,8 +82,6 @@ export function Hero() {
       const EMAILJS_TEMPLATE_ID = "template_0aw959n";
       const EMAILJS_PUBLIC_KEY = "d0BucBhFNX26TUOgd";
 
-      const TERMS_URL = "https://phincoelite.com/Terms%20&%20Conditions";
-      const PRIVACY_URL = "https://phincoelite.com/Privacy-Policy";
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
           e.preventDefault();
       
@@ -294,8 +292,7 @@ export function Hero() {
               <span>
                 By submitting the form, you agree to our{" "}
                 <a
-                  href={TERMS_URL}
-                  target="_blank"
+                  href="/terms-and-conditions"
                   rel="noreferrer"
                   className="font-medium text-[#1d6bff] underline"
                 >
@@ -303,8 +300,7 @@ export function Hero() {
                 </a>{" "}
                 and our{" "}
                 <a
-                  href={PRIVACY_URL}
-                  target="_blank"
+                  href="/privacy-policy"
                   rel="noreferrer"
                   className="font-medium text-[#1d6bff] underline"
                 >

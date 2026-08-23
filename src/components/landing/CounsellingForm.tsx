@@ -12,9 +12,6 @@ const EMAILJS_SERVICE_ID = "service_1p7ynrp";
 const EMAILJS_TEMPLATE_ID = "template_0aw959n";
 const EMAILJS_PUBLIC_KEY = "d0BucBhFNX26TUOgd";
 
-const TERMS_URL = "https://phincoelite.com/Terms%20&%20Conditions";
-const PRIVACY_URL = "https://phincoelite.com/Privacy-Policy";
-
 const BENEFITS = [
   "Personalized Career Counselling",
   "Online & Offline Modes",
@@ -179,8 +176,7 @@ export function CounsellingForm() {
                 <span>
                   By providing your contact details, you agree to our{" "}
                   <a
-                    href={TERMS_URL}
-                    target="_blank"
+                    href="/terms-and-conditions"
                     rel="noreferrer"
                     className="font-medium text-brand underline"
                   >
@@ -188,8 +184,7 @@ export function CounsellingForm() {
                   </a>{" "}
                   and{" "}
                   <a
-                    href={PRIVACY_URL}
-                    target="_blank"
+                    href="/privacy-policy"
                     rel="noreferrer"
                     className="font-medium text-brand underline"
                   >

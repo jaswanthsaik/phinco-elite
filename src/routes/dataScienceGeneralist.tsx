@@ -8,8 +8,8 @@ import { AdmissionProcess } from "@/components/programs/dataScienceDevelopers/Ad
 import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/dataScienceGeneralist/ExploreSyllabus";
-import { FAQSection } from "@/components/programs/dataScienceGeneralist/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/dataScienceGeneralist/FeeBatchDetails";
+import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
+import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/dataScienceGeneralist/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/dataScienceGeneralist/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";

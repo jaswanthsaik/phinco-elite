@@ -123,7 +123,7 @@ export function CertificationCourse() {
                     key={active.image}
                     src={active.image}
                     alt={active.alt}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full"
                     loading="lazy"
                   />
                 </div>

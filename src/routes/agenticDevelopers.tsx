@@ -10,7 +10,7 @@ import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/Alu
 import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/agenticDevelopers/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/agenticDevelopers/FeeBatchDetails";
+import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/agenticDevelopers/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/agenticDevelopers/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";
