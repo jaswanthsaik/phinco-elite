@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
+import logo from "@/assets/logo.webp";
 
 interface CountryItem {
   label: string;
@@ -296,46 +297,46 @@ function EduversityMegaMenu({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose]);
 
-  return (
-    <div className="relative" ref={ref}>
-      <button
-        onClick={onToggle}
-        className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-brand"
-      >
-        PHINCO Eduversity
-        {isOpen ? (
-          <ChevronUp className="h-4 w-4 text-brand" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-brand" />
-        )}
-      </button>
+  // return (
+  //   <div className="relative" ref={ref}>
+  //     <button
+  //       onClick={onToggle}
+  //       className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-brand"
+  //     >
+  //       PHINCO Eduversity
+  //       {isOpen ? (
+  //         <ChevronUp className="h-4 w-4 text-brand" />
+  //       ) : (
+  //         <ChevronDown className="h-4 w-4 text-brand" />
+  //       )}
+  //     </button>
 
-      {isOpen && (
-        <div className={`${desktopDropdownClass} p-5`}>
-          <div className="grid grid-cols-3 gap-4">
-            {eduversityCountries.map((country) => (
-              <a
-                key={country.label}
-                href={country.href || "/"}
-                onClick={onClose}
-                className="flex min-h-[64px] items-center gap-4 rounded-xl px-5 py-4 transition-colors hover:bg-muted/50"
-              >
-                <img
-                  src={country.flagUrl}
-                  alt={country.label}
-                  className="h-8 w-8 object-contain"
-                />
+  //     {isOpen && (
+  //       <div className={`${desktopDropdownClass} p-5`}>
+  //         <div className="grid grid-cols-3 gap-4">
+  //           {eduversityCountries.map((country) => (
+  //             <a
+  //               key={country.label}
+  //               href={country.href || "/"}
+  //               onClick={onClose}
+  //               className="flex min-h-[64px] items-center gap-4 rounded-xl px-5 py-4 transition-colors hover:bg-muted/50"
+  //             >
+  //               <img
+  //                 src={country.flagUrl}
+  //                 alt={country.label}
+  //                 className="h-8 w-8 object-contain"
+  //               />
 
-                <span className="text-sm font-semibold text-foreground">
-                  {country.label}
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  //               <span className="text-sm font-semibold text-foreground">
+  //                 {country.label}
+  //               </span>
+  //             </a>
+  //           ))}
+  //         </div>
+  //       </div>
+  //     )}
+  //   </div>
+  // );
 }
 
 function DropdownMenu({
@@ -425,18 +426,20 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a href="/" className="flex shrink-0 items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-brand font-bold text-primary-foreground">
-            <BookOpen className="h-5 w-5" />
-          </span>
+            <img
+            src={logo}
+            alt="logo"
+            className="max-w-full h-10 object-contain block align-middle"
+          />
 
-          <div className="flex flex-col leading-none">
+          {/* <div className="flex flex-col leading-none">
             <span className="text-lg font-extrabold tracking-tight">
               PHINCO <span className="text-brand">ELITE</span>
             </span>
             <span className="text-[10px] tracking-wide text-muted-foreground">
               Your Career, Our Commitment
             </span>
-          </div>
+          </div> */}
         </a>
 
         <nav className="hidden items-center gap-16 lg:flex">
@@ -543,7 +546,7 @@ export function Header() {
             )}
           </div>
 
-          <div>
+          {/* <div>
             <button
               onClick={() =>
                 setMobileActiveDropdown((prev) =>
@@ -585,7 +588,7 @@ export function Header() {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
 
           {navDropdowns.map((dropdown) => (
             <div key={dropdown.label}>
