@@ -2,7 +2,7 @@ import learner1 from "@/assets/learner-1.jpg";
 import learner2 from "@/assets/learner-2.jpg";
 import learner3 from "@/assets/learner-3.jpg";
 import learner4 from "@/assets/learner-4.jpg";
-import learner5 from "@/assets/learner-5.jpg";
+import learner5 from "@/assets/learner--5.jpg";
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
