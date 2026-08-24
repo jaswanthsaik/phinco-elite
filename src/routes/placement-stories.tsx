@@ -11,7 +11,7 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
 import { createFileRoute } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Download, Linkedin, Phone, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Linkedin, Phone, Play, X } from "lucide-react";
 import { useState } from "react";
 import {
   FaAmazon,
@@ -26,6 +26,11 @@ import {
   SiSwiggy,
   SiTarget,
 } from "react-icons/si";
+import CareerSupportSection from "@/components/landing/CareerSupportSection";
+import OurHiringPartners from "@/components/landing/OurHiringPartners";
+import PartnerLogosGrid from "@/components/landing/PartnerLogosGrid";
+import AlumniDistribution from "@/components/landing/AlumniDistribution";
+import SalaryDistribution from "@/components/landing/SalaryDistribution";
 
 
 export const Route = createFileRoute("/placement-stories")({
@@ -53,10 +58,15 @@ function PlacementStoriesPage() {
       <Header />
       <main>
         <PlacementHero />
+        <AlumniDistribution />
+        <SalaryDistribution />
         <SuccessStoriesSection />
         <AlumniTriumphSection />
         <AlumniReviewsSection />
-        <RegisterCtaSection />
+        <CareerSupportSection />
+        <OurHiringPartners />
+        <PartnerLogosGrid />
+        {/* <RegisterCtaSection /> */}
         <FAQSection />
 
       </main>
@@ -172,20 +182,48 @@ function PlacementHero() {
         </div>
 
         {/* Stats strip */}
-        <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3 lg:grid-cols-5">
-          {[
-            { label: "Companies Hiring", value: "2,000+" },
-            { label: "Students Placed", value: "4,500+" },
-            { label: "Industry Experts", value: "1,200+" },
-            { label: "Highest Package", value: "1.5 Cr" },
-            { label: "Highest Salary Hike", value: "500%" },
-          ].map((s) => (
-            <div key={s.label} className="bg-background px-4 py-5 text-center sm:text-left">
-              <p className="text-xs text-muted-foreground sm:text-sm">{s.label}</p>
-              <p className="mt-1 text-xl font-extrabold text-foreground sm:text-2xl">{s.value}</p>
-            </div>
-          ))}
-        </div>
+       <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3 lg:grid-cols-5">
+  {[
+    {
+      label: "Companies Hiring",
+      value: "2,000+",
+      bg: "bg-blue-600",
+    },
+    {
+      label: "Students Placed",
+      value: "4,500+",
+      bg: "bg-emerald-600",
+    },
+    {
+      label: "Industry Experts",
+      value: "1,200+",
+      bg: "bg-violet-600",
+    },
+    {
+      label: "Highest Package",
+      value: "36 LPA",
+      bg: "bg-orange-500",
+    },
+    {
+      label: "Highest Salary Hike",
+      value: "500%",
+      bg: "bg-rose-600",
+    },
+  ].map((s) => (
+    <div
+      key={s.label}
+      className={`${s.bg} px-4 py-5 text-center sm:text-left`}
+    >
+      <p className="text-xs text-white sm:text-sm">
+        {s.label}
+      </p>
+
+      <p className="mt-1 text-xl font-extrabold text-white sm:text-2xl">
+        {s.value}
+      </p>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
@@ -202,6 +240,7 @@ const successStories = [
     description:
       "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
     image: portrait1,
+    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
   },
   {
     name: "Sneha Reddy",
@@ -209,92 +248,206 @@ const successStories = [
     description:
       "From a non-tech background to building production ML systems — Sneha's journey shows how dedication and the right guidance transform careers.",
     image: portrait2,
+    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
   },
+  {
+    name: "Vivek Tandale",
+    role: "Data Analyst at Bain & Company",
+    description:
+      "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
+    image: portrait1,
+    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
+  },
+  {
+    name: "Sneha Reddy",
+    role: "ML Engineer at Microsoft",
+    description:
+      "From a non-tech background to building production ML systems — Sneha's journey shows how dedication and the right guidance transform careers.",
+    image: portrait2,
+    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
+  },
+  {
+    name: "Vivek Tandale",
+    role: "Data Analyst at Bain & Company",
+    description:
+      "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
+    image: portrait1,
+    youtubeUrl: "https://youtu.be/IZwdiQPUoYI?si=3W1PzznSugoAh85p",
+  }
 ];
+
+function getYouTubeEmbedUrl(url: string) {
+  try {
+    const parsedUrl = new URL(url);
+
+    let videoId = "";
+
+    if (parsedUrl.hostname.includes("youtu.be")) {
+      videoId = parsedUrl.pathname.slice(1).split("/")[0];
+    } else if (parsedUrl.pathname.includes("/shorts/")) {
+      videoId = parsedUrl.pathname.split("/shorts/")[1]?.split("/")[0] || "";
+    } else if (parsedUrl.pathname.includes("/embed/")) {
+      videoId = parsedUrl.pathname.split("/embed/")[1]?.split("/")[0] || "";
+    } else {
+      videoId = parsedUrl.searchParams.get("v") || "";
+    }
+
+    return videoId
+      ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+      : "";
+  } catch {
+    return "";
+  }
+}
 
 function SuccessStoriesSection() {
   const [idx, setIdx] = useState(0);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   const current = successStories[idx];
   const total = successStories.length;
 
+  const closeVideo = () => setActiveVideo(null);
+
   return (
-    <section id="stories" className="bg-[oklch(0.98_0.01_240)]">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-20">
-        <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
-          Incredible success stories of our alumni
-        </h2>
-        <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-          With 2000+ hiring partners, and top mentors from top companies from MAANG
-        </p>
+    <>
+      <section id="stories" className="bg-[oklch(0.98_0.01_240)]">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+          <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
+            Incredible success stories of our alumni
+          </h2>
 
-        <div className="mt-8 rounded-2xl border border-border bg-background p-5 sm:p-8">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
-            {/* Left: text */}
-            <div className="min-w-0">
-              <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground">
-                {idx + 1}/{total}
-              </span>
-              <h3 className="mt-5 text-2xl font-extrabold text-foreground sm:text-3xl">
-                {current.name}
-              </h3>
-              <p className="mt-3 max-w-md text-sm text-muted-foreground sm:text-base">
-                {current.description}
-              </p>
+          <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+            With 2000+ hiring partners, and top mentors from top companies from MAANG
+          </p>
 
-              <div className="mt-8 flex items-center gap-3">
-                <button
-                  aria-label="Previous story"
-                  onClick={() => setIdx((p) => (p - 1 + total) % total)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-foreground hover:bg-muted transition-colors"
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                  aria-label="Next story"
-                  onClick={() => setIdx((p) => (p + 1) % total)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-foreground hover:bg-muted transition-colors"
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Right: video card */}
-            <div className="relative overflow-hidden rounded-xl bg-blue-700">
-              <div className="aspect-video w-full">
-                <img
-                  src={current.image}
-                  alt={current.name}
-                  loading="lazy"
-                  className="h-full w-full object-cover opacity-90"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 via-blue-700/40 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-7">
-                <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-bold text-foreground">
-                  <span className="grid h-4 w-4 place-items-center rounded-full bg-brand text-[10px] text-primary-foreground">P</span>
-                  Phinco Elite
+          <div className="mt-8 rounded-2xl border border-border bg-background p-5 sm:p-8">
+            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+              {/* Left: text */}
+              <div className="min-w-0">
+                <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground">
+                  {idx + 1}/{total}
                 </span>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
-                    {current.role}
-                  </p>
-                  <p className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
-                    {current.name}
-                  </p>
+
+                <h3 className="mt-5 text-2xl font-extrabold text-foreground sm:text-3xl">
+                  {current.name}
+                </h3>
+
+                <p className="mt-3 max-w-md text-sm text-muted-foreground sm:text-base">
+                  {current.description}
+                </p>
+
+                <div className="mt-8 flex items-center gap-3">
+                  <button
+                    type="button"
+                    aria-label="Previous story"
+                    onClick={() => setIdx((p) => (p - 1 + total) % total)}
+                    className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-muted"
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </button>
+
+                  <button
+                    type="button"
+                    aria-label="Next story"
+                    onClick={() => setIdx((p) => (p + 1) % total)}
+                    className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-foreground transition-colors hover:bg-muted"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
                 </div>
               </div>
-              <button
-                aria-label="Play video"
-                className="absolute inset-0 m-auto grid h-14 w-14 place-items-center rounded-full bg-neutral-900/90 text-white shadow-lg hover:scale-105 transition-transform"
+
+              {/* Right: video card */}
+              <div
+                onClick={() => setActiveVideo(current.youtubeUrl)}
+                className="relative cursor-pointer overflow-hidden rounded-xl bg-blue-700"
               >
-                <Play className="h-6 w-6 fill-current" />
-              </button>
+                <div className="aspect-video w-full">
+                  <img
+                    src={current.image}
+                    alt={current.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover opacity-90"
+                  />
+                </div>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 via-blue-700/40 to-transparent" />
+
+                {/* Content */}
+                <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-5 sm:p-7">
+                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-background px-3 py-1 text-xs font-bold text-foreground">
+                    <span className="grid h-4 w-4 place-items-center rounded-full bg-brand text-[10px] text-primary-foreground">
+                      P
+                    </span>
+                    Phinco Elite
+                  </span>
+
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
+                      {current.role}
+                    </p>
+
+                    <p className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
+                      {current.name}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Play button */}
+                <button
+                  type="button"
+                  aria-label={`Watch ${current.name}'s success story`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveVideo(current.youtubeUrl);
+                  }}
+                  className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white shadow-lg backdrop-blur-sm ring-2 ring-white/70 transition-transform hover:scale-110"
+                >
+                  <Play className="h-6 w-6 fill-white text-white" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* YouTube video modal */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 px-3 py-6 backdrop-blur-[2px] sm:px-6"
+          onClick={closeVideo}
+        >
+          <div
+            className="relative w-full max-w-6xl overflow-visible rounded-2xl border-4 border-white bg-black shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              type="button"
+              aria-label="Close video"
+              onClick={closeVideo}
+              className="absolute -right-3 -top-3 z-20 grid h-11 w-11 place-items-center rounded-full bg-sky-500 text-white shadow-lg transition-colors hover:bg-sky-600 sm:-right-5 sm:-top-5"
+            >
+              <X className="h-7 w-7" />
+            </button>
+
+            {/* Player */}
+            <div className="aspect-video w-full overflow-hidden rounded-xl bg-black">
+              <iframe
+                src={getYouTubeEmbedUrl(activeVideo)}
+                title={`${current.name} success story`}
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -531,4 +684,3 @@ function RegisterCtaSection() {
     </section>
   );
 }
-

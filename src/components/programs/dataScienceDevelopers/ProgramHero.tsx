@@ -12,8 +12,8 @@ export function ProgramHero({
   titleTop,
   titleHighlight,
   badge = "Gain In-Demand Skills and Elevate Your Tech Career.",
-  pointOne = "Gain hands-on expertise in integrating Generative AI with your existing software stack.",
-  pointTwo = "Master Agentic AI and Autonomous Agent Development",
+  pointOne = "Gain hands-on expertise in Data Science and Analytics with AI-powered data-driven decision-making.",
+  pointTwo = "Master Python, SQL, Power BI, Statistics,Gen AI with real-world Data Analytics projects.",
 }: ProgramHeroProps) {
   return (
     <section
@@ -72,7 +72,7 @@ export function ProgramHero({
               Earn an Industry-Recognized Certification from PHINCO ELITE
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              ISO 9001:2015 Certified
+              ISO & Google
             </span>
           </div>
         </div>

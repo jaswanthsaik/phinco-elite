@@ -45,8 +45,8 @@ const PROGRAMS: Program[] = [
     highlight: "Domain Specialised Program with Industry Project Certification",
     timeline: "4 Months Live Classes",
     projects: "20+ Real Domain Projects",
-    techHref: "/dataScienceDevelopers",
-    nonTechHref: "/dataScienceGeneralist",
+    techHref: "/datascience_OJT",
+    nonTechHref: "/Datascience_Certification",
   },
   {
     id: "services-now",

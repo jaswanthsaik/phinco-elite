@@ -122,7 +122,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
 
   masters: [
     {
-      id: "masters-datascientists",
+      id: "Internship-datascientists",
       title: "Internship for Data Science & Analytics",
       duration: "12 Months",
       cert: "Global Valid Certification",
@@ -132,7 +132,7 @@ const PROGRAMS_BY_CATEGORY: Record<string, Program[]> = {
         "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=900&auto=format&fit=crop",
     },
     {
-      id: "masters-fullstack",
+      id: "Internship-fullstack",
       title: "Internship for Full Stack Development",
       duration: "12 Months",
       cert: "Global Valid Certification",

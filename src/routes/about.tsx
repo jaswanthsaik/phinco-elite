@@ -4,7 +4,11 @@ import aboutus3 from "@/assets/aboutus-3.png";
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
+import AboutSection from "@/components/landing/AboutSection";
+import AboutWho from "@/components/landing/aboutwho";
+import DigitalSkill from "@/components/landing/digitalskill";
 import { Header } from "@/components/landing/Header";
+import HiringCompaniesSection from "@/components/landing/HiringCompaniesSection";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { createFileRoute } from "@tanstack/react-router";
@@ -27,6 +31,10 @@ function AboutPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        <DigitalSkill />
+        <AboutWho />
+        <AboutSection />
+        <HiringCompaniesSection />
         <KnowledgeIsPower />
         <VisionSection />
         <MissionSection />

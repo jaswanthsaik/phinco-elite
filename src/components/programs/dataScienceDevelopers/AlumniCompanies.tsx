@@ -27,7 +27,7 @@ export function AlumniCompanies() {
           <span className="bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent">
             Network Across
           </span>{" "}
-          350+ Companies
+          867+ Companies
         </h2>
 
         <div className="mx-auto mt-2 h-2 w-48 sm:w-64">

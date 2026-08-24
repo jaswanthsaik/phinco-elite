@@ -17,9 +17,8 @@ import { Route as ReturnAndRefundPolicyRouteImport } from './routes/return-and-r
 import { Route as ReferAndEarnRouteImport } from './routes/refer-and-earn'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PlacementStoriesRouteImport } from './routes/placement-stories'
-import { Route as MastersGeneralistRouteImport } from './routes/mastersGeneralist'
-import { Route as MastersDevelopersRouteImport } from './routes/mastersDevelopers'
 import { Route as HelpRouteImport } from './routes/help'
+import { Route as Datascience_OJTRouteImport } from './routes/datascience_OJT'
 import { Route as DataScienceGeneralistRouteImport } from './routes/dataScienceGeneralist'
 import { Route as DataScienceDevelopersRouteImport } from './routes/dataScienceDevelopers'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -27,6 +26,9 @@ import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as AgenticGeneralistRouteImport } from './routes/agenticGeneralist'
 import { Route as AgenticDevelopersRouteImport } from './routes/agenticDevelopers'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as Internship_for_Full_Stack_DevelopersRouteImport } from './routes/Internship_for_Full_Stack_Developers'
+import { Route as Internship_for_Data_ScientistsRouteImport } from './routes/Internship_for_Data_Scientists'
+import { Route as Datascience_CertificationRouteImport } from './routes/Datascience_Certification'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
@@ -72,19 +74,14 @@ const PlacementStoriesRoute = PlacementStoriesRouteImport.update({
   path: '/placement-stories',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MastersGeneralistRoute = MastersGeneralistRouteImport.update({
-  id: '/mastersGeneralist',
-  path: '/mastersGeneralist',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MastersDevelopersRoute = MastersDevelopersRouteImport.update({
-  id: '/mastersDevelopers',
-  path: '/mastersDevelopers',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Datascience_OJTRoute = Datascience_OJTRouteImport.update({
+  id: '/datascience_OJT',
+  path: '/datascience_OJT',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataScienceGeneralistRoute = DataScienceGeneralistRouteImport.update({
@@ -122,6 +119,24 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Internship_for_Full_Stack_DevelopersRoute =
+  Internship_for_Full_Stack_DevelopersRouteImport.update({
+    id: '/Internship_for_Full_Stack_Developers',
+    path: '/Internship_for_Full_Stack_Developers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Internship_for_Data_ScientistsRoute =
+  Internship_for_Data_ScientistsRouteImport.update({
+    id: '/Internship_for_Data_Scientists',
+    path: '/Internship_for_Data_Scientists',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Datascience_CertificationRoute =
+  Datascience_CertificationRouteImport.update({
+    id: '/Datascience_Certification',
+    path: '/Datascience_Certification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -145,6 +160,9 @@ const BlogsTopicRoute = BlogsTopicRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/Datascience_Certification': typeof Datascience_CertificationRoute
+  '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
+  '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
@@ -152,9 +170,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/datascience_OJT': typeof Datascience_OJTRoute
   '/help': typeof HelpRoute
-  '/mastersDevelopers': typeof MastersDevelopersRoute
-  '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
@@ -169,15 +186,17 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/Datascience_Certification': typeof Datascience_CertificationRoute
+  '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
+  '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/datascience_OJT': typeof Datascience_OJTRoute
   '/help': typeof HelpRoute
-  '/mastersDevelopers': typeof MastersDevelopersRoute
-  '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
@@ -193,6 +212,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/Datascience_Certification': typeof Datascience_CertificationRoute
+  '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
+  '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
@@ -200,9 +222,8 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/dataScienceDevelopers': typeof DataScienceDevelopersRoute
   '/dataScienceGeneralist': typeof DataScienceGeneralistRoute
+  '/datascience_OJT': typeof Datascience_OJTRoute
   '/help': typeof HelpRoute
-  '/mastersDevelopers': typeof MastersDevelopersRoute
-  '/mastersGeneralist': typeof MastersGeneralistRoute
   '/placement-stories': typeof PlacementStoriesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refer-and-earn': typeof ReferAndEarnRoute
@@ -219,6 +240,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/Datascience_Certification'
+    | '/Internship_for_Data_Scientists'
+    | '/Internship_for_Full_Stack_Developers'
     | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
@@ -226,9 +250,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/datascience_OJT'
     | '/help'
-    | '/mastersDevelopers'
-    | '/mastersGeneralist'
     | '/placement-stories'
     | '/privacy-policy'
     | '/refer-and-earn'
@@ -243,15 +266,17 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/Datascience_Certification'
+    | '/Internship_for_Data_Scientists'
+    | '/Internship_for_Full_Stack_Developers'
     | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/datascience_OJT'
     | '/help'
-    | '/mastersDevelopers'
-    | '/mastersGeneralist'
     | '/placement-stories'
     | '/privacy-policy'
     | '/refer-and-earn'
@@ -266,6 +291,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/Datascience_Certification'
+    | '/Internship_for_Data_Scientists'
+    | '/Internship_for_Full_Stack_Developers'
     | '/about'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
@@ -273,9 +301,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/dataScienceDevelopers'
     | '/dataScienceGeneralist'
+    | '/datascience_OJT'
     | '/help'
-    | '/mastersDevelopers'
-    | '/mastersGeneralist'
     | '/placement-stories'
     | '/privacy-policy'
     | '/refer-and-earn'
@@ -291,6 +318,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Datascience_CertificationRoute: typeof Datascience_CertificationRoute
+  Internship_for_Data_ScientistsRoute: typeof Internship_for_Data_ScientistsRoute
+  Internship_for_Full_Stack_DevelopersRoute: typeof Internship_for_Full_Stack_DevelopersRoute
   AboutRoute: typeof AboutRoute
   AgenticDevelopersRoute: typeof AgenticDevelopersRoute
   AgenticGeneralistRoute: typeof AgenticGeneralistRoute
@@ -298,9 +328,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DataScienceDevelopersRoute: typeof DataScienceDevelopersRoute
   DataScienceGeneralistRoute: typeof DataScienceGeneralistRoute
+  Datascience_OJTRoute: typeof Datascience_OJTRoute
   HelpRoute: typeof HelpRoute
-  MastersDevelopersRoute: typeof MastersDevelopersRoute
-  MastersGeneralistRoute: typeof MastersGeneralistRoute
   PlacementStoriesRoute: typeof PlacementStoriesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ReferAndEarnRoute: typeof ReferAndEarnRoute
@@ -370,25 +399,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlacementStoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mastersGeneralist': {
-      id: '/mastersGeneralist'
-      path: '/mastersGeneralist'
-      fullPath: '/mastersGeneralist'
-      preLoaderRoute: typeof MastersGeneralistRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mastersDevelopers': {
-      id: '/mastersDevelopers'
-      path: '/mastersDevelopers'
-      fullPath: '/mastersDevelopers'
-      preLoaderRoute: typeof MastersDevelopersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/help': {
       id: '/help'
       path: '/help'
       fullPath: '/help'
       preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datascience_OJT': {
+      id: '/datascience_OJT'
+      path: '/datascience_OJT'
+      fullPath: '/datascience_OJT'
+      preLoaderRoute: typeof Datascience_OJTRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dataScienceGeneralist': {
@@ -440,6 +462,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/Internship_for_Full_Stack_Developers': {
+      id: '/Internship_for_Full_Stack_Developers'
+      path: '/Internship_for_Full_Stack_Developers'
+      fullPath: '/Internship_for_Full_Stack_Developers'
+      preLoaderRoute: typeof Internship_for_Full_Stack_DevelopersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Internship_for_Data_Scientists': {
+      id: '/Internship_for_Data_Scientists'
+      path: '/Internship_for_Data_Scientists'
+      fullPath: '/Internship_for_Data_Scientists'
+      preLoaderRoute: typeof Internship_for_Data_ScientistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/Datascience_Certification': {
+      id: '/Datascience_Certification'
+      path: '/Datascience_Certification'
+      fullPath: '/Datascience_Certification'
+      preLoaderRoute: typeof Datascience_CertificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -485,6 +528,10 @@ const BlogsRouteWithChildren = BlogsRoute._addFileChildren(BlogsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Datascience_CertificationRoute: Datascience_CertificationRoute,
+  Internship_for_Data_ScientistsRoute: Internship_for_Data_ScientistsRoute,
+  Internship_for_Full_Stack_DevelopersRoute:
+    Internship_for_Full_Stack_DevelopersRoute,
   AboutRoute: AboutRoute,
   AgenticDevelopersRoute: AgenticDevelopersRoute,
   AgenticGeneralistRoute: AgenticGeneralistRoute,
@@ -492,9 +539,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DataScienceDevelopersRoute: DataScienceDevelopersRoute,
   DataScienceGeneralistRoute: DataScienceGeneralistRoute,
+  Datascience_OJTRoute: Datascience_OJTRoute,
   HelpRoute: HelpRoute,
-  MastersDevelopersRoute: MastersDevelopersRoute,
-  MastersGeneralistRoute: MastersGeneralistRoute,
   PlacementStoriesRoute: PlacementStoriesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ReferAndEarnRoute: ReferAndEarnRoute,

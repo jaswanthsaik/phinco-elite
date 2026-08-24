@@ -21,8 +21,8 @@ const COURSES = [
   "Data Science & Analytics Certification",
   "Services Now for Developer",
   "Services Now for Generalist",
-  "Masters for Data Scientists",
-  "Masters for Full Stack Developers",
+  "Internship for Data Scientists",
+  "Internship for Full Stack Developers",
 ];
 
 const PROFILE_TYPES = [

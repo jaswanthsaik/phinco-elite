@@ -2,8 +2,8 @@ import { BriefcaseBusiness, Contact, IdCard, Users } from "lucide-react";
 
 const ITEMS = [
   {
-    title: "Placement Support",
-    body: "Unlock access to job opportunities, with personalized support to enhance interview readiness and optimize professional profile.",
+    title: "AI integrated Placement Tool",
+    body: "Unlock access to job opportunities, with personalized support to enhance interview readiness and optimize professional profile. Through our own India’s first AI integrated placement tool.",
     icon: BriefcaseBusiness,
     iconColor: "text-blue-600",
   },
@@ -15,13 +15,13 @@ const ITEMS = [
   },
   {
     title: "Resume Building",
-    body: "Create a job-winning, ATS-friendly resume with expert guidance that highlights your skills, projects, and experience to stand out in a competitive job market.",
+    body: "Create unlimited job-winning, ATS-friendly resume with AI Resume expert that highlights your skills, projects, and experience to stand out in a competitive job market.",
     icon: IdCard,
     iconColor: "text-amber-600",
   },
   {
     title: "Interview Opportunities",
-    body: "Get access to relevant job interviews with continuous support, expert guidance, and feedback to help you confidently secure your ideal role.",
+    body: "Get access to relevant job interviews with continuous support, expert guidance, and feedback to help you confidently secure your ideal role with the help of AI Job Expert.",
     icon: Users,
     iconColor: "text-purple-600",
   },

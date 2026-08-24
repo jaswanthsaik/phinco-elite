@@ -16,8 +16,8 @@ interface FooterLink {
 const COURSES: FooterLink[] = [
   { label: "GenAI & Agentic AI Developer", href: "/agenticDevelopers" },
   { label: "GenAI & Agentic AI Generalist", href: "/agenticGeneralist" },
-  { label: "Data Science & Analytics OJT", href: "/dataScienceDevelopers" },
-  { label: "Data Science & Analytics Certification", href: "/dataScienceGeneralist" },
+  { label: "Data Science & Analytics OJT", href: "/datascience_OJT" },
+  { label: "Data Science & Analytics Certification", href: "/Datascience_Certification" },
   { label: "Services Now for Developer", href: "/servicesNowDevelopers" },
   { label: "Services Now for Generalist", href: "/servicesNowGeneralist" },
   // { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
@@ -26,8 +26,8 @@ const COURSES: FooterLink[] = [
 
 // Pulled from the header PHINCO Eduversity mega menu
 const INTERNSHIPS: FooterLink[] = [
-   { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
-  { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
+  { label: "Internship for Data Scientists", href: "/Internship_for_Data_Scientists" },
+  { label: "Internship for Full Stack Developers", href: "/Internship_for_Full_Stack_Developers" },
   // { label: "Europe", href: "/" },
   // { label: "Canada", href: "/" },
   // { label: "Australia", href: "/" },

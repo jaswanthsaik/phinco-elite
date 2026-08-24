@@ -20,7 +20,7 @@ import { ProgrammingTools } from "@/components/programs/mastersDevelopers/Progra
 import { SupportThatMatters } from "@/components/programs/dataScienceDevelopers/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/mastersDevelopers")({
+export const Route = createFileRoute("/Internship_for_Data_Scientists")({
   head: () => ({
     meta: [
       { title: "Internship for Data Scientists — Phinco Elite" },

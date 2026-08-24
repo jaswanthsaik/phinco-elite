@@ -114,7 +114,7 @@ const STEPS: Step[] = [
           <p className="text-base font-bold text-white">
             Earn <span className="ml-4 text-orange-300">Renowned Project</span>
             <br />
-            Certification from: <span className="text-orange-300">Leading Industry</span>
+            Certification from: <span className="text-orange-300">ISO & Google</span>
           </p>
         </div>
       </div>

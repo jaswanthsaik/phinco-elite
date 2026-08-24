@@ -23,7 +23,7 @@ export function SupportThatMatters() {
               Where Our Alumni Work
             </span>
             <h3 className="mt-4 text-lg font-extrabold text-amber-900">
-              Our Alumni Are Employed at 350+ Companies
+              Our Alumni Are Employed at 350+ Top Notch MNC’s
             </h3>
             <p className="mt-3 text-sm text-gray-700">
               Set Your Career Preferences and {" "}

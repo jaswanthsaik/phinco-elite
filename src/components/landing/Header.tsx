@@ -96,11 +96,11 @@ const ojtPrograms: OjtProgram[] = [
     children: [
       {
         label: "Data Science & Analytics OJT",
-        href: "/dataScienceDevelopers",
+        href: "/datascience_OJT",
       },
       {
         label: "Data Science & Analytics Certification",
-        href: "/dataScienceGeneralist",
+        href: "/Datascience_Certification",
       },
     ],
   },
@@ -120,8 +120,8 @@ const ojtPrograms: OjtProgram[] = [
   {
     label: "Internship",
     children: [
-      { label: "Internship for Data Scientists", href: "/mastersDevelopers" },
-      { label: "Internship for Full Stack Developers", href: "/mastersGeneralist" },
+      { label: "Internship for Data Scientists", href: "/Internship_for_Data_Scientists" },
+      { label: "Internship for Full Stack Developers", href: "/Internship_for_Full_Stack_Developers" },
     ],
   },
 ];

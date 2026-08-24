@@ -12,8 +12,8 @@ export function ProgramHero({
   titleTop,
   titleHighlight,
   badge = "Elevate your tech career with our programs",
-  pointOne = "Learn to integrate GenAI into your existing software stack",
-  pointTwo = "Earn Your Data Science & Analytics Certification",
+  pointOne = "Gain hands-on expertise in Data Science and Analytics with AI-powered data-driven decision-making",
+  pointTwo = "Master Python, SQL, Power BI, Statistics,Gen AI with real-world Data Analytics projects",
 }: ProgramHeroProps) {
   return (
     <section
@@ -72,7 +72,7 @@ export function ProgramHero({
               Earn Industry-Ready Certification From
             </span>
             <span className="rounded bg-white px-3 py-1 text-base font-extrabold tracking-wider text-slate-900">
-              IS0
+              IS0 & Google
             </span>
           </div>
         </div>

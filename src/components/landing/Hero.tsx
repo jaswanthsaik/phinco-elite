@@ -66,7 +66,7 @@ const COURSES = [
   "Services Now for Developer",
   "Services Now for Generalist",
   "Internship for Data Scientists",
-  "Masters for Full Stack Developers",
+  "Internship for Full Stack Developers",
 ];
 const PROFILE_TYPES = [
   "Freshers",
@@ -166,7 +166,7 @@ export function Hero() {
                       className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:opacity-90 sm:w-auto sm:text-base"
                     >
                        <Phone className="h-4 w-4" />
-                      Get Expert Callback
+                      Get Expert Call
             </Link>
 
              <Link

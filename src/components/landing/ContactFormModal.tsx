@@ -11,7 +11,7 @@ const COURSES = [
   "Services Now for Developer",
   "Services Now for Generalist",
   "Internship for Data Scientists",
-  "Masters for Full Stack Developers",
+  "Internship for Full Stack Developers",
 ];
 
 const PROFILE_TYPES = [

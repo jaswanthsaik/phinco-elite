@@ -7,29 +7,29 @@ import { WhyChooseLearnbay } from "@/components/landing/WhyChooseLearnbay";
 import { AdmissionProcess } from "@/components/programs/dataScienceDevelopers/AdmissionProcess";
 import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/AlumniCompanies";
 import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
-import { ExploreSyllabus } from "@/components/programs/mastersGeneralist/ExploreSyllabus";
+import { ExploreSyllabus } from "@/components/programs/dataScienceDevelopers/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
 import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
-import { IndustryProjects } from "@/components/programs/mastersGeneralist/IndustryProjects";
-import { LearningToPlacement } from "@/components/programs/mastersGeneralist/LearningToPlacement";
+import { IndustryProjects } from "@/components/programs/dataScienceDevelopers/IndustryProjects";
+import { LearningToPlacement } from "@/components/programs/dataScienceDevelopers/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";
 import { OthersVsLearnbayProgram } from "@/components/programs/dataScienceDevelopers/OthersVsLearnbayProgram";
 import { PlacementSupport } from "@/components/programs/dataScienceDevelopers/PlacementSupport";
-import { ProgramHero } from "@/components/programs/mastersGeneralist/ProgramHero";
-import { ProgrammingTools } from "@/components/programs/mastersGeneralist/ProgrammingTools";
+import { ProgramHero } from "@/components/programs/dataScienceDevelopers/ProgramHero";
+import { ProgrammingTools } from "@/components/programs/dataScienceDevelopers/ProgrammingTools";
 import { SupportThatMatters } from "@/components/programs/dataScienceDevelopers/SupportThatMatters";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/mastersGeneralist")({
+export const Route = createFileRoute("/datascience_OJT")({
   head: () => ({
     meta: [
-      { title: "Masters for Full Stack Developers — Phinco Elite" },
+      { title: "Data Science & GenAI for Developers — Phinco Elite" },
       {
         name: "description",
         content:
           "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
-      { property: "og:title", content: "Masters for Full Stack Developers — Phinco Elite" },
+      { property: "og:title", content: "Data Science & GenAI for Developers — Phinco Elite" },
       {
         property: "og:description",
         content: "Industry-ready Data Science & GenAI certification with real AI projects and placement support.",
@@ -44,7 +44,7 @@ function ProgramPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <ProgramHero titleTop="Masters" titleHighlight="for Full Stack Developers" />
+        <ProgramHero titleTop="Data Science & " titleHighlight="Analytics OJT" />
         <AlumniCompanies />
         <LearningToPlacement />
         <SupportThatMatters />

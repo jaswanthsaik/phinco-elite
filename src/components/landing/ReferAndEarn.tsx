@@ -309,7 +309,7 @@ const ReferAndEarn = () => {
 
           <div className="flex flex-col">
             <h1 className="max-w-xl text-2xl font-extrabold leading-tight text-foreground sm:text-3xl md:text-4xl lg:text-[2.5rem]">
-              Refer your friends to Simplilearn Programs
+              Refer your friends to PHINCO ELITE Programs
             </h1>
 
             {/* Benefit 1 */}
