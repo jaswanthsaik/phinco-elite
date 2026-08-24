@@ -51,6 +51,9 @@ const partnerCategories: PartnerCategory[] = [
       { name: "Bain & Company", domain: "bain.com" },
       { name: "EY", domain: "ey.com" },
       { name: "PwC", domain: "pwc.com" },
+      { name: "Kearney", domain: "kearney.com" },
+    { name: "Oliver Wyman", domain: "oliverwyman.com" },
+    { name: "Roland Berger", domain: "rolandberger.com" },
     ],
   },
   {

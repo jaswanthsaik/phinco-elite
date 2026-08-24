@@ -55,10 +55,10 @@ const POLICIES: FooterLink[] = [
 
 const SOCIAL = [
   { label: "Twitter", href: "https://twitter.com", Icon: Twitter },
-  { label: "Instagram", href: "https://instagram.com", Icon: Instagram },
-  { label: "LinkedIn", href: "https://linkedin.com", Icon: Linkedin },
+  { label: "Instagram", href: "https://www.instagram.com/phinco_elite_official/", Icon: Instagram },
+  { label: "LinkedIn", href: "https://in.linkedin.com/company/phinco_elite_official", Icon: Linkedin },
   { label: "YouTube", href: "https://youtube.com", Icon: Youtube },
-  { label: "Facebook", href: "https://facebook.com", Icon: Facebook },
+  { label: "Facebook", href: "https://www.facebook.com/phincoeliteofficial/", Icon: Facebook },
 ];
 
 function FooterAnchor({ link }: { link: FooterLink }) {

@@ -8,14 +8,14 @@ const companies = [
   { name: "Microsoft", domain: "microsoft.com" },
   { name: "Genpact", domain: "genpact.com" },
   { name: "Wipro", domain: "wipro.com" },
-  { name: "TCS", domain: "tcs.com" },
+  { name: "TCS", domain: "https://www.tcs.com/" },
 
   { name: "Ericsson", domain: "ericsson.com" },
   { name: "Saint-Gobain", domain: "saint-gobain.com" },
   { name: "Sony", domain: "sony.com" },
   { name: "Intuit", domain: "intuit.com" },
   { name: "Gartner", domain: "gartner.com" },
-  { name: "Artificial", domain: "artificial.com" },
+  { name: "Artificial", domain: "https://www.snagged.com/" },
 
   { name: "Adobe", domain: "adobe.com" },
   { name: "Cisco", domain: "cisco.com" },
@@ -24,8 +24,8 @@ const companies = [
   { name: "Amdocs", domain: "amdocs.com" },
   { name: "Mu Sigma", domain: "mu-sigma.com" },
 
-  { name: "HCL", domain: "hcltech.com" },
-  { name: "FAI", domain: "fai.com" },
+  { name: "HCL", domain: "https://www.hcltech.com/" },
+  { name: "FAI", domain: "https://www.ltm.com/" },
   { name: "Yokogawa", domain: "yokogawa.com" },
   { name: "Tech Mahindra", domain: "techmahindra.com" },
   { name: "Societe Generale", domain: "societegenerale.com" },

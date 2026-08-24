@@ -144,7 +144,7 @@ function PlacementHero() {
                 Explore Stories
               </a>
               <a
-                href="#"
+                href="/contact#contactus"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-bold text-foreground hover:bg-muted transition-colors"
               >
                 <Download className="h-4 w-4" />

@@ -7,6 +7,7 @@ import portrait3 from "@/assets/portrait-3.jpg";
 import AboutSection from "@/components/landing/AboutSection";
 import AboutWho from "@/components/landing/aboutwho";
 import DigitalSkill from "@/components/landing/digitalskill";
+import DriveVision from "@/components/landing/DriveVision";
 import { Header } from "@/components/landing/Header";
 import HiringCompaniesSection from "@/components/landing/HiringCompaniesSection";
 import { SiteFooter } from "@/components/landing/SiteFooter";
@@ -36,8 +37,9 @@ function AboutPage() {
         <AboutSection />
         <HiringCompaniesSection />
         <KnowledgeIsPower />
-        <VisionSection />
-        <MissionSection />
+        <DriveVision />
+        {/* <VisionSection />
+        <MissionSection /> */}
         <CoreTeamSection />
         <PlacementHighlightsSection />
       </main>
@@ -177,10 +179,26 @@ function CoreTeamSection() {
 
 /* 5. Placement Highlights */
 const highlights = [
-  { icon: <TrendingUp className="h-6 w-6" />, label: "Highest Salary Hike" },
-  { icon: <ChevronsUp className="h-6 w-6" />, label: "Average Salary Hike" },
-  { icon: <Handshake className="h-6 w-6" />, label: "Hiring Partners" },
-  { icon: <GraduationCap className="h-6 w-6" />, label: "Careers Reshaped" },
+  {
+    icon: <TrendingUp className="h-6 w-6" />,
+    label: "Highest Salary Hike",
+    color: "bg-blue-100 text-blue-600 border-blue-200",
+  },
+  {
+    icon: <ChevronsUp className="h-6 w-6" />,
+    label: "Average Salary Hike",
+    color: "bg-green-100 text-green-600 border-green-200",
+  },
+  {
+    icon: <Handshake className="h-6 w-6" />,
+    label: "Hiring Partners",
+    color: "bg-orange-100 text-orange-600 border-orange-200",
+  },
+  {
+    icon: <GraduationCap className="h-6 w-6" />,
+    label: "Careers Reshaped",
+    color: "bg-purple-100 text-purple-600 border-purple-200",
+  },
 ];
 
 function PlacementHighlightsSection() {
@@ -191,16 +209,20 @@ function PlacementHighlightsSection() {
           <h2 className="text-center text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
             Placement Highlights
           </h2>
+
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {highlights.map((h) => (
+            {highlights.map((highlight) => (
               <div
-                key={h.label}
-                className="flex flex-col items-center gap-4 rounded-xl border border-brand/20 bg-background px-6 py-8 text-center"
+                key={highlight.label}
+                className={`flex flex-col items-center gap-4 rounded-xl border px-6 py-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${highlight.color}`}
               >
-                <span className="grid h-12 w-12 place-items-center rounded-lg bg-brand text-primary-foreground">
-                  {h.icon}
+                <span className="grid h-12 w-12 place-items-center rounded-lg bg-white/80 shadow-sm">
+                  {highlight.icon}
                 </span>
-                <p className="text-sm font-semibold text-foreground sm:text-base">{h.label}</p>
+
+                <p className="text-sm font-semibold sm:text-base">
+                  {highlight.label}
+                </p>
               </div>
             ))}
           </div>

@@ -26,476 +26,470 @@ const AboutSection: React.FC = () => {
 
   const journey = [
     {
-      year: "2025",
-      title: "PHINCO EDUVERSITY",
-      icon: "bi-mortarboard-fill",
-      text: "Started global MBA and study abroad services for higher education aspirants.",
+      year: "2015",
+      title: "Kelvin Educon",
+      text: "Started technical training in SCADA, PLC, and design tools for engineers.",
+    },
+     {
+      year: "2020",
+      title: "PHINCO GROUP",
+      text: "Expanded into engineering, education, infra, and workforce solutions.",
+    },
+     {
+      year: "2023",
+      title: "PHINCO ELITE",
+      text: "Launched job-oriented courses in AI, Full Stack, Digital Marketing, and Analytics.",
     },
     {
       year: "2024",
       title: "PHINCO CONNECT",
-      icon: "bi-people-fill",
       text: "Established 350+ hiring partnerships for student placement and IT staffing.",
     },
     {
-      year: "2023",
-      title: "PHINCO ELITE",
-      icon: "bi-person-badge-fill",
-      text: "Launched job-oriented courses in AI, Full Stack, Digital Marketing, and Analytics.",
-    },
-    {
-      year: "2020",
-      title: "PHINCO GROUP",
-      icon: "bi-diagram-3-fill",
-      text: "Expanded into engineering, education, infra, and workforce solutions.",
-    },
-    {
-      year: "2015",
-      title: "Kelvin Educon",
-      icon: "bi-gear-fill",
-      text: "Started technical training in SCADA, PLC, and design tools for engineers.",
+      year: "2025",
+      title: "PHINCO EDUVERSITY",
+      text: "Started global MBA and study abroad services for higher education aspirants.",
     },
   ];
 
   return (
     <>
       <style>{`
+        * {
+          box-sizing: border-box;
+        }
+
         .about-section {
           width: 100%;
-          box-sizing: border-box;
+          overflow: hidden;
           background: #f3fbff;
-          padding: 36px 7.5% 20px;
+          padding: 50px 5%;
           font-family: inherit;
         }
 
-        /* ==============================
-           MAIN TITLE
-        ============================== */
-
-        .about-section .section-title {
-          margin: 0 0 18px;
-          padding: 0;
+        .section-title {
+          margin: 0 0 45px;
           text-align: center;
           color: #08b6ef;
-          font-size: 34px;
-          line-height: 1.2;
+          font-size: 38px;
           font-weight: 700;
-          text-transform: none;
-          letter-spacing: 0;
         }
 
-        .about-section .section-title::after {
-          display: none;
-        }
-
-        /* ==============================
-           TWO COLUMN LAYOUT
-        ============================== */
-
-        .about-section .about-grid {
+        .about-content2 {
           width: 100%;
-          max-width: 1600px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: minmax(0, 1.18fr) minmax(520px, 1fr);
-          gap: 55px;
-          align-items: start;
+          margin: auto;
         }
 
-        /* ==============================
-           LEFT CONTENT
-        ============================== */
-
-        .about-section .about-text {
-          padding-top: 12px;
-        }
-
-        .about-section .about-text > h2 {
-          max-width: 760px;
+        .about-text h2 {
           margin: 0 0 25px;
-          color: #0b1f38;
-          font-size: 35px;
-          line-height: 1.42;
-          font-weight: 400;
-          letter-spacing: 0;
-        }
-
-        .about-section .about-text > h2 span {
-          color: #08b6ef;
-          font-weight: 400;
-        }
-
-        .about-section .about-text > p {
-          max-width: 820px;
-          margin: 0 0 28px;
-          color: #617080;
-          font-size: 15px;
-          line-height: 1.8;
-          font-weight: 400;
-        }
-
-        .about-section .about-text > p strong {
-          color: #586474;
-          font-weight: 700;
-        }
-
-        /* ==============================
-           LEFT FEATURE ROWS
-        ============================== */
-
-        .about-section .highlight-item {
-          min-height: 65px;
-          margin: 0 0 20px;
-          padding: 12px 18px;
-          box-sizing: border-box;
-
-          display: grid;
-          grid-template-columns: 130px 1fr;
-          align-items: center;
-
-          background: #e7f8ff;
-          border: none;
-          border-radius: 14px;
-          box-shadow: none;
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .about-section .highlight-item:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(25, 181, 232, 0.08);
-        }
-
-        .about-section .highlight-title {
-          margin: 0;
-          display: flex;
-          align-items: center;
-          gap: 11px;
-
-          color: #07192f;
-          font-size: 15px;
-          font-weight: 600;
-          white-space: nowrap;
-        }
-
-        .about-section .highlight-title i {
-          width: 32px;
-          height: 32px;
-          flex-shrink: 0;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          color: #ffffff;
-          background: #08baf3;
-          border-radius: 50%;
-          font-size: 15px;
-        }
-
-        .about-section .highlight-item p {
-          margin: 0;
-          padding-left: 15px;
-
-          color: #354353;
-          font-size: 14px;
-          line-height: 1.5;
-          font-weight: 400;
-        }
-
-        /* ==============================
-           RIGHT JOURNEY CONTAINER
-        ============================== */
-
-        .about-section .timeline-container {
-          position: relative;
-          margin: 0;
-          padding: 42px 28px 42px;
-          box-sizing: border-box;
-
-          background: #ffffff;
-          border-radius: 20px;
-          min-height: 690px;
-        }
-
-        .about-section .timeline-container::before {
-          display: none;
-        }
-
-        .about-section .timeline-container > h2 {
-          margin: 0 0 38px;
-          text-align: center;
-
-          color: #07192f;
-          font-size: 25px;
-          line-height: 1.3;
-          font-weight: 400;
-        }
-
-        /* ==============================
-           JOURNEY ROWS
-        ============================== */
-
-        .about-section .timeline-step {
-          position: relative;
-          display: flex;
-          align-items: center;
-          gap: 16px;
-
-          min-height: 86px;
-          margin: 0 0 23px;
-          padding: 13px 20px;
-          box-sizing: border-box;
-
-          background: #e6f8ff;
-          border-radius: 14px;
-        }
-
-        .about-section .timeline-step:last-child {
-          margin-bottom: 0;
-        }
-
-        .about-section .timeline-icon {
-          position: relative;
-          z-index: 2;
-
-          width: 49px;
-          height: 49px;
-          flex: 0 0 49px;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          background: #08baf3;
-          color: #ffffff;
-          border-radius: 50%;
-          font-size: 17px;
-
-          box-shadow: 0 6px 14px rgba(8, 186, 243, 0.16);
-        }
-
-        .about-section .timeline-content {
-          width: auto;
-          flex: 1;
-
-          margin: 0;
-          padding: 0;
-
-          background: transparent;
-          border-radius: 0;
-          box-shadow: none;
-
-          transition: none;
-        }
-
-        .about-section .timeline-content:hover {
-          transform: none;
-          box-shadow: none;
-        }
-
-        .about-section .timeline-content h5 {
-          margin: 0 0 7px;
-
-          color: #13243a;
-          font-size: 14px;
-          line-height: 1.3;
+          color: #102033;
+          font-size: 42px;
+          line-height: 1.35;
           font-weight: 500;
         }
 
-        .about-section .timeline-content p {
+        .about-text h2 span {
+          color: #08b6ef;
+        }
+
+        .about-text > p {
+          margin: 0 0 35px;
+          color: #64748b;
+          font-size: 17px;
+          line-height: 1.8;
+        }
+
+        .highlight-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 25px;
+          margin-top: 35px;
+        }
+
+        .highlight-item {
+          min-height: 120px;
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          padding: 25px;
+          background: #ffffff;
+          border-radius: 18px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-title {
+          min-width: 140px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: #102033;
+          font-size: 17px;
+          font-weight: 600;
+        }
+
+        .highlight-title i {
+          flex: 0 0 38px;
+          width: 38px;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #08b6ef;
+          color: #ffffff;
+          border-radius: 50%;
+        }
+
+        .highlight-item p {
           margin: 0;
-
-          color: #5d6b79;
-          font-size: 13px;
-          line-height: 1.5;
-          font-weight: 400;
+          color: #475569;
+          font-size: 15px;
+          line-height: 1.6;
         }
 
-        /* ==============================
-           LARGE SCREENS
-        ============================== */
+        /* Journey section */
 
-        @media (min-width: 1600px) {
-          .about-section {
-            padding-left: 7.5%;
-            padding-right: 7.5%;
-          }
-
-          .about-section .about-grid {
-            grid-template-columns: 1.2fr 1fr;
-          }
+        .journey-section {
+          margin-top: 75px;
         }
 
-        /* ==============================
-           TABLET
-        ============================== */
+        .journey-title {
+          margin: 0 0 60px;
+          text-align: center;
+          color: #08b6ef;
+          font-size: 36px;
+          font-weight: 700;
+        }
 
-        @media (max-width: 1100px) {
+        .journey-wrapper {
+          width: 100%;
+          max-width: 1250px;
+          margin: auto;
+          position: relative;
+          padding: 20px 0;
+        }
+
+        .journey-path {
+          position: absolute;
+          top: 80px;
+          bottom: 80px;
+          left: 50%;
+          width: 230px;
+          height: calc(100% - 160px);
+          transform: translateX(-50%);
+          overflow: visible;
+          pointer-events: none;
+        }
+
+        .journey-path path {
+          fill: none;
+          stroke: #9ca3af;
+          stroke-width: 2;
+          stroke-dasharray: 10 12;
+          stroke-linecap: round;
+        }
+
+        .journey-row {
+          --marker-position: 50%;
+
+          min-height: 260px;
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+
+        .journey-row.left {
+          justify-content: flex-start;
+          padding-right: 55%;
+        }
+
+        .journey-row.right {
+          justify-content: flex-end;
+          padding-left: 55%;
+        }
+
+        .journey-row:nth-child(2) {
+          --marker-position: 47%;
+        }
+
+        .journey-row:nth-child(3) {
+          --marker-position: 55%;
+        }
+
+        .journey-row:nth-child(4) {
+          --marker-position: 45%;
+        }
+
+        .journey-row:nth-child(5) {
+          --marker-position: 54%;
+        }
+
+        .journey-row:nth-child(6) {
+          --marker-position: 47%;
+        }
+
+        .journey-card {
+          width: 100%;
+          min-height: 190px;
+          position: relative;
+          z-index: 2;
+          padding: 30px 32px;
+          background: #ffffff;
+          border: 1px solid rgba(148, 163, 184, 0.25);
+          border-radius: 18px;
+          box-shadow: 0 10px 0 rgba(15, 23, 42, 0.05);
+        }
+
+        .journey-card h3 {
+          margin: 0 0 14px;
+          color: #102033;
+          font-size: 32px;
+          line-height: 1.2;
+          font-weight: 700;
+        }
+
+        .journey-card h4 {
+          margin: 0 0 13px;
+          color: #08b6ef;
+          font-size: 17px;
+          line-height: 1.4;
+          font-weight: 600;
+        }
+
+        .journey-card p {
+          margin: 0;
+          color: #64748b;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+
+        .journey-number {
+          position: absolute;
+          top: 50%;
+          left: var(--marker-position);
+          z-index: 3;
+          width: 54px;
+          height: 54px;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #08b6ef;
+          color: #ffffff;
+          border-radius: 50%;
+          font-size: 18px;
+          font-weight: 700;
+          box-shadow: 0 0 0 8px #f3fbff;
+        }
+
+        @media (max-width: 900px) {
           .about-section {
-            padding: 50px 5%;
+            padding: 35px 20px;
           }
 
-          .about-section .about-grid {
+          .section-title {
+            margin-bottom: 30px;
+            font-size: 30px;
+          }
+
+          .about-text h2 {
+            font-size: 30px;
+          }
+
+          .highlight-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
-            max-width: 850px;
           }
 
-          .about-section .about-text > h2 {
-            max-width: 100%;
+          .highlight-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
           }
 
-          .about-section .timeline-container {
+          .highlight-title {
+            min-width: 0;
+          }
+
+          .journey-section {
+            margin-top: 55px;
+          }
+
+          .journey-title {
+            margin-bottom: 40px;
+            font-size: 30px;
+          }
+
+          .journey-wrapper {
+            padding: 0;
+          }
+
+          .journey-path {
+            display: none;
+          }
+
+          .journey-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 26px;
+            bottom: 26px;
+            left: 26px;
+            border-left: 2px dashed #9ca3af;
+          }
+
+          .journey-row,
+          .journey-row.left,
+          .journey-row.right {
             min-height: auto;
-          }
-        }
-
-        /* ==============================
-           MOBILE
-        ============================== */
-
-        @media (max-width: 768px) {
-          .about-section {
-            padding: 45px 20px;
+            justify-content: flex-start;
+            padding: 0 0 35px 70px;
           }
 
-          .about-section .section-title {
-            font-size: 28px;
-            margin-bottom: 25px;
+          .journey-row:last-child {
+            padding-bottom: 0;
           }
 
-          .about-section .about-text {
-            padding-top: 0;
+          .journey-card {
+            min-height: auto;
+            padding: 24px;
           }
 
-          .about-section .about-text > h2 {
-            font-size: 27px;
-            line-height: 1.4;
-            margin-bottom: 18px;
-          }
-
-          .about-section .about-text > p {
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 25px;
-          }
-
-          .about-section .highlight-item {
-            grid-template-columns: 1fr;
-            gap: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-          }
-
-          .about-section .highlight-item p {
-            padding-left: 43px;
-            font-size: 13px;
-          }
-
-          .about-section .timeline-container {
-            padding: 30px 18px;
-            border-radius: 16px;
-          }
-
-          .about-section .timeline-container > h2 {
-            font-size: 23px;
-            margin-bottom: 28px;
-          }
-
-          .about-section .timeline-step {
-            padding: 13px 15px;
-            gap: 13px;
-            margin-bottom: 16px;
-          }
-
-          .about-section .timeline-icon {
-            width: 44px;
-            height: 44px;
-            flex-basis: 44px;
-            font-size: 15px;
-          }
-
-          .about-section .timeline-content h5 {
-            font-size: 13px;
-          }
-
-          .about-section .timeline-content p {
-            font-size: 12px;
+          .journey-number {
+            top: 28px;
+            left: 26px;
+            width: 46px;
+            height: 46px;
+            transform: translate(-50%, 0);
+            font-size: 16px;
+            box-shadow: 0 0 0 6px #f3fbff;
           }
         }
 
         @media (max-width: 480px) {
           .about-section {
-            padding: 40px 15px;
+            padding: 30px 15px;
           }
 
-          .about-section .section-title {
-            font-size: 25px;
+          .section-title {
+            font-size: 26px;
           }
 
-          .about-section .about-text > h2 {
-            font-size: 24px;
+          .about-text h2 {
+            font-size: 26px;
           }
 
-          .about-section .highlight-item p {
-            padding-left: 0;
+          .about-text > p {
+            font-size: 15px;
           }
 
-          .about-section .timeline-step {
-            align-items: flex-start;
+          .highlight-item {
+            padding: 20px;
+          }
+
+          .journey-title {
+            font-size: 27px;
+          }
+
+          .journey-wrapper::before {
+            left: 21px;
+          }
+
+          .journey-row,
+          .journey-row.left,
+          .journey-row.right {
+            padding-left: 55px;
+          }
+
+          .journey-number {
+            left: 21px;
+            width: 42px;
+            height: 42px;
+          }
+
+          .journey-card {
+            padding: 22px 20px;
+          }
+
+          .journey-card h3 {
+            font-size: 27px;
+          }
+
+          .journey-card h4 {
+            font-size: 15px;
+          }
+
+          .journey-card p {
+            font-size: 14px;
           }
         }
       `}</style>
 
-      <section className="about-section" id="about">
+      <section className="about-section">
         <h2 className="section-title">About PHINCO ELITE</h2>
 
-        <div className="about-grid">
-          {/* LEFT SIDE */}
+        <div className="about-content2">
           <div className="about-text">
             <h2>
-              We are <span>Phinco Elite</span>, where your skills launch
-              <br />
-              real careers
+              We are <span>Phinco Elite</span>, where your skills launch real
+              careers
             </h2>
 
             <p>
-              Phinco Elite offers{" "}
-              <strong>career-ready IT programs</strong> in Data Science,
-              Analytics, Full Stack Development, and AI.
-              <br />
-              Get trained with real projects, 1-on-1 mentorship, and industry
+              Phinco Elite offers <b>career-ready IT programs</b> in Data
+              Science, Analytics, Full Stack Development, and AI. Get trained
+              with real projects, 1-on-1 mentorship, and industry
               certifications.
             </p>
 
-            {highlights.map((item) => (
-              <div className="highlight-item" key={item.title}>
-                <div className="highlight-title">
-                  <i className={`bi ${item.icon}`}></i>
-                  {item.title}
-                </div>
+            <div className="highlight-grid">
+              {highlights.map((item) => (
+                <div className="highlight-item" key={item.title}>
+                  <div className="highlight-title">
+                    <i className={`bi ${item.icon}`}></i>
+                    {item.title}
+                  </div>
 
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="timeline-container">
-            <h2>Our Journey</h2>
-
-            {journey.map((item) => (
-              <div className="timeline-step" key={item.year}>
-                <div className="timeline-icon">
-                  <i className={`bi ${item.icon}`}></i>
-                </div>
-
-                <div className="timeline-content">
-                  <h5>
-                    {item.year} – {item.title}
-                  </h5>
                   <p>{item.text}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="journey-section">
+          <h2 className="journey-title">Our Journey</h2>
+
+          <div className="journey-wrapper">
+            <svg
+              className="journey-path"
+              viewBox="0 0 230 1000"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                d="
+                  M115 0
+                  C20 80, 25 170, 145 250
+                  C215 310, 205 390, 85 460
+                  C15 520, 30 620, 155 690
+                  C215 750, 200 850, 90 920
+                  C50 950, 55 980, 115 1000
+                "
+              />
+            </svg>
+
+            {journey.map((item, index) => (
+              <div
+                className={`journey-row ${
+                  index % 2 === 0 ? "left" : "right"
+                }`}
+                key={item.year}
+              >
+                <div className="journey-card">
+                  <h3>{item.year}</h3>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+
+                <div className="journey-number">{index + 1}</div>
               </div>
             ))}
           </div>
