@@ -7,7 +7,7 @@ import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
 import Icons1 from "@/assets/Icons1.jpeg";
-import Icons2 from "@/assets/Icons2.jpeg";
+import Icons2 from "@/assets/hiring-icons.jpeg";
 import { Header } from "@/components/landing/Header";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
