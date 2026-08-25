@@ -6,6 +6,8 @@ import learner5 from "@/assets/learner--5.jpg";
 import portrait1 from "@/assets/portrait-1.jpg";
 import portrait2 from "@/assets/portrait-2.jpg";
 import portrait3 from "@/assets/portrait-3.jpg";
+import icons1 from "@/assets/icons1.jpeg";
+import icons2 from "@/assets/icons2.jpeg";
 import { Header } from "@/components/landing/Header";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
@@ -31,6 +33,7 @@ import OurHiringPartners from "@/components/landing/OurHiringPartners";
 import PartnerLogosGrid from "@/components/landing/PartnerLogosGrid";
 import AlumniDistribution from "@/components/landing/AlumniDistribution";
 import SalaryDistribution from "@/components/landing/SalaryDistribution";
+import { TalkToTeam } from "@/components/landing/TalkToTeam";
 
 
 export const Route = createFileRoute("/placement-stories")({
@@ -64,11 +67,16 @@ function PlacementStoriesPage() {
         <AlumniTriumphSection />
         <AlumniReviewsSection />
         <CareerSupportSection />
-        <OurHiringPartners />
-        <PartnerLogosGrid />
+        <div className="text-center mb-[30px] text-[32px] font-bold text-[#17202a]">Our Hiring Partners</div>
+        <div className="flex flex-col items-center justify-center gap-32 bg-background p-3 mx-9">
+        <img src={icons2} className="h-full w-full object-cover" />
+        <img src={icons1} className="h-full w-full object-cover" />
+        </div>
+        {/* <OurHiringPartners /> */}
+        {/* <PartnerLogosGrid /> */}
         {/* <RegisterCtaSection /> */}
+      <TalkToTeam />
         <FAQSection />
-
       </main>
       <SiteFooter />
       <WhatsAppFab />

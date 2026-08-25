@@ -9,9 +9,9 @@ export function TalkToTeam() {
           <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
             <div className="max-w-2xl">
               <p className="text-lg font-semibold text-[#f0a93b]">Got more questions?</p>
-              <h2 className="mt-2 text-3xl font-extrabold text-white md:text-[40px]">
-                Talk to our team directly
-              </h2>
+              <div className="mt-2 text-3xl font-extrabold text-white md:text-[40px]">
+                Talk to our expert
+              </div>
               <p className="mt-3 text-base text-gray-300">
                 Contact us and our academic counsellor will get in touch with you shortly
               </p>
@@ -23,13 +23,23 @@ export function TalkToTeam() {
                 >
                   Enquire Now
                 </a>
-                <a
+                {/* <a
                   href="tel:+919177956 87988"
                   className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-bold text-[#1f8df0] shadow transition hover:bg-gray-100"
                 >
                   <Phone className="h-4 w-4 fill-current" />
                   9912104888
-                </a>
+                </a> */}
+                <a
+                        href="https://wa.me/919912104888"
+                        className="inline-flex items-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-bold text-[#1f8df0] shadow transition hover:bg-gray-100"
+                        aria-label="WhatsApp"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                         <Phone className="h-4 w-4 fill-current" />
+                          9912104888
+                      </a>
               </div>
             </div>
 
