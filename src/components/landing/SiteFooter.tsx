@@ -57,7 +57,7 @@ const SOCIAL = [
   { label: "Twitter", href: "https://twitter.com", Icon: Twitter },
   { label: "Instagram", href: "https://www.instagram.com/phinco_elite_official/", Icon: Instagram },
   { label: "LinkedIn", href: "https://in.linkedin.com/company/phinco_elite_official", Icon: Linkedin },
-  { label: "YouTube", href: "https://youtube.com", Icon: Youtube },
+  { label: "YouTube", href: "https://www.youtube.com/@phincoelitee", Icon: Youtube },
   { label: "Facebook", href: "https://www.facebook.com/phincoeliteofficial/", Icon: Facebook },
 ];
 

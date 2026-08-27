@@ -1,11 +1,17 @@
-import learner1 from "@/assets/learner-1.jpg";
-import learner2 from "@/assets/learner-2.jpg";
-import learner3 from "@/assets/learner-3.jpg";
-import learner4 from "@/assets/learner-4.jpg";
-import learner5 from "@/assets/learner--5.jpg";
-import portrait1 from "@/assets/portrait-1.jpg";
-import portrait2 from "@/assets/portrait-2.jpg";
-import portrait3 from "@/assets/portrait-3.jpg";
+import learner1 from "@/assets/geenth.png";
+import learner2 from "@/assets/rabbani.jpeg";
+import learner3 from "@/assets/venthan.png";
+import learner4 from "@/assets/portrait-2.jpeg";
+import learner5 from "@/assets/arun.jpeg";
+import learner6 from "@/assets/Prash.jpeg";
+import learner7 from "@/assets/nehaaaa.png";
+
+import portrait1 from "@/assets/rahul1t.png";
+import portrait2 from "@/assets/himani (1).png";
+import portrait3 from "@/assets/shalini.png";
+import portrait4 from "@/assets/sanskarreel.png";
+import portrait5 from "@/assets/nehaaaa.png";
+
 import Icons1 from "@/assets/Icons1.jpeg";
 import Icons2 from "@/assets/hiring-icons.jpeg";
 import { Header } from "@/components/landing/Header";
@@ -243,44 +249,45 @@ function PlacementHero() {
 
 const successStories = [
   {
-    name: "Vivek Tandale",
-    role: "Data Analyst at Bain & Company",
+    name: "Shalini",
+    role: "Digital marketing to Data Analyst",
     description:
-      "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
-    image: portrait1,
-    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
+      "A passionate learner from Haveri, Karnataka, who switched from an Digital marketing  role to pursuing his dream career in Data Science.",
+    image: portrait3,
+    youtubeUrl: "https://www.youtube.com/watch?v=HvdoG3X8gB8",
   },
   {
-    name: "Sneha Reddy",
-    role: "ML Engineer at Microsoft",
+    name: "Rahul",
+    role: "Career Gat to Data Analyst ",
     description:
-      "From a non-tech background to building production ML systems — Sneha's journey shows how dedication and the right guidance transform careers.",
+      "A passionate learner who turned a career gap into an opportunity and successfully transitioned into a career as a Data Analyst.",
+    image: portrait1,
+    youtubeUrl: "https://www.youtube.com/watch?v=dyiWCACsg0E",
+  },
+  {
+    name: "Himani",
+    role: "Fresher to Data analyst",
+    description:
+      "A passionate learner who successfully transitioned from being a fresher to starting a promising career as a Data Analyst.",
     image: portrait2,
     youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
   },
+  
   {
-    name: "Vivek Tandale",
-    role: "Data Analyst at Bain & Company",
+    name: "Sanskar",
+    role: "Customer Support to Data Analyst",
     description:
-      "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
-    image: portrait1,
-    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
+      "A passionate learner who successfully transitioned from a Customer Support role to a promising career as a Data Analyst.",
+    image: portrait4,
+    youtubeUrl: "https://www.youtube.com/watch?v=cMgXp2qAb9U&t=1s",
   },
   {
-    name: "Sneha Reddy",
-    role: "ML Engineer at Microsoft",
+    name: "Neha",
+    role: "Career Gap to Data Analyst ",
     description:
-      "From a non-tech background to building production ML systems — Sneha's journey shows how dedication and the right guidance transform careers.",
-    image: portrait2,
-    youtubeUrl: "https://www.youtube.com/watch?v=IZwdiQPUoYI",
-  },
-  {
-    name: "Vivek Tandale",
-    role: "Data Analyst at Bain & Company",
-    description:
-      "A passionate learner from Haveri, Karnataka, who switched from an Associate Analyst role to pursuing his dream career in Data Science.",
-    image: portrait1,
-    youtubeUrl: "https://youtu.be/IZwdiQPUoYI?si=3W1PzznSugoAh85p",
+      "A passionate learner who turned a career gap into an opportunity and successfully transitioned into a career as a Data Analyst.",
+    image: portrait5,
+    youtubeUrl: "https://www.youtube.com/watch?v=dQRCKGdh2M8",
   }
 ];
 
@@ -464,14 +471,14 @@ function SuccessStoriesSection() {
    ============================================================ */
 
 const alumniCards = [
-  { name: "Sagarika Keshri", company: "Yoga Bar", before: "Fresher", after: "Data Analyst", photo: portrait2 },
-  { name: "Sonakshi Bhatt", company: "Digit88 Technologies", before: "Patent Research Analyst", after: "Data Analyst", photo: learner1 },
-  { name: "Suruchi Singh", company: "Public Sapient", before: "Fresher", after: "Data Analyst", photo: learner2 },
-  { name: "Animesh Bhatt", company: "CommsCredible", before: "Software Development Engineer", after: "Data Analyst", photo: portrait1 },
-  { name: "Rahul Verma", company: "Swiggy", before: "Mechanical Engineer", after: "Data Scientist", photo: learner3 },
-  { name: "Priya Sharma", company: "Microsoft", before: "Accountant", after: "ML Engineer", photo: portrait3 },
-  { name: "Karan Mehta", company: "Paytm", before: "Sales Executive", after: "Business Analyst", photo: learner4 },
-  { name: "Anita Rao", company: "Google", before: "Teacher", after: "Cloud Engineer", photo: learner5 },
+  { name: "Himani", company: "Yoga Bar", before: "Fresher", after: "Data Analyst", photo: portrait2 },
+  { name: "Shivani K", company: "AXA", before: "Patent Analyst", after: "Finance Analyst", photo: learner1 },
+  { name: "Rabbani S", company: "Public Sapient", before: "Customer Support ", after: "Data Analyst", photo: learner2 },
+  { name: "Venthan", company: "CommsCredible", before: "Sales ", after: "Data Analyst", photo: learner3 },
+  { name: "Ahmed S", company: "KPMG", before: "Mechanical Engineer", after: "Data Analyst", photo: learner4 },
+  { name: "Arun M", company: "General Motors", before: "Accountant", after: "Bussiness Analyst", photo: learner5 },
+  { name: "Prashanth Reddy", company: "JP Morgan", before: "Data Analyst", after: "Senior Data Analyst", photo: learner6 },
+  { name: "Neha", company: "Data Poem", before: "Career Gap", after: "Data Analyst", photo: learner7 },
 ];
 
 function AlumniTriumphSection() {
@@ -518,7 +525,7 @@ function AlumniTriumphSection() {
                 </div>
 
                 <a
-                  href="#"
+          href="/contact#contactus"
                   className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg border border-brand bg-background px-3 py-2 text-sm font-bold text-brand hover:bg-brand/5 transition-colors"
                 >
                   <Linkedin className="h-4 w-4" />
@@ -539,32 +546,31 @@ function AlumniTriumphSection() {
 
 const reviews = [
   {
-    name: "Yogesh Mane",
-    role: "Aspiring Data Scientist",
+    name: "Krushitha",
+    role: "Data Analyst",
+    photo: null,
+    text:"Phinco Elite helped me gain practical knowledge in SQL, Power BI, Excel, and Python. The hands-on projects and guidance gave me the confidence to prepare for interviews and start my journey as a Data Analyst",
+  },
+  {
+    name: "Manish",
+    role: "Business Analyst",
     photo: null,
     text:
-      "In just one month of the Data Science course at Phinco Elite, I've delved into Excel basics, mastering functions like VLOOKUP and Pivot Tables. Theory seamlessly blends with hands-on practice, guided by exceptional instructors. The support has been instrumental in my progress, with a supportive community and an innovative curriculum featuring real-world assignments and dedicated doubt sessions.",
+      "The Business Analyst training at Phinco Elite helped me understand real business processes, requirement gathering, documentation, and stakeholder communication. The practical approach made learning much easier and job-focused.",
   },
   {
-    name: "Varsha Jaiswal",
-    role: "Aspiring Data Scientist",
-    photo: learner2,
+    name: "Samyuktha",
+    role: "Finance Analyst",
+    photo: null,
     text:
-      "Joining Phinco Elite has been a transformative decision for me. Over the past three months, I have experienced exceptional management, outstanding instructors, and dedicated mentors. The support and guidance I have received have been invaluable to my growth. The instructors are not just knowledgeable but also incredibly approachable and always willing to assist, making the learning process engaging and effective.",
-  },
-  {
-    name: "Alamelu J Mahindra",
-    role: "Data Analyst",
-    photo: portrait2,
-    text:
-      "Through completing three valuable hands-on experiences in real-world scenarios. Mentors guided me through every project and motivated me to explore tools like Power BI. The structured curriculum and continuous support from the team made the entire journey meaningful and impactful.",
+      "Phinco Elite helped me strengthen my analytical and financial skills through practical exercises and real-world projects. I learned how to work with data, create reports, and generate meaningful business insights.",
   },
   {
     name: "Ravi Kumar",
-    role: "ML Engineer",
-    photo: portrait1,
+    role: "Career Transition",
+    photo: null,
     text:
-      "The placement support team is phenomenal. From resume reviews to mock interviews, they prepared me for every round. Within weeks of finishing the program I had multiple offers to choose from.",
+      "Coming from a different background, I was initially unsure about moving into analytics. Phinco Elite provided structured training, practical projects, mentorship, and interview support, which helped me confidently transition into an analytics career.",
   },
 ];
 
