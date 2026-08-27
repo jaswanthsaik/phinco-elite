@@ -3,7 +3,7 @@ import learner2 from "@/assets/rabbani.jpeg";
 import learner3 from "@/assets/venthan.png";
 import learner4 from "@/assets/portrait-2.jpeg";
 import learner5 from "@/assets/arun.jpeg";
-import learner6 from "@/assets/Prash.jpeg";
+import learner6 from "@/assets/prashanth.jpeg";
 import learner7 from "@/assets/nehaaaa.png";
 
 import portrait1 from "@/assets/rahul1t.png";

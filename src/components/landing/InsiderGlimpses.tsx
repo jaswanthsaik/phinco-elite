@@ -1,4 +1,4 @@
-import learner1 from "@/assets/prash.jpeg";
+import learner1 from "@/assets/prashanth.jpeg";
 import learner2 from "@/assets/arun.jpeg";
 import learner3 from "@/assets/ahmed.jpeg";
 import learner4 from "@/assets/venthan.png";
