@@ -14,6 +14,7 @@ import { SiteFooter } from "@/components/landing/SiteFooter";
 import { WhatsAppFab } from "@/components/landing/WhatsAppFab";
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronsUp, GraduationCap, Handshake, IdCard, Layers, Linkedin, Maximize2, TrendingUp, Users } from "lucide-react";
+import Aspire from "@/components/landing/aspire";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -35,6 +36,7 @@ function AboutPage() {
         <DigitalSkill />
         <AboutWho />
         <AboutSection />
+        <Aspire />
         <HiringCompaniesSection />
         <KnowledgeIsPower />
         <DriveVision />
@@ -129,6 +131,7 @@ const team = [
     name: "SRIKANTH K",
     role: "Founder",
     photo: portrait1,
+    linkedin: "https://www.linkedin.com/in/srikanth-k-59870825b/",
     quote:
       "With over 15+ years of experience across the IT and Engineering industries,With six ventures under the PHINCO Group and Passionate about entrepreneurship and technology, Srikanth actively supports promising startups through strategic investments and encourages emerging innovations, particularly in the field of Artificial Intelligence. His vision is to create an ecosystem where innovation, technology, and entrepreneurship come together to shape the future.",
   },
@@ -136,6 +139,7 @@ const team = [
     name: "Prathyusha P",
     role: "Co-Founder",
     photo: portrait2,
+    linkedin: "https://www.linkedin.com/in/pratyusha-p-342124156/",
     quote:
       "With over 12+ years of experience working with diverse startups and leading EdTech organizations and brings strong expertise in operations, business processes, and organizational management. As the Co-Founder of PHINCO ELITE, she plays a key role in overseeing day-to-day operations and ensuring the smooth functioning of various business activities. Her experience and strategic approach help drive efficiency, coordination, and sustainable growth across the organization.",
   },
@@ -143,6 +147,7 @@ const team = [
     name: "Kenen Bhandhavi",
     role: "Branch Head-Hyderabad",
     photo: portrait3,
+    linkedin: "https://www.linkedin.com/in/kenen-bhandhavi-551388165/",
     quote:
       "With over 10+ years of experience in the EdTech industry, Kenen B brings extensive expertise in career guidance, candidate profiling, and team management. Having worked with top-notch companies throughout his career, he has gained valuable experience in guiding professionals toward the right career opportunities and helping them achieve their goals.",
   },
@@ -164,7 +169,13 @@ function CoreTeamSection() {
                   <span className="text-brand">{m.name}</span>{" "}
                   <span className="text-foreground/80 font-medium">({m.role})</span>
                 </h3>
-                <a href="#" aria-label={`${m.name} on LinkedIn`} className="grid h-7 w-7 shrink-0 place-items-center rounded bg-[#0A66C2] text-white">
+                <a
+                  href={m.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${m.name} on LinkedIn`}
+                  className="grid h-7 w-7 shrink-0 place-items-center rounded bg-[#0A66C2] text-white"
+                >
                   <Linkedin className="h-4 w-4" />
                 </a>
               </div>

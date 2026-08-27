@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BlogHero } from "@/components/blogs/BlogHero";
 import { LatestBlogs } from "@/components/blogs/LatestBlogs";
+import BlogPage from "@/components/blogs/BlogPage";
 
 export const Route = createFileRoute("/blogs/")({
   head: () => ({
@@ -28,8 +29,9 @@ export const Route = createFileRoute("/blogs/")({
 function BlogsIndexPage() {
   return (
     <>
-      <BlogHero />
-      <LatestBlogs />
+      {/* <BlogHero /> */}
+      {/* <LatestBlogs /> */}
+      <BlogPage />
     </>
   );
 }

@@ -1,0 +1,436 @@
+{
+  "featuredBlogs": [
+    {
+      "title": "How Much Does PMP® Certification Cost? Fees and Expenses (2026)",
+      "type": "Article",
+      "date": "Aug 24, 2026",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Top Data Science Career Paths You Should Know",
+      "type": "Article",
+      "date": "Sep 20, 2026",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Complete Guide to Artificial Intelligence",
+      "type": "Ebook",
+      "date": "Sep 10, 2026",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Cloud Computing Trends and Future Scope",
+      "type": "Article",
+      "date": "Aug 30, 2026",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Data Science & Business Analytics",
+      "count": 8,
+      "blogs": [
+        {
+          "title": "DSA Interview Questions and Answers",
+          "type": "Article",
+          "date": "Sep 24, 2025",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+          "description": "Prepare for technical interviews with commonly asked Data Structures and Algorithms questions, explanations, and problem-solving approaches."
+        },
+        {
+          "title": "Top 10 Career Paths in Data Science",
+          "type": "Article",
+          "date": "Sep 20, 2025",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore the most promising data science career opportunities, required skills, and future growth potential in the industry."
+        },
+        {
+          "title": "Business Analytics Guide for Beginners",
+          "type": "Article",
+          "date": "Sep 15, 2025",
+          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn the fundamentals of business analytics, data-driven decision making, and how organizations use insights to grow."
+        },
+        {
+          "title": "Data Visualization Best Practices",
+          "type": "Article",
+          "date": "Sep 10, 2025",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand effective data visualization techniques to present complex information through meaningful charts and dashboards."
+        },
+        {
+          "title": "Complete Python for Data Science Guide",
+          "type": "Article",
+          "date": "Aug 30, 2025",
+          "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80",
+          "description": "A complete beginner-friendly guide to Python programming concepts used in data science and analytics."
+        },
+        {
+          "title": "SQL Interview Questions for Analysts",
+          "type": "Article",
+          "date": "Aug 22, 2025",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=900&q=80",
+          "description": "Master SQL interview questions covering queries, joins, database concepts, and analytical problem solving."
+        },
+        {
+          "title": "Machine Learning in Business Analytics",
+          "type": "Article",
+          "date": "Aug 12, 2025",
+          "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=900&q=80",
+          "description": "Discover how machine learning helps businesses predict trends, automate decisions, and improve performance."
+        },
+        {
+          "title": "Data Analytics Tools and Technologies",
+          "type": "Article",
+          "date": "Aug 5, 2025",
+          "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore popular analytics tools, platforms, and technologies used by modern data professionals."
+        }
+      ]
+    },
+    {
+      "name": "AI & Machine Learning",
+      "count": 6,
+      "blogs": [
+        {
+          "title": "Introduction to Artificial Intelligence",
+          "type": "Article",
+          "date": "Sep 26, 2025",
+          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand artificial intelligence concepts, applications, and how AI is transforming industries worldwide."
+        },
+        {
+          "title": "Top Machine Learning Projects",
+          "type": "Article",
+          "date": "Sep 24, 2025",
+          "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=80",
+          "description": "Discover practical machine learning project ideas to improve skills and build an impressive AI portfolio."
+        },
+        {
+          "title": "Best AI Courses Online for Free",
+          "type": "Article",
+          "date": "Sep 18, 2025",
+          "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80",
+          "description": "Find the best free AI courses to learn machine learning, deep learning, and artificial intelligence concepts."
+        },
+        {
+          "title": "Deep Learning Fundamentals",
+          "type": "Article",
+          "date": "Sep 10, 2025",
+          "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn deep learning basics, neural networks, and the technologies powering modern AI applications."
+        },
+        {
+          "title": "Generative AI Complete Guide",
+          "type": "Article",
+          "date": "Aug 28, 2025",
+          "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80",
+          "description": "A complete guide to generative AI, large language models, and real-world business applications."
+        },
+        {
+          "title": "Natural Language Processing Explained",
+          "type": "Article",
+          "date": "Aug 20, 2025",
+          "image": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand NLP concepts and how machines process, analyze, and generate human language."
+        }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "count": 7,
+      "blogs": [
+        {
+          "title": "Project Management Best Practices",
+          "type": "Article",
+          "date": "Aug 20, 2025",
+          "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn proven project management strategies, techniques, and practices used by successful project teams."
+        },
+        {
+          "title": "PMP Preparation Guide",
+          "type": "Article",
+          "date": "Jul 15, 2025",
+          "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+          "description": "A complete PMP certification preparation guide covering concepts, exam strategies, and learning resources."
+        },
+        {
+          "title": "Project Management Tools Comparison",
+          "type": "Article",
+          "date": "Jul 8, 2025",
+          "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
+          "description": "Compare popular project management tools and understand which solution fits different team requirements."
+        },
+        {
+          "title": "Risk Management in Projects",
+          "type": "Article",
+          "date": "Jun 25, 2025",
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn how to identify, analyze, and manage project risks to improve delivery success."
+        },
+        {
+          "title": "Leadership Skills for Project Managers",
+          "type": "Article",
+          "date": "Jun 15, 2025",
+          "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80",
+          "description": "Develop leadership and communication skills required to manage successful project teams."
+        },
+        {
+          "title": "Scrum Master Complete Handbook",
+          "type": "Ebook",
+          "date": "Jun 5, 2025",
+          "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn Scrum roles, ceremonies, and responsibilities to become an effective Scrum Master."
+        },
+        {
+          "title": "How to Manage Remote Teams",
+          "type": "Article",
+          "date": "May 25, 2025",
+          "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore strategies for managing distributed teams and maintaining productivity in remote environments."
+        }
+      ]
+    },
+    {
+      "name": "Cyber Security",
+      "count": 8,
+      "blogs": [
+        {
+          "title": "Cyber Security Essentials for Modern Teams",
+          "type": "Article",
+          "date": "Jul 28, 2025",
+          "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn essential cybersecurity practices to protect modern organizations from evolving digital threats."
+        },
+        {
+          "title": "How to Build a Security-First Culture",
+          "type": "Article",
+          "date": "Jul 16, 2025",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+          "description": "Discover how organizations can create a strong security culture through awareness and best practices."
+        },
+        {
+          "title": "A Practical Guide to Cloud Security",
+          "type": "Article",
+          "date": "Jun 30, 2025",
+          "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand cloud security fundamentals, threats, and strategies to secure cloud environments."
+        },
+        {
+          "title": "Network Security Fundamentals",
+          "type": "Article",
+          "date": "Jun 20, 2025",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn the basics of network security, firewalls, encryption, and protection techniques."
+        },
+        {
+          "title": "Ethical Hacking Beginner Guide",
+          "type": "Article",
+          "date": "Jun 10, 2025",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore ethical hacking concepts, tools, and methodologies used by security professionals."
+        },
+        {
+          "title": "Cyber Security Career Roadmap",
+          "type": "Article",
+          "date": "May 28, 2025",
+          "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80",
+          "description": "Follow a complete roadmap to build a successful career in cybersecurity."
+        },
+        {
+          "title": "Security Operations Center Guide",
+          "type": "Article",
+          "date": "May 15, 2025",
+          "image": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn how SOC teams monitor, detect, and respond to cybersecurity incidents."
+        },
+        {
+          "title": "Zero Trust Security Explained",
+          "type": "Article",
+          "date": "May 5, 2025",
+          "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand Zero Trust architecture and how it improves enterprise security."
+        }
+      ]
+    },
+    {
+      "name": "Cloud Computing",
+      "count": 7,
+      "blogs": [
+        {
+          "title": "Cloud Computing for Business Leaders",
+          "type": "Article",
+          "date": "Jun 24, 2025",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn how cloud computing helps businesses improve scalability, flexibility, and innovation."
+        },
+        {
+          "title": "Choosing the Right Cloud Architecture",
+          "type": "Article",
+          "date": "Jun 12, 2025",
+          "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand different cloud architectures and select the right approach for your business."
+        },
+        {
+          "title": "Cloud Migration Planning Checklist",
+          "type": "Article",
+          "date": "May 29, 2025",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+          "description": "A practical checklist to plan, execute, and manage successful cloud migration projects."
+        },
+        {
+          "title": "AWS Cloud Services Overview",
+          "type": "Article",
+          "date": "May 18, 2025",
+          "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore major AWS services and how organizations use them for modern applications."
+        },
+        {
+          "title": "Azure Cloud Infrastructure Guide",
+          "type": "Article",
+          "date": "May 8, 2025",
+          "image": "https://images.unsplash.com/photo-1560732488-6b0df240254a?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn Microsoft Azure infrastructure concepts, services, and cloud deployment practices."
+        },
+        {
+          "title": "Cloud Security Best Practices",
+          "type": "Article",
+          "date": "Apr 15, 2025",
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+          "description": "A complete guide covering security practices for protecting cloud workloads."
+        },
+        {
+          "title": "Future Trends in Cloud Computing",
+          "type": "Article",
+          "date": "Apr 5, 2025",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore upcoming cloud technologies and trends shaping the future of IT."
+        }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "count": 8,
+      "blogs": [
+        {
+          "title": "DevOps Practices That Scale",
+          "type": "Article",
+          "date": "May 20, 2025",
+          "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn DevOps practices that help organizations improve collaboration, automation, deployment speed, and software reliability."
+        },
+        {
+          "title": "Continuous Delivery Made Practical",
+          "type": "Article",
+          "date": "May 8, 2025",
+          "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand continuous delivery concepts and implement efficient software delivery pipelines."
+        },
+        {
+          "title": "The Complete CI/CD Starter Guide",
+          "type": "Article",
+          "date": "Apr 25, 2025",
+          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
+          "description": "A beginner-friendly guide to CI/CD pipelines, automation tools, and modern deployment workflows."
+        },
+        {
+          "title": "Docker Containerization Explained",
+          "type": "Article",
+          "date": "Apr 18, 2025",
+          "image": "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn Docker fundamentals, containers, images, and how teams use containerization for modern applications."
+        },
+        {
+          "title": "Kubernetes for Beginners",
+          "type": "Article",
+          "date": "Apr 10, 2025",
+          "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand Kubernetes architecture, deployments, services, and container orchestration concepts."
+        },
+        {
+          "title": "Infrastructure as Code with Terraform",
+          "type": "Article",
+          "date": "Mar 28, 2025",
+          "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore Infrastructure as Code concepts and learn how Terraform simplifies cloud infrastructure management."
+        },
+        {
+          "title": "DevOps Engineer Career Roadmap",
+          "type": "Article",
+          "date": "Mar 15, 2025",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+          "description": "Follow a complete roadmap to become a skilled DevOps engineer with practical learning steps."
+        },
+        {
+          "title": "Monitoring and Logging Best Practices",
+          "type": "Article",
+          "date": "Mar 5, 2025",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn monitoring, logging, and observability practices for maintaining reliable applications."
+        }
+      ]
+    },
+    {
+      "name": "Full Stack Development",
+      "count": 8,
+      "blogs": [
+        {
+          "title": "Full Stack Roadmap for Beginners",
+          "type": "Article",
+          "date": "Apr 18, 2025",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+          "description": "A complete roadmap covering frontend, backend, databases, APIs, and full stack development skills."
+        },
+        {
+          "title": "Building Better Web Applications",
+          "type": "Article",
+          "date": "Apr 5, 2025",
+          "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn best practices for building scalable, secure, and user-friendly web applications."
+        },
+        {
+          "title": "Modern JavaScript Development Guide",
+          "type": "Article",
+          "date": "Mar 22, 2025",
+          "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=900&q=80",
+          "description": "Explore modern JavaScript concepts, frameworks, and development techniques used by professionals."
+        },
+        {
+          "title": "React Development Best Practices",
+          "type": "Article",
+          "date": "Mar 15, 2025",
+          "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn React component patterns, state management, and techniques for building efficient interfaces."
+        },
+        {
+          "title": "Node.js Backend Development Guide",
+          "type": "Article",
+          "date": "Mar 8, 2025",
+          "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand Node.js backend development, APIs, authentication, and server-side programming."
+        },
+        {
+          "title": "Database Design Fundamentals",
+          "type": "Article",
+          "date": "Feb 25, 2025",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=900&q=80",
+          "description": "Learn database design principles, relationships, normalization, and data management techniques."
+        },
+        {
+          "title": "REST API Development Guide",
+          "type": "Article",
+          "date": "Feb 15, 2025",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+          "description": "Understand REST API architecture, development practices, authentication, and integration methods."
+        },
+        {
+          "title": "Full Stack Developer Interview Guide",
+          "type": "Article",
+          "date": "Feb 5, 2025",
+          "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80",
+          "description": "Prepare for full stack developer interviews with important frontend, backend, and database concepts."
+        }
+      ]
+    }
+  ]
+}

@@ -25,6 +25,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as AgenticGeneralistRouteImport } from './routes/agenticGeneralist'
 import { Route as AgenticDevelopersRouteImport } from './routes/agenticDevelopers'
+import { Route as AdminblogsRouteImport } from './routes/adminblogs'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as Internship_for_Full_Stack_DevelopersRouteImport } from './routes/Internship_for_Full_Stack_Developers'
 import { Route as Internship_for_Data_ScientistsRouteImport } from './routes/Internship_for_Data_Scientists'
@@ -32,6 +33,7 @@ import { Route as Datascience_CertificationRouteImport } from './routes/Datascie
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
+import { Route as BlogsAllRouteImport } from './routes/blogs.all'
 import { Route as BlogsTopicRouteImport } from './routes/blogs.$topic'
 
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
@@ -114,6 +116,11 @@ const AgenticDevelopersRoute = AgenticDevelopersRouteImport.update({
   path: '/agenticDevelopers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminblogsRoute = AdminblogsRouteImport.update({
+  id: '/adminblogs',
+  path: '/adminblogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -152,6 +159,11 @@ const ProgramsDataScienceAiRoute = ProgramsDataScienceAiRouteImport.update({
   path: '/programs/data-science-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogsAllRoute = BlogsAllRouteImport.update({
+  id: '/all',
+  path: '/all',
+  getParentRoute: () => BlogsRoute,
+} as any)
 const BlogsTopicRoute = BlogsTopicRouteImport.update({
   id: '/$topic',
   path: '/$topic',
@@ -164,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
+  '/adminblogs': typeof AdminblogsRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
   '/blogs': typeof BlogsRouteWithChildren
@@ -181,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
+  '/blogs/all': typeof BlogsAllRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs/': typeof BlogsIndexRoute
 }
@@ -190,6 +204,7 @@ export interface FileRoutesByTo {
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
+  '/adminblogs': typeof AdminblogsRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
   '/contact': typeof ContactRoute
@@ -206,6 +221,7 @@ export interface FileRoutesByTo {
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
+  '/blogs/all': typeof BlogsAllRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs': typeof BlogsIndexRoute
 }
@@ -216,6 +232,7 @@ export interface FileRoutesById {
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
   '/about': typeof AboutRoute
+  '/adminblogs': typeof AdminblogsRoute
   '/agenticDevelopers': typeof AgenticDevelopersRoute
   '/agenticGeneralist': typeof AgenticGeneralistRoute
   '/blogs': typeof BlogsRouteWithChildren
@@ -233,6 +250,7 @@ export interface FileRoutesById {
   '/servicesNowGeneralist': typeof ServicesNowGeneralistRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/blogs/$topic': typeof BlogsTopicRoute
+  '/blogs/all': typeof BlogsAllRoute
   '/programs/data-science-ai': typeof ProgramsDataScienceAiRoute
   '/blogs/': typeof BlogsIndexRoute
 }
@@ -244,6 +262,7 @@ export interface FileRouteTypes {
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
     | '/about'
+    | '/adminblogs'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
     | '/blogs'
@@ -261,6 +280,7 @@ export interface FileRouteTypes {
     | '/servicesNowGeneralist'
     | '/terms-and-conditions'
     | '/blogs/$topic'
+    | '/blogs/all'
     | '/programs/data-science-ai'
     | '/blogs/'
   fileRoutesByTo: FileRoutesByTo
@@ -270,6 +290,7 @@ export interface FileRouteTypes {
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
     | '/about'
+    | '/adminblogs'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
     | '/contact'
@@ -286,6 +307,7 @@ export interface FileRouteTypes {
     | '/servicesNowGeneralist'
     | '/terms-and-conditions'
     | '/blogs/$topic'
+    | '/blogs/all'
     | '/programs/data-science-ai'
     | '/blogs'
   id:
@@ -295,6 +317,7 @@ export interface FileRouteTypes {
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
     | '/about'
+    | '/adminblogs'
     | '/agenticDevelopers'
     | '/agenticGeneralist'
     | '/blogs'
@@ -312,6 +335,7 @@ export interface FileRouteTypes {
     | '/servicesNowGeneralist'
     | '/terms-and-conditions'
     | '/blogs/$topic'
+    | '/blogs/all'
     | '/programs/data-science-ai'
     | '/blogs/'
   fileRoutesById: FileRoutesById
@@ -322,6 +346,7 @@ export interface RootRouteChildren {
   Internship_for_Data_ScientistsRoute: typeof Internship_for_Data_ScientistsRoute
   Internship_for_Full_Stack_DevelopersRoute: typeof Internship_for_Full_Stack_DevelopersRoute
   AboutRoute: typeof AboutRoute
+  AdminblogsRoute: typeof AdminblogsRoute
   AgenticDevelopersRoute: typeof AgenticDevelopersRoute
   AgenticGeneralistRoute: typeof AgenticGeneralistRoute
   BlogsRoute: typeof BlogsRouteWithChildren
@@ -455,6 +480,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgenticDevelopersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/adminblogs': {
+      id: '/adminblogs'
+      path: '/adminblogs'
+      fullPath: '/adminblogs'
+      preLoaderRoute: typeof AdminblogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -504,6 +536,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsDataScienceAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blogs/all': {
+      id: '/blogs/all'
+      path: '/all'
+      fullPath: '/blogs/all'
+      preLoaderRoute: typeof BlogsAllRouteImport
+      parentRoute: typeof BlogsRoute
+    }
     '/blogs/$topic': {
       id: '/blogs/$topic'
       path: '/$topic'
@@ -516,11 +555,13 @@ declare module '@tanstack/react-router' {
 
 interface BlogsRouteChildren {
   BlogsTopicRoute: typeof BlogsTopicRoute
+  BlogsAllRoute: typeof BlogsAllRoute
   BlogsIndexRoute: typeof BlogsIndexRoute
 }
 
 const BlogsRouteChildren: BlogsRouteChildren = {
   BlogsTopicRoute: BlogsTopicRoute,
+  BlogsAllRoute: BlogsAllRoute,
   BlogsIndexRoute: BlogsIndexRoute,
 }
 
@@ -533,6 +574,7 @@ const rootRouteChildren: RootRouteChildren = {
   Internship_for_Full_Stack_DevelopersRoute:
     Internship_for_Full_Stack_DevelopersRoute,
   AboutRoute: AboutRoute,
+  AdminblogsRoute: AdminblogsRoute,
   AgenticDevelopersRoute: AgenticDevelopersRoute,
   AgenticGeneralistRoute: AgenticGeneralistRoute,
   BlogsRoute: BlogsRouteWithChildren,
