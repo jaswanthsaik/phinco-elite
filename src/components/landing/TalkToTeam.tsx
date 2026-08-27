@@ -1,4 +1,4 @@
-import counsellor from "@/assets/counsellor.jpg";
+import counsellor from "@/assets/callfrom.jpeg";
 import { Phone } from "lucide-react";
 
 export function TalkToTeam() {

@@ -15,21 +15,21 @@ const driveCards: DriveCard[] = [
     {
         title: "Our Vision",
         description:
-            "Powering career success for every member of the global workforce as their trusted lifelong learning partner.",
+            "Empowering individuals to achieve lasting career success by becoming their trusted partner in lifelong learning and professional growth.",
         image: telescope,
         imageClass: "telescope",
     },
     {
         title: "Our Mission",
         description:
-            "Making our learners achieve their desired outcomes.",
+            "Empowering our learners with the right skills, knowledge, and support to achieve their desired career outcomes.",
         image: mission,
         imageClass: "mission",
     },
     {
         title: "Our Core Values",
         description:
-            "Powering career success for every member of the global workforce as their trusted lifelong learning partner.",
+            "To empower career success for every learner by being their trusted partner in lifelong learning and professional growth.",
         image: coreValues,
         imageClass: "core-values",
     },

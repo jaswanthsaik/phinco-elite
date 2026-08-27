@@ -10,10 +10,9 @@ const AboutWho: React.FC = () => {
           <div className="about-description">
             <div className="accent-line" />
             <p>
-              Founded in 2010, Phinco Elite is a global leader in digital skills
-              training. Our programs are designed with leading universities,
-              corporations, and industry bodies, featuring expert-led live
-              online classes.
+              Founded with a vision to empower individuals through industry-relevant skills, Phinco Elite has grown into a platform focused on transforming careers through practical, job-oriented digital education.
+
+Our programs are designed to bridge the gap between learning and industry requirements, offering expert-led training, hands-on projects, real-world tools, and career-focused guidance.
             </p>
           </div>
 
@@ -22,9 +21,7 @@ const AboutWho: React.FC = () => {
 
             <div className="highlight-card">
               <span>
-                A Blackstone company, Phinco Elite is the world’s leading
-                digital skills training provider, enabling learners across the
-                globe with new-age digital skills.
+                At Phinco Elite, we empower learners with in-demand digital skills and help them confidently build successful careers in Data Analytics, Business Analytics, Data Science, AI, and other emerging technologies.
               </span>
             </div>
           </div>

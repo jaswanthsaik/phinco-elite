@@ -1,9 +1,9 @@
-import aboutus1 from "@/assets/aboutus-1.jpg";
+import aboutus1 from "@/assets/know.png";
 import aboutus2 from "@/assets/aboutus-2.jpg";
 import aboutus3 from "@/assets/aboutus-3.png";
-import portrait1 from "@/assets/portrait-1.jpg";
-import portrait2 from "@/assets/portrait-2.jpg";
-import portrait3 from "@/assets/portrait-3.jpg";
+import portrait1 from "@/assets/sriiii.jpeg";
+import portrait2 from "@/assets/usha.jpeg";
+import portrait3 from "@/assets/kenen.jpeg";
 import AboutSection from "@/components/landing/AboutSection";
 import AboutWho from "@/components/landing/aboutwho";
 import DigitalSkill from "@/components/landing/digitalskill";
@@ -126,25 +126,25 @@ function FeatureBullet({ icon, text, color }: { icon: React.ReactNode; text: str
 /* 4. Core team */
 const team = [
   {
-    name: "Krishna Kumar",
+    name: "SRIKANTH K",
     role: "Founder",
     photo: portrait1,
     quote:
-      "Skills are what distinguish a novice from a professional. But there is no such skill level that we can call \"evergreen.\" Continuous skill development is the only way to survive in today's highly competitive job market. I want to lead all of the passionate professionals to the peak of their professionals. I want to establish Phinco Elite as the 'one-stop destination to learn, grow & lead.'",
+      "With over 15+ years of experience across the IT and Engineering industries,With six ventures under the PHINCO Group and Passionate about entrepreneurship and technology, Srikanth actively supports promising startups through strategic investments and encourages emerging innovations, particularly in the field of Artificial Intelligence. His vision is to create an ecosystem where innovation, technology, and entrepreneurship come together to shape the future.",
   },
   {
-    name: "Nisha Kumari",
-    role: "CEO",
+    name: "Prathyusha P",
+    role: "Co-Founder",
     photo: portrait2,
     quote:
-      "I had a dream of building an educational institute offering a successful career to aspirants. Non-tech candidates lose hope of working for 2-3 years. My dream is to establish an organization beyond certification and create extremely demanding professionals. Data science is a promising future; my entire team is dedicated to training everyone in DS, AI, and full-stack knowledge. I don't want anyone to lose hope anymore.",
+      "With over 12+ years of experience working with diverse startups and leading EdTech organizations and brings strong expertise in operations, business processes, and organizational management. As the Co-Founder of PHINCO ELITE, she plays a key role in overseeing day-to-day operations and ensuring the smooth functioning of various business activities. Her experience and strategic approach help drive efficiency, coordination, and sustainable growth across the organization.",
   },
   {
-    name: "Abhishek Gupta",
-    role: "Director",
+    name: "Kenen Bhandhavi",
+    role: "Branch Head-Hyderabad",
     photo: portrait3,
     quote:
-      "We work hard to ensure students achieve the ultimate success after course completion. They lose track of careers as \"What now?\" we save candidates from getting lost in the huge crowd. Our goal is to make sure everyone starts a successful career as DS, AI, and full-stack experts from Phinco Elite. More than certificates, we enhance our students' skills and knowledge, so they learn to earn through an ever-secure career.",
+      "With over 10+ years of experience in the EdTech industry, Kenen B brings extensive expertise in career guidance, candidate profiling, and team management. Having worked with top-notch companies throughout his career, he has gained valuable experience in guiding professionals toward the right career opportunities and helping them achieve their goals.",
   },
 ];
 

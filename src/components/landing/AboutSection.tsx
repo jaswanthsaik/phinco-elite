@@ -5,17 +5,17 @@ const AboutSection: React.FC = () => {
     {
       title: "Mission",
       icon: "bi-lightbulb-fill",
-      text: "To make job-aligned, tech education accessible and practical across India.",
+      text: "To make quality, job-focused technology education accessible, practical, and meaningful—helping people across India gain the skills and confidence to build successful careers.",
     },
     {
       title: "Impact",
       icon: "bi-people-fill",
-      text: "Over 800+ success stories, 90% placement success, and ongoing hiring support.",
+      text: "Over 2,000+ success stories, a 90% placement success rate, and continuous hiring support to help learners build successful careers.",
     },
     {
       title: "Certification",
       icon: "bi-award-fill",
-      text: "Global-standard certifications from real-time capstone projects & expert mentors.",
+      text: "Earn industry-recognized certifications while gaining practical experience through real-world capstone projects and expert mentorship.",
     },
     {
       title: "Placement",
@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
         .about-section {
           width: 100%;
           overflow: hidden;
-          background: #f3fbff;
+          // background: #f3fbff;
           padding: 50px 5%;
           font-family: inherit;
         }
@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
         .section-title {
           margin: 0 0 45px;
           text-align: center;
-          color: #08b6ef;
+          color: #1E293B;
           font-size: 38px;
           font-weight: 700;
         }
@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
         }
 
         .about-text h2 span {
-          color: #08b6ef;
+          color: #2563EB;
         }
 
         .about-text > p {
@@ -122,7 +122,7 @@ const AboutSection: React.FC = () => {
           display: flex;
           align-items: center;
           gap: 12px;
-          color: #102033;
+          color: #2563EB;
           font-size: 17px;
           font-weight: 600;
         }
@@ -155,7 +155,7 @@ const AboutSection: React.FC = () => {
         .journey-title {
           margin: 0 0 60px;
           text-align: center;
-          color: #08b6ef;
+          color: #2563EB;
           font-size: 36px;
           font-weight: 700;
         }
@@ -249,7 +249,7 @@ const AboutSection: React.FC = () => {
 
         .journey-card h4 {
           margin: 0 0 13px;
-          color: #08b6ef;
+          color: #2563EB;
           font-size: 17px;
           line-height: 1.4;
           font-weight: 600;
@@ -309,61 +309,65 @@ const AboutSection: React.FC = () => {
             min-width: 0;
           }
 
-          .journey-section {
-            margin-top: 55px;
-          }
+  .journey-section {
+    margin-top: 55px;
+  }
 
-          .journey-title {
-            margin-bottom: 40px;
-            font-size: 30px;
-          }
+  .journey-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
 
-          .journey-wrapper {
-            padding: 0;
-          }
+  .journey-wrapper {
+    padding: 0;
+  }
 
-          .journey-path {
-            display: none;
-          }
+  .journey-path {
+    display: none;
+  }
 
-          .journey-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 26px;
-            bottom: 26px;
-            left: 26px;
+  .journey-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    bottom: 26px;
+    left: 26px;
             border-left: 2px dashed #9ca3af;
-          }
+  }
 
-          .journey-row,
-          .journey-row.left,
-          .journey-row.right {
-            min-height: auto;
-            justify-content: flex-start;
-            padding: 0 0 35px 70px;
-          }
+  .journey-row,
+  .journey-row.left,
+  .journey-row.right {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 0 0 35px 70px;
+  }
 
-          .journey-row:last-child {
-            padding-bottom: 0;
-          }
+  .journey-row:last-child {
+    padding-bottom: 0;
+  }
 
-          .journey-card {
-            min-height: auto;
-            padding: 24px;
-          }
+  .journey-card {
+    min-height: auto;
+    padding: 24px;
+  }
 
-          .journey-number {
-            top: 28px;
-            left: 26px;
-            width: 46px;
-            height: 46px;
-            transform: translate(-50%, 0);
-            font-size: 16px;
-            box-shadow: 0 0 0 6px #f3fbff;
-          }
-        }
+  .journey-number {
+    top: 28px;
+    left: 26px;
+    width: 46px;
+    height: 46px;
+    transform: translate(-50%, 0);
+    font-size: 16px;
+    box-shadow: 0 0 0 5px #F8FAFC;
+  }
 
-        @media (max-width: 480px) {
+  .journey-row:hover .journey-number {
+    transform: translate(-50%, 0) scale(1.15);
+  }
+}
+
+@media (max-width: 480px) {
           .about-section {
             padding: 30px 15px;
           }
@@ -384,33 +388,33 @@ const AboutSection: React.FC = () => {
             padding: 20px;
           }
 
-          .journey-title {
-            font-size: 27px;
-          }
+  .journey-title {
+    font-size: 27px;
+  }
 
-          .journey-wrapper::before {
-            left: 21px;
-          }
+  .journey-wrapper::before {
+    left: 21px;
+  }
 
-          .journey-row,
-          .journey-row.left,
-          .journey-row.right {
-            padding-left: 55px;
-          }
+  .journey-row,
+  .journey-row.left,
+  .journey-row.right {
+    padding-left: 55px;
+  }
 
-          .journey-number {
-            left: 21px;
-            width: 42px;
-            height: 42px;
-          }
+  .journey-number {
+    left: 21px;
+    width: 42px;
+    height: 42px;
+  }
 
-          .journey-card {
-            padding: 22px 20px;
-          }
+  .journey-card {
+    padding: 22px 20px;
+  }
 
-          .journey-card h3 {
-            font-size: 27px;
-          }
+  .journey-card h3 {
+    font-size: 27px;
+  }
 
           .journey-card h4 {
             font-size: 15px;
@@ -419,7 +423,7 @@ const AboutSection: React.FC = () => {
           .journey-card p {
             font-size: 14px;
           }
-        }
+}
       `}</style>
 
       <section className="about-section">
@@ -428,8 +432,7 @@ const AboutSection: React.FC = () => {
         <div className="about-content2">
           <div className="about-text">
             <h2>
-              We are <span>Phinco Elite</span>, where your skills launch real
-              careers
+              Welcome to <span>Phinco Elite</span>, Where Skills Transform Into Successful careers
             </h2>
 
             <p>

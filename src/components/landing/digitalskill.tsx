@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "@/assets/about-us-banner-destop_v1.png";
+import bannerImage from "@/assets/about.png";
 
 const DigitalSkill: React.FC = () => {
   return (
@@ -8,13 +8,12 @@ const DigitalSkill: React.FC = () => {
 
       <div className="digital-skill-content">
         <h1 className="digital-skill-title">
-          We Transform Lives
+          Empowering People and
           <br />
-          by Empowering
-          <br />
-          People Via <span>Digital</span>
-          <br />
-          <span>Skills.</span>
+          
+          Transforming Lives         
+ <br />
+          <span> Through Digital Skills</span>
         </h1>
 
         <div className="digital-skill-stats">
