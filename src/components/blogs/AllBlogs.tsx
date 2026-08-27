@@ -1,38 +1,86 @@
-import { useState } from "react";
-import { useSearch } from "@tanstack/react-router";
-import blogData from "../../data/blogs.json";
+import { useEffect, useState } from "react";
+import { Link, useSearch } from "@tanstack/react-router";
+import { getBlogs, type Blog } from "@/services/blogService";
 
-const AllBlogs = () => {
-const search = useSearch({
-  from: "/blogs/all",
-}) as {
-  category?: string;
+
+type Category = {
+  name: string;
+  count: number;
+  blogs: Blog[];
 };
 
-  const defaultCategory =
-    blogData.categories.find(
-      (item) => item.name === search.category
-    ) || blogData.categories[0];
+const AllBlogs = () => {
+  const search = useSearch({
+    from: "/blogs/all",
+  }) as {
+    category?: string;
+  };
 
-  const [selectedCategory, setSelectedCategory] =
-    useState(defaultCategory);
-
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedType, setSelectedType] = useState("All");
 
-  const blogs = selectedCategory.blogs || [];
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const data = await getBlogs();
+
+      setBlogs(data);
+
+      const categoryData: Category[] = Object.values(
+        data.reduce((acc: any, blog: Blog) => {
+          if (!acc[blog.category]) {
+            acc[blog.category] = {
+              name: blog.category,
+              count: 0,
+              blogs: [],
+            };
+          }
+
+          acc[blog.category].blogs.push(blog);
+          acc[blog.category].count++;
+
+          return acc;
+        }, {})
+      );
+
+      setCategories(categoryData);
+
+      const selected =
+        categoryData.find(
+          (item) => item.name === search.category
+        ) || categoryData[0];
+
+      setSelectedCategory(selected);
+    };
+
+    fetchBlogs();
+  }, [search.category]);
+
+  if (!selectedCategory) {
+    return null;
+  }
+
+  const categoryBlogs = selectedCategory.blogs;
 
   const filteredBlogs =
     selectedType === "All"
-      ? blogs
-      : blogs.filter((blog) => blog.type === selectedType);
+      ? categoryBlogs
+      : categoryBlogs.filter(
+          (blog) => blog.type === selectedType
+        );
 
   const types = [
     "All",
-    ...new Set(blogs.map((blog) => blog.type)),
+    ...new Set(
+      categoryBlogs.map((blog) => blog.type)
+    ),
   ];
 
-  const handleCategoryChange = (value: string) => {
-    const category = blogData.categories.find(
+  const handleCategoryChange = (
+    value: string
+  ) => {
+    const category = categories.find(
       (item) => item.name === value
     );
 
@@ -47,6 +95,7 @@ const search = useSearch({
       <div className="mx-auto max-w-7xl">
 
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
           <select
             value={selectedCategory.name}
             onChange={(e) =>
@@ -54,15 +103,18 @@ const search = useSearch({
             }
             className="w-full max-w-md rounded-lg border border-border bg-background px-4 py-3 font-medium outline-none"
           >
-            {blogData.categories.map((category) => (
+
+            {categories.map((category) => (
               <option
                 key={category.name}
                 value={category.name}
               >
-                {category.name}
+                {category.name} ({category.count})
               </option>
             ))}
+
           </select>
+
 
           <a
             href="/blogs"
@@ -70,11 +122,16 @@ const search = useSearch({
           >
             Back to Blogs
           </a>
+
         </div>
+
 
         <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[260px_1fr]">
 
+
           <aside className="h-fit rounded-lg bg-muted p-5">
+
+
             <button
               onClick={() => setSelectedType("All")}
               className={`w-full border-l-4 border-primary px-4 py-3 text-left font-semibold ${
@@ -83,18 +140,27 @@ const search = useSearch({
                   : ""
               }`}
             >
-              All Blogs ({blogs.length})
+              All Blogs ({categoryBlogs.length})
             </button>
 
+
             <div className="mt-4 space-y-2">
+
               {types
-                .filter((type) => type !== "All")
+                .filter(
+                  (type) => type !== "All"
+                )
                 .map((type) => {
-                  const count = blogs.filter(
-                    (blog) => blog.type === type
-                  ).length;
+
+                  const count =
+                    categoryBlogs.filter(
+                      (blog) =>
+                        blog.type === type
+                    ).length;
+
 
                   return (
+
                     <button
                       key={type}
                       onClick={() =>
@@ -108,55 +174,87 @@ const search = useSearch({
                     >
                       {type} ({count})
                     </button>
+
                   );
+
                 })}
+
             </div>
+
           </aside>
 
+
+
           <section className="grid grid-cols-1 gap-6">
+
             {filteredBlogs.length > 0 ? (
+
               filteredBlogs.map((blog) => (
-                <article
-                  key={blog.title}
-                  className="grid overflow-hidden rounded-lg border border-border bg-card shadow-sm md:grid-cols-[410px_1fr]"
+
+                <Link
+                  to="/BlogInfo"
+                  search={{ topic: blog.id }}
+                  key={blog.id || blog.title}
+                  className="grid overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-md md:grid-cols-[410px_1fr]"
                 >
+
                   <img
                     src={blog.image}
                     alt={blog.title}
                     className="h-56 w-full object-cover"
                   />
 
+
                   <div className="flex flex-col justify-between p-6">
+
                     <div>
+
                       <h2 className="line-clamp-2 text-2xl font-bold">
                         {blog.title}
                       </h2>
 
+
                       <p className="mt-5 text-muted-foreground">
                         {blog.description}
                       </p>
+
                     </div>
 
+
                     <div className="mt-8 flex items-center justify-between text-sm text-muted-foreground">
+
                       <span className="rounded-full border px-4 py-1">
                         {blog.type}
                       </span>
 
+
                       <span>
                         Last updated on {blog.date}
                       </span>
+
                     </div>
+
+
                   </div>
-                </article>
+
+                </Link>
+
               ))
+
             ) : (
+
               <p className="text-muted-foreground">
                 No blogs found
               </p>
+
             )}
+
           </section>
 
+
         </div>
+
+
       </div>
     </main>
   );

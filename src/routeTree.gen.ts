@@ -30,6 +30,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as Internship_for_Full_Stack_DevelopersRouteImport } from './routes/Internship_for_Full_Stack_Developers'
 import { Route as Internship_for_Data_ScientistsRouteImport } from './routes/Internship_for_Data_Scientists'
 import { Route as Datascience_CertificationRouteImport } from './routes/Datascience_Certification'
+import { Route as BlogInfoRouteImport } from './routes/BlogInfo'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
 import { Route as ProgramsDataScienceAiRouteImport } from './routes/programs.data-science-ai'
@@ -144,6 +145,11 @@ const Datascience_CertificationRoute =
     path: '/Datascience_Certification',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogInfoRoute = BlogInfoRouteImport.update({
+  id: '/BlogInfo',
+  path: '/BlogInfo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -172,6 +178,7 @@ const BlogsTopicRoute = BlogsTopicRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/BlogInfo': typeof BlogInfoRoute
   '/Datascience_Certification': typeof Datascience_CertificationRoute
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
@@ -200,6 +207,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/BlogInfo': typeof BlogInfoRoute
   '/Datascience_Certification': typeof Datascience_CertificationRoute
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
@@ -228,6 +236,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/BlogInfo': typeof BlogInfoRoute
   '/Datascience_Certification': typeof Datascience_CertificationRoute
   '/Internship_for_Data_Scientists': typeof Internship_for_Data_ScientistsRoute
   '/Internship_for_Full_Stack_Developers': typeof Internship_for_Full_Stack_DevelopersRoute
@@ -258,6 +267,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/BlogInfo'
     | '/Datascience_Certification'
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
@@ -286,6 +296,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/BlogInfo'
     | '/Datascience_Certification'
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
@@ -313,6 +324,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/BlogInfo'
     | '/Datascience_Certification'
     | '/Internship_for_Data_Scientists'
     | '/Internship_for_Full_Stack_Developers'
@@ -342,6 +354,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogInfoRoute: typeof BlogInfoRoute
   Datascience_CertificationRoute: typeof Datascience_CertificationRoute
   Internship_for_Data_ScientistsRoute: typeof Internship_for_Data_ScientistsRoute
   Internship_for_Full_Stack_DevelopersRoute: typeof Internship_for_Full_Stack_DevelopersRoute
@@ -515,6 +528,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Datascience_CertificationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/BlogInfo': {
+      id: '/BlogInfo'
+      path: '/BlogInfo'
+      fullPath: '/BlogInfo'
+      preLoaderRoute: typeof BlogInfoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -569,6 +589,7 @@ const BlogsRouteWithChildren = BlogsRoute._addFileChildren(BlogsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogInfoRoute: BlogInfoRoute,
   Datascience_CertificationRoute: Datascience_CertificationRoute,
   Internship_for_Data_ScientistsRoute: Internship_for_Data_ScientistsRoute,
   Internship_for_Full_Stack_DevelopersRoute:

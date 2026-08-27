@@ -1,19 +1,64 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import blogData from "../../data/blogs.json";
+import { getBlogs, type Blog } from "@/services/blogService";
 
 const BlogPage = () => {
   const [activeFeatured, setActiveFeatured] = useState(0);
   const [activeCategory, setActiveCategory] = useState(0);
+  const [blogs, setBlogs] = useState<any[]>([]);
   const sectionRefs = useRef<Array<HTMLElement | null>>([]);
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveFeatured((current) => (current + 1) % blogData.featuredBlogs.length);
-    }, 3000);
+  const featuredBlogs = blogs.filter(
+  (blog) => blog.featured === true
+);
 
-    return () => window.clearInterval(timer);
-  }, []);
+type Category = {
+  name: string;
+  count: number;
+  blogs: Blog[];
+};
+
+const categories: Category[] = Object.values(
+  blogs.reduce((acc: any, blog: Blog) => {
+
+    const category = blog.category;
+
+    if (!acc[category]) {
+      acc[category] = {
+        name: category,
+        count: 0,
+        blogs: [],
+      };
+    }
+
+    acc[category].blogs.push(blog);
+    acc[category].count++;
+
+    return acc;
+
+  }, {})
+);
+
+  useEffect(() => {
+  if (featuredBlogs.length <= 1) return;
+
+  const timer = window.setInterval(() => {
+    setActiveFeatured((current) =>
+      (current + 1) % featuredBlogs.length
+    );
+  }, 2000);
+
+  return () => window.clearInterval(timer);
+}, [featuredBlogs.length]);
+  
+  useEffect(() => {
+  const fetchBlogs = async () => {
+    const data = await getBlogs();
+    setBlogs(data);
+  };
+
+  fetchBlogs();
+}, []);
 
   useEffect(() => {
     const updateActiveCategory = () => {
@@ -56,28 +101,34 @@ const BlogPage = () => {
 
   setActiveCategory(index);
 };
-const BlogCard = ({ blog }: { blog: any }) => (
-  <article className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm">
-    <img
-      className="h-48 w-full object-cover"
-      src={blog.image}
-      alt={blog.title}
-    />
+const BlogCard = ({ blog }: { blog: Blog }) => (
+  <Link
+    to="/BlogInfo"
+    search={{ topic: blog.id }}
+    className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+  >
+    <article>
+      <img
+        className="h-48 w-full object-cover"
+        src={blog.image}
+        alt={blog.title}
+      />
 
-    <div className="flex min-h-44 flex-1 flex-col justify-between gap-6 p-5">
-      <h3 className="text-xl font-semibold leading-snug">
-        {blog.title}
-      </h3>
+      <div className="flex min-h-44 flex-1 flex-col justify-between gap-6 p-5">
+        <h3 className="text-xl font-semibold leading-snug">
+          {blog.title}
+        </h3>
 
-      <div className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
-        <span className="rounded-full border border-border px-3 py-1">
-          {blog.type}
-        </span>
+        <div className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
+          <span className="rounded-full border border-border px-3 py-1">
+            {blog.type}
+          </span>
 
-        <span>{blog.date}</span>
+          <span>{blog.date}</span>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </Link>
 );
 
   return (
@@ -96,15 +147,17 @@ const BlogCard = ({ blog }: { blog: any }) => (
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(-${activeFeatured * (100 / blogData.featuredBlogs.length)}%)`,
-              width: `${blogData.featuredBlogs.length * 100}%`,
+              transform: `translateX(-${activeFeatured * (100 / (featuredBlogs.length || 1))}%)`,
+              width: `${(featuredBlogs.length || 1) * 100}%`,
             }}
           >
-            {blogData.featuredBlogs.map((blog) => (
-              <article
+            {featuredBlogs.map((blog) => (
+              <Link
+                to="/BlogInfo"
+                search={{ topic: blog.id }}
                 className="grid shrink-0 grid-cols-1 overflow-hidden border border-border bg-card shadow-sm sm:grid-cols-[230px_minmax(0,1fr)]"
-                key={blog.title}
-                style={{ width: `${100 / blogData.featuredBlogs.length}%` }}
+                key={blog.id || blog.title}
+                style={{ width: `${100 / (featuredBlogs.length || 1)}%` }}
               >
                 <img
                   className="h-52 w-full object-cover sm:h-64"
@@ -120,12 +173,12 @@ const BlogCard = ({ blog }: { blog: any }) => (
                   </h2>
                   <p className="mt-5 text-sm text-muted-foreground">Last updated on {blog.date}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
         <div className="mt-5 flex justify-center gap-2" aria-label="Featured resource slides">
-          {blogData.featuredBlogs.map((blog, index) => (
+          {featuredBlogs.map((blog, index) => (
             <button
               aria-label={`Show featured resource ${index + 1}`}
               className={`h-2.5 w-2.5 rounded-full transition-colors ${
@@ -142,7 +195,7 @@ const BlogCard = ({ blog }: { blog: any }) => (
       <div className="mx-auto mt-14 grid max-w-7xl gap-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-12">
         <aside className="top-4 hidden h-fit lg:sticky lg:block" aria-label="Blog categories">
           <nav className="flex flex-wrap gap-2 rounded-lg bg-muted p-2 lg:flex-col mt-[60px]">
-            {blogData.categories.map((category, index) => (
+            {categories.map((category, index) => (
               <button
                 className={`rounded-md px-4 py-3 text-left text-sm font-medium transition-colors ${
                   activeCategory === index
@@ -160,7 +213,7 @@ const BlogCard = ({ blog }: { blog: any }) => (
         </aside>
 
         <div className="min-w-0 space-y-16">
-          {blogData.categories.map((category, index) => (
+          {categories.map((category, index) => (
             <section
               className="scroll-mt-6"
               data-index={index}
@@ -188,21 +241,21 @@ const BlogCard = ({ blog }: { blog: any }) => (
               {/* Desktop */}
 <div className="hidden lg:grid grid-cols-3 gap-6">
   {category.blogs.slice(0, 3).map((blog) => (
-    <BlogCard key={blog.title} blog={blog} />
+    <BlogCard key={blog.id || blog.title} blog={blog} />
   ))}
 </div>
 
 {/* Tablet */}
 <div className="hidden sm:grid lg:hidden grid-cols-2 gap-6">
   {category.blogs.slice(0, 2).map((blog) => (
-    <BlogCard key={blog.title} blog={blog} />
+    <BlogCard key={blog.id || blog.title} blog={blog} />
   ))}
 </div>
 
 {/* Mobile */}
 <div className="grid sm:hidden grid-cols-1 gap-6">
   {category.blogs.slice(0, 2).map((blog) => (
-    <BlogCard key={blog.title} blog={blog} />
+    <BlogCard key={blog.id || blog.title} blog={blog} />
   ))}
 </div>
             </section>

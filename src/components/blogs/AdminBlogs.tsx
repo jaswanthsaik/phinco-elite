@@ -1,235 +1,249 @@
-import { useState } from "react";
-import { UploadCloud } from "lucide-react";
-import blogData from "../../data/blogs.json";
+import { useEffect, useState } from "react";
+import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
+import { db } from "@/firebase/firebaseConfig";
+import {
+  HIGH_PAYING_CERTIFICATIONS_CONTENT,
+  HIGH_PAYING_CERTIFICATIONS_META,
+} from "@/data/highPayingCertificationsArticle";
+
+const emptyForm = {
+  title: "",
+  description: "",
+  date: "",
+  image: "",
+  category: "",
+  featured: false,
+  author: "",
+  views: "",
+  content: "",
+};
 
 const AdminBlogs = () => {
-  const [preview, setPreview] = useState("");
-  const [categories, setCategories] = useState(blogData.categories);
+  const [categories, setCategories] = useState<string[]>([]);
   const [newCategory, setNewCategory] = useState(false);
+  const [formData, setFormData] = useState(emptyForm);
 
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    type: "Article",
-    date: "",
-    image: "",
-    category: ""
-  });
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const snapshot = await getDocs(collection(db, "blogs"));
+      const blogs = snapshot.docs.map((docSnap) => docSnap.data());
+      const uniqueCategories = [
+        ...new Set(blogs.map((blog: any) => blog.category).filter(Boolean)),
+      ];
+      setCategories(uniqueCategories);
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) =>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
-
-  const handleImage = (file?: File) => {
-    if (!file) return;
-
-    const url = URL.createObjectURL(file);
-
-    setPreview(url);
-    setFormData({
-      ...formData,
-      image: url
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const loadCertificationArticle = () => {
+    setNewCategory(!categories.includes(HIGH_PAYING_CERTIFICATIONS_META.category));
+    setFormData({
+      title: HIGH_PAYING_CERTIFICATIONS_META.title,
+      description: HIGH_PAYING_CERTIFICATIONS_META.description,
+      date: "2026-08-25",
+      image: HIGH_PAYING_CERTIFICATIONS_META.image,
+      category: HIGH_PAYING_CERTIFICATIONS_META.category,
+      featured: HIGH_PAYING_CERTIFICATIONS_META.featured,
+      author: HIGH_PAYING_CERTIFICATIONS_META.author,
+      views: String(HIGH_PAYING_CERTIFICATIONS_META.views),
+      content: JSON.stringify(HIGH_PAYING_CERTIFICATIONS_CONTENT, null, 2),
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const blog = {
-      title: formData.title,
-      description: formData.description,
-      type: formData.type,
-      date: new Date(formData.date).toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric"
-      }),
-      image: formData.image
-    };
-
-    const updatedCategories = [...categories];
-
-    const category = updatedCategories.find(
-      item => item.name === formData.category
-    );
-
-    if (category) {
-      category.blogs.push(blog);
-      category.count = category.blogs.length;
-    } else {
-      updatedCategories.push({
-        name: formData.category,
-        count: 1,
-        blogs: [blog]
-      });
+    if (
+      !formData.title ||
+      !formData.description ||
+      !formData.date ||
+      !formData.image ||
+      !formData.category
+    ) {
+      alert("Please fill all required fields");
+      return;
     }
 
-    setCategories(updatedCategories);
+    let parsedContent = undefined;
+    if (formData.content.trim()) {
+      try {
+        parsedContent = JSON.parse(formData.content);
+      } catch {
+        alert("Article content must be valid JSON");
+        return;
+      }
+    }
 
-    localStorage.setItem(
-      "blogs",
-      JSON.stringify({
-        ...blogData,
-        categories: updatedCategories
-      })
-    );
-
-    alert("Blog Added Successfully");
-
-    setFormData({
-      title: "",
-      description: "",
+    await addDoc(collection(db, "blogs"), {
+      title: formData.title,
+      description: formData.description,
       type: "Article",
-      date: "",
-      image: "",
-      category: ""
+      date: Timestamp.fromDate(new Date(formData.date)),
+      image: formData.image,
+      category: formData.category,
+      featured: formData.featured,
+      author: formData.author || "",
+      views: formData.views ? Number(formData.views) : 0,
+      content: parsedContent || null,
     });
 
-    setPreview("");
+    alert("Blog Added Successfully");
+    setFormData(emptyForm);
     setNewCategory(false);
+
+    if (!categories.includes(formData.category)) {
+      setCategories([...categories, formData.category]);
+    }
   };
 
   return (
     <main className="min-h-screen bg-background px-6 py-10">
       <div className="mx-auto max-w-3xl">
-        <h1 className="mb-8 text-3xl font-bold">
-          Add Blogs
-        </h1>
+        <h1 className="mb-8 text-3xl font-bold">Add Blogs</h1>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 rounded-lg border bg-card p-8"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6 rounded-lg border bg-card p-8">
+          <button
+            className="w-full rounded-lg border border-border py-3 font-medium hover:bg-muted"
+            onClick={loadCertificationArticle}
+            type="button"
+          >
+            Load sample article
+          </button>
+
           <input
+            className="w-full rounded-lg border px-4 py-3"
             name="title"
-            value={formData.title}
             onChange={handleChange}
             placeholder="Blog Title"
-            className="w-full rounded-lg border px-4 py-3"
+            required
+            value={formData.title}
           />
 
           <textarea
+            className="w-full rounded-lg border px-4 py-3"
             name="description"
-            value={formData.description}
             onChange={handleChange}
             placeholder="Blog Description"
+            required
             rows={5}
-            className="w-full rounded-lg border px-4 py-3"
+            value={formData.description}
           />
 
-          <div className="grid grid-cols-2 gap-5">
-            <select
-              name="type"
-              value={formData.type}
-              onChange={handleChange}
-              className="rounded-lg border px-4 py-3"
-            >
-              <option>Article</option>
-              <option>Ebook</option>
-              <option>Guide</option>
-              <option>Report</option>
-            </select>
+          <input
+            className="w-full rounded-lg border px-4 py-3"
+            name="author"
+            onChange={handleChange}
+            placeholder="Author"
+            value={formData.author}
+          />
 
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="rounded-lg border px-4 py-3"
-            />
-          </div>
+          <input
+            className="w-full rounded-lg border px-4 py-3"
+            name="views"
+            onChange={handleChange}
+            placeholder="Views (optional)"
+            type="number"
+            value={formData.views}
+          />
+
+          <input
+            className="w-full rounded-lg border px-4 py-3"
+            name="date"
+            onChange={handleChange}
+            required
+            type="date"
+            value={formData.date}
+          />
+
+          <input
+            className="w-full rounded-lg border px-4 py-3"
+            name="image"
+            onChange={handleChange}
+            placeholder="Image URL"
+            required
+            value={formData.image}
+          />
 
           <div>
-            <label className="font-medium">
-              Category
-            </label>
-
+            <label className="font-medium">Category</label>
             <select
-              value={newCategory ? "new" : formData.category}
+              className="mt-2 w-full rounded-lg border px-4 py-3"
               onChange={(e) => {
                 if (e.target.value === "new") {
                   setNewCategory(true);
                   setFormData({
                     ...formData,
-                    category: ""
+                    category: "",
                   });
                 } else {
                   setNewCategory(false);
                   setFormData({
                     ...formData,
-                    category: e.target.value
+                    category: e.target.value,
                   });
                 }
               }}
-              className="mt-2 w-full rounded-lg border px-4 py-3"
+              required={!newCategory}
+              value={newCategory ? "new" : formData.category}
             >
-              <option value="">
-                Select Category
-              </option>
-
-              {categories.map(category => (
-                <option
-                  key={category.name}
-                  value={category.name}
-                >
-                  {category.name}
+              <option value="">Select Category</option>
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
                 </option>
               ))}
-
-              <option value="new">
-                + Create New Category
-              </option>
+              <option value="new">+ Create New Category</option>
             </select>
 
             {newCategory && (
               <input
+                className="mt-3 w-full rounded-lg border px-4 py-3"
                 name="category"
-                value={formData.category}
                 onChange={handleChange}
                 placeholder="New Category Name"
-                className="mt-3 w-full rounded-lg border px-4 py-3"
+                required
+                value={formData.category}
               />
             )}
           </div>
 
-          <div
-            onDrop={(e) => {
-              e.preventDefault();
-              handleImage(e.dataTransfer.files[0]);
-            }}
-            onDragOver={(e) => e.preventDefault()}
-            className="rounded-lg border-2 border-dashed p-8 text-center"
-          >
-            <UploadCloud className="mx-auto mb-3" />
+          <textarea
+            className="w-full rounded-lg border px-4 py-3 font-mono text-sm"
+            name="content"
+            onChange={handleChange}
+            placeholder="Article content JSON (toc + blocks)"
+            rows={14}
+            value={formData.content}
+          />
 
-            <p>
-              Drag & Drop image or choose file
-            </p>
-
+          <div className="flex items-center gap-3">
             <input
-              type="file"
-              accept="image/*"
+              checked={formData.featured}
               onChange={(e) =>
-                handleImage(e.target.files?.[0])
+                setFormData({
+                  ...formData,
+                  featured: e.target.checked,
+                })
               }
-              className="mt-4"
+              type="checkbox"
             />
+            <label>Featured Blog</label>
           </div>
 
-          {preview && (
-            <img
-              src={preview}
-              className="h-48 w-full rounded-lg object-cover"
-            />
-          )}
-
-          <button className="w-full rounded-lg bg-primary py-3 font-semibold text-primary-foreground">
+          <button
+            className="w-full rounded-lg bg-primary py-3 font-semibold text-primary-foreground"
+            type="submit"
+          >
             Add Blog
           </button>
         </form>
