@@ -6,6 +6,7 @@ const BlogPage = () => {
   const [activeFeatured, setActiveFeatured] = useState(0);
   const [activeCategory, setActiveCategory] = useState(0);
   const [blogs, setBlogs] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const sectionRefs = useRef<Array<HTMLElement | null>>([]);
 
   const featuredBlogs = blogs.filter(
@@ -53,8 +54,10 @@ const categories: Category[] = Object.values(
   
   useEffect(() => {
   const fetchBlogs = async () => {
+    setLoading(true);
     const data = await getBlogs();
     setBlogs(data);
+    setLoading(false);
   };
 
   fetchBlogs();
@@ -130,6 +133,17 @@ const BlogCard = ({ blog }: { blog: Blog }) => (
     </article>
   </Link>
 );
+
+  if (loading) {
+    return (
+      <main className="grid min-h-[60vh] place-items-center bg-background">
+        <div className="flex flex-col items-center gap-3 text-muted-foreground">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" />
+          <p className="text-sm font-medium text-blue-600">Loading blogs...</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="bg-background px-4 py-10 font-sans text-foreground sm:px-6 lg:px-10">

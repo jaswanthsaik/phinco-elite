@@ -204,7 +204,7 @@ export function Hero() {
             className="bottom-6 right-4 sm:bottom-8 sm:right-10 lg:bottom-6 lg:right-4"
           />
         </div> */}
-        <div className="w-full max-w-md justify-self-center rounded-2xl bg-white p-5 shadow-2xl sm:p-8 lg:justify-self-end">
+        <div className="w-full max-w-md justify-self-center rounded-2xl bg-white p-5 text-slate-900 shadow-2xl sm:p-8 lg:justify-self-end">
           <h3 className="text-xl font-bold text-[#0a1e3f] sm:text-2xl">
             Free Counselling with Experts
           </h3>
@@ -323,7 +323,7 @@ export function Hero() {
   );
 }
 const inputClass =
-  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm outline-none placeholder:text-slate-400 focus:border-[#1d6bff]";
+  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-[#1d6bff]";
 
 const selectClass =
-  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-500 outline-none focus:border-[#1d6bff]";
+  "w-full border-0 border-b border-slate-200 bg-transparent py-3 text-sm text-slate-900 outline-none focus:border-[#1d6bff]";
