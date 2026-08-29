@@ -494,7 +494,7 @@ export function Header() {
               }
               className="flex w-full items-center justify-between py-2.5 text-sm font-semibold text-foreground"
             >
-              OJT Programs
+              Programs
               {mobileActiveDropdown === "OJT Programs" ? (
                 <ChevronUp className="h-4 w-4 text-brand" />
               ) : (
