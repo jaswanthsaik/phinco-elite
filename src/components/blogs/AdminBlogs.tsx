@@ -11,6 +11,7 @@ const emptyForm = {
   description: "",
   date: "",
   image: "",
+  video: "",
   category: "",
   featured: false,
   author: "",
@@ -52,6 +53,7 @@ const AdminBlogs = () => {
       description: HIGH_PAYING_CERTIFICATIONS_META.description,
       date: "2026-08-25",
       image: HIGH_PAYING_CERTIFICATIONS_META.image,
+      video: "",
       category: HIGH_PAYING_CERTIFICATIONS_META.category,
       featured: HIGH_PAYING_CERTIFICATIONS_META.featured,
       author: HIGH_PAYING_CERTIFICATIONS_META.author,
@@ -90,6 +92,7 @@ const AdminBlogs = () => {
       type: "Article",
       date: Timestamp.fromDate(new Date(formData.date)),
       image: formData.image,
+      video: formData.video.trim(),
       category: formData.category,
       featured: formData.featured,
       author: formData.author || "",
@@ -172,6 +175,14 @@ const AdminBlogs = () => {
             placeholder="Image URL"
             required
             value={formData.image}
+          />
+
+          <input
+            className="w-full rounded-lg border px-4 py-3"
+            name="video"
+            onChange={handleChange}
+            placeholder="YouTube video URL (optional)"
+            value={formData.video}
           />
 
           <div>

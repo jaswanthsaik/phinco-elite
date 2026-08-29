@@ -1,7 +1,30 @@
 import { useEffect, useState } from "react";
 import { Link, useSearch } from "@tanstack/react-router";
-import { ArrowLeft, Eye, Share2 } from "lucide-react";
+import { ArrowLeft, Eye, Play, Share2, X } from "lucide-react";
 import { getBlogById, type Blog, type BlogContentBlock } from "@/services/blogService";
+
+function getYouTubeEmbedUrl(url: string) {
+  try {
+    const parsedUrl = new URL(url);
+    let videoId = "";
+
+    if (parsedUrl.hostname.includes("youtu.be")) {
+      videoId = parsedUrl.pathname.slice(1).split("/")[0];
+    } else if (parsedUrl.pathname.includes("/shorts/")) {
+      videoId = parsedUrl.pathname.split("/shorts/")[1]?.split("/")[0] || "";
+    } else if (parsedUrl.pathname.includes("/embed/")) {
+      videoId = parsedUrl.pathname.split("/embed/")[1]?.split("/")[0] || "";
+    } else {
+      videoId = parsedUrl.searchParams.get("v") || "";
+    }
+
+    return videoId
+      ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+      : "";
+  } catch {
+    return "";
+  }
+}
 
 const BlogInfo = () => {
   const search = useSearch({ from: "/BlogInfo" }) as { topic?: string };
@@ -9,6 +32,7 @@ const BlogInfo = () => {
   const [loading, setLoading] = useState(true);
   const [activeSection, setActiveSection] = useState("");
   const [copied, setCopied] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -122,11 +146,61 @@ const BlogInfo = () => {
         </div>
 
         {blog.image ? (
-          <img
-            alt={blog.title}
-            className="mt-8 h-56 w-full rounded-xl object-cover sm:h-80"
-            src={blog.image}
-          />
+          blog.video ? (
+            <button
+              aria-label="Play video"
+              className="relative mt-8 block w-full overflow-hidden rounded-xl"
+              onClick={() => setActiveVideo(blog.video || null)}
+              type="button"
+            >
+              <img
+                alt={blog.title}
+                className="h-56 w-full object-cover sm:h-80"
+                src={blog.image}
+              />
+              <span className="absolute inset-0 bg-black/25" />
+              <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white shadow-lg backdrop-blur-sm ring-2 ring-white/70">
+                <Play className="h-6 w-6 fill-white text-white" />
+              </span>
+            </button>
+          ) : (
+            <img
+              alt={blog.title}
+              className="mt-8 h-56 w-full rounded-xl object-cover sm:h-80"
+              src={blog.image}
+            />
+          )
+        ) : null}
+
+        {activeVideo ? (
+          <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 px-3 py-6 backdrop-blur-[2px] sm:px-6"
+            onClick={() => setActiveVideo(null)}
+          >
+            <div
+              className="relative w-full max-w-4xl overflow-visible rounded-2xl border-4 border-white bg-black shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                aria-label="Close video"
+                className="absolute -right-3 -top-3 z-20 grid h-11 w-11 place-items-center rounded-full bg-sky-500 text-white shadow-lg transition-colors hover:bg-sky-600 sm:-right-5 sm:-top-5"
+                onClick={() => setActiveVideo(null)}
+                type="button"
+              >
+                <X className="h-7 w-7" />
+              </button>
+              <div className="aspect-video w-full overflow-hidden rounded-xl bg-black">
+                <iframe
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="h-full w-full"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  src={getYouTubeEmbedUrl(activeVideo)}
+                  title={blog.title}
+                />
+              </div>
+            </div>
+          </div>
         ) : null}
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)]">

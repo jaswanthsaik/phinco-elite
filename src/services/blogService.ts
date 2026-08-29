@@ -30,6 +30,7 @@ export type Blog = {
   type: string;
   date: string;
   image: string;
+  video?: string;
   category: string;
   featured: boolean;
   author?: string;
@@ -50,6 +51,7 @@ const mapBlog = (id: string, data: Record<string, any>): Blog => ({
       })
     : data.date || "",
   image: data.image || "",
+  video: data.video || "",
   category: data.category || "",
   featured: data.featured || false,
   author: data.author || "",
