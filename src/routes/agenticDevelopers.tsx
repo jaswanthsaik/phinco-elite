@@ -27,7 +27,7 @@ export const Route = createFileRoute("/agenticDevelopers")({
       {
         name: "description",
         content:
-          "Become an IBM Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
+          "Become an ISO & Google Certified AI Professional. 250+ live hours, 30+ hands-on projects, and 1-on-1 mentor support to integrate GenAI into your career.",
       },
       { property: "og:title", content: "Agentic for Developers — Phinco Elite" },
       {

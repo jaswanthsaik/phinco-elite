@@ -8,11 +8,11 @@ export function CertificationCourse() {
 
   const content = {
     ibm: {
-      title: "Course Completion Certificate from IBM",
+      title: "Course Completion Certificate from ISO & Google",
       points: [
         "Complete your training with the internationally recognized certificate.",
-        "Validate your Data Science & AI skills with IBM Course Completion Certificate.",
-        "Get acknowledged in IT sector by adding IBM Certificate to your profile.",
+        "Validate your Data Science & AI skills with ISO & Google Course Completion Certificate.",
+        "Get acknowledged in IT sector by adding ISO & Google Certificate to your profile.",
       ],
       brand: "IBM",
     },

@@ -62,11 +62,11 @@ const FAQS: Record<Category, { q: string; a: string }[]> = {
   Certifications: [
     {
       q: "What certificate will I receive?",
-      a: "You'll receive an IBM Course Completion Certificate plus a Project Completion Certificate from Learnbay.",
+      a: "You'll receive an ISO & Google Course Completion Certificate plus a Project Completion Certificate from Learnbay.",
     },
     {
       q: "Is the certificate globally recognized?",
-      a: "Yes, the IBM certificate is internationally recognized across the IT industry.",
+      a: "Yes, the ISO & Google certificate is internationally recognized across the IT industry.",
     },
   ],
   "Job Assistance": [
