@@ -143,14 +143,14 @@ const team = [
     quote:
       "With over 12+ years of experience working with diverse startups and leading EdTech organizations and brings strong expertise in operations, business processes, and organizational management. As the Co-Founder of PHINCO ELITE, she plays a key role in overseeing day-to-day operations and ensuring the smooth functioning of various business activities. Her experience and strategic approach help drive efficiency, coordination, and sustainable growth across the organization.",
   },
-  {
-    name: "Kenen Bhandhavi",
-    role: "Branch Head-Hyderabad",
-    photo: portrait3,
-    linkedin: "https://www.linkedin.com/in/kenen-bhandhavi-551388165/",
-    quote:
-      "With over 10+ years of experience in the EdTech industry, Kenen B brings extensive expertise in career guidance, candidate profiling, and team management. Having worked with top-notch companies throughout his career, he has gained valuable experience in guiding professionals toward the right career opportunities and helping them achieve their goals.",
-  },
+  // {
+  //   name: "Kenen Bhandhavi",
+  //   role: "Branch Head-Hyderabad",
+  //   photo: portrait3,
+  //   linkedin: "https://www.linkedin.com/in/kenen-bhandhavi-551388165/",
+  //   quote:
+  //     "With over 10+ years of experience in the EdTech industry, Kenen B brings extensive expertise in career guidance, candidate profiling, and team management. Having worked with top-notch companies throughout his career, he has gained valuable experience in guiding professionals toward the right career opportunities and helping them achieve their goals.",
+  // },
 ];
 
 function CoreTeamSection() {
@@ -158,7 +158,7 @@ function CoreTeamSection() {
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <h2 className="text-center text-3xl font-extrabold text-foreground sm:text-4xl">Our Core Team</h2>
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        <div className="mt-10 flex  gap-32 justify-center">
           {team.map((m) => (
             <article key={m.name} className="flex flex-col max-w-xs">
               <div className="aspect-[4/5] w-full max-w-[240px] mx-auto overflow-hidden rounded-lg bg-muted">
