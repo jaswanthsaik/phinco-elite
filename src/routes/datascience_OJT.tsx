@@ -9,7 +9,7 @@ import { AlumniCompanies } from "@/components/programs/dataScienceDevelopers/Alu
 import { CertificationCourse } from "@/components/programs/dataScienceDevelopers/CertificationCourse";
 import { ExploreSyllabus } from "@/components/programs/dataScienceDevelopers/ExploreSyllabus";
 import { FAQSection } from "@/components/programs/agenticDevelopers/FAQSection";
-import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
+// import { FeeBatchDetails } from "@/components/programs/dataScienceDevelopers/FeeBatchDetails";
 import { IndustryProjects } from "@/components/programs/dataScienceDevelopers/IndustryProjects";
 import { LearningToPlacement } from "@/components/programs/dataScienceDevelopers/LearningToPlacement";
 import { MeetOurMentors } from "@/components/programs/dataScienceDevelopers/MeetOurMentors";
@@ -57,7 +57,7 @@ function ProgramPage() {
         <ExploreSyllabus />
         <ProgrammingTools />
         <CertificationCourse />
-        <FeeBatchDetails />
+        {/* <FeeBatchDetails /> */}
         <AdmissionProcess />
         <TalkToTeam />
         <FAQSection />

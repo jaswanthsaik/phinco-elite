@@ -5,98 +5,98 @@ type Article = {
   outlet: string;
   outletColor: string;
   title: string;
-  date: string;
+  // date: string;
   href: string;
   target: string;
 };
 
 const ARTICLES: Article[] = [
   {
-    outlet: "Analytics Insight",
+    outlet: "Hindustan Metro",
     outletColor: "#c8102e",
-    title: "PHINCO ELITE Sets Ambitious Global Goal: To Train 10 Lakh Data Analytics Professionals After Placing 7,000+ Graduates Worldwide",
-    date: "2nd december",
-    href: "https://www.hindustanmetro.com/phinco-elite-sets-ambitious-global-goal-to-train-10-lakh-data-analytics-professionals-after-placing-7000-graduates-worldwide",
+    title: "PHINCO ELITE Builds a Career-Ready Path from Learning to Employment",
+    // date: "29th September",
+    href: "https://hindustanmetro.com/phinco-elite-learn-to-hire-ojt-program-bridging-education-skills-and-employment",
     target: "_blank",
   },
   {
-    outlet: "Global Education",
+    outlet: "Times Release",
     outletColor: "#c8102e",
-    title: "PHINCO ELITE Unveils Global Skilling Initiative to Train 10 Lakh Data Analytics Professionals After Reaching 7,000+ Placements",
-    date: "4th december",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "PHINCO ELITE Learn-to-Hire OJT Program: Bridging Education, Skills and Employment",
+    // date: "29th September",
+    href: "https://timesrelease.com/phinco-elite-learn-to-hire-ojt-program-bridging-education-skills-and-employment/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "The People Management",
+    outlet: "Latest Tales",
     outletColor: "#c8102e",
-    title: "PHINCO ELITE Unveils Global Skilling Initiative to Train 10 Lakh Data Analytics Professionals After Reaching 7,000+ Placements",
-    date: "4th december",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "PHINCO ELITE: Empowering Freshers to Build a Career in the IT Industry",
+    // date: "29th September",
+    href: "https://latesttales.in/phinco-elite-empowering-freshers-to-build-a-career-in-the-it-industry/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "YourStory",
+    outlet: "Prime Bulletins",
     outletColor: "#ee3124",
-    title: "How PHINCO ELITE is helping working professionals transition into data science",
-    date: "15th March",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "PHINCO ELITE: Helping Non-IT Professionals Make a Structured Transition into IT",
+    // date: "29th September",
+    href: "https://primebulletins.com/phinco-elite-helping-non-it-professionals-make-a-structured-transition-into-it/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "Economic Times",
+    outlet: "Hindustan Hunt",
     outletColor: "#c8102e",
-    title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
-    date: "20th June",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "Restarting Your Career After a Career Gap: How PHINCO ELITE Helps Professionals Begin Again",
+    // date: "29th September",
+    href: "https://hindustanhunt.com/restarting-your-career-after-a-career-gap-how-phinco-elite-helps-professionals-begin-again/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "FINANCIAL EXPRESS",
+    outlet: "Daily Viewer",
     outletColor: "#c8102e",
-    title: "PHINCO ELITE introduces domain specialisation programme for sustainable career transition",
-    date: "1st August",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "From B.Sc, B.Com, M.Sc, M.Com, BBA or BA to an IT Career with PHINCO ELITE",
+    // date: "1st August",
+    href: "https://dailyviewer.in/from-b-sc-b-com-m-sc-m-com-bba-or-ba-to-an-it-career-with-phinco-elite/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "YourStory",
+    outlet: "The Civic Journal",
     outletColor: "#ee3124",
-    title: "How PHINCO ELITE is helping working professionals transition into data science",
-    date: "15th March",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "How to Restart Your Career After a Gap With Previous Work Experience with PHINCO ELITE",
+    // date: "15th March",
+    href: "https://thecivicjournal.com/how-to-restart-your-career-after-a-gap-with-previous-work-experience-with-phinco-elite/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "Economic Times",
+    outlet: "Bollywood Insider",
     outletColor: "#c8102e",
-    title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
-    date: "20th June",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "From B.Tech or M.Tech to IT Specialization with PHINCO ELITE",
+    // date: "20th June",
+    href: "https://bollywoodinsider.in/from-b-tech-or-m-tech-to-it-specialization-with-phinco-elite/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "Inc42",
-    outletColor: "#000",
+    outlet: "The Rising Founder",
+    outletColor: "#ee3124",
     title: "Phinco Elite plans global expansion with new GenAI master programs",
-    date: "5th May",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    // date: "5th May",
+    href: "https://therisingfounder.com/from-sales-bpo-kpo-or-customer-support-to-it-with-phinco-elite/",
     target: "_blank",
   },
   {
-    outlet: "YourStory",
+    outlet: "Okay Weekly",
     outletColor: "#ee3124",
-    title: "How PHINCO ELITE is helping working professionals transition into data science",
-    date: "15th March",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "From Marketing, HR, Operations, Finance or Admin to IT with PHINCO ELITE",
+    // date: "15th March",
+    href: "https://okayweekly.com/from-marketing-hr-operations-finance-or-admin-to-it-with-phinco-elite/?utm_source=chatgpt.com",
     target: "_blank",
   },
   {
-    outlet: "Economic Times",
+    outlet: "UK Bulletins",
     outletColor: "#c8102e",
-    title: "Edtech startup PHINCO ELITE raises funding to scale industry projects platform",
-    date: "20th June",
-    href: "https://arisetimes.in/spotlight/phinco-elite-unveils-global-skilling-initiative-to-train-10-lakh-data-analytics-professionals/",
+    title: "How to Restart Your Career After a Complete Gap Following Graduation with PHINCO ELITE",
+    // date: "20th June",
+    href: "https://ukbulletins.com/how-to-restart-your-career-after-a-complete-gap-following-graduation-with-phinco-elite/?utm_source=chatgpt.com",
     target: "_blank",
   },
 ];
@@ -161,9 +161,9 @@ export function MediaSpotlight() {
                 {a.title}
               </h3>
 
-              <p className="mt-auto pt-5 text-sm text-gray-500 sm:pt-6">
+              {/* <p className="mt-auto pt-5 text-sm text-gray-500 sm:pt-6">
                 {a.date}
-              </p>
+              </p> */}
             </a>
           ))}
         </div>
